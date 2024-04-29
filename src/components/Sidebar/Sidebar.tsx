@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment, useState } from "react";
+import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
@@ -108,25 +108,6 @@ const Sidebar = ({ navOpen, opened, setOpened, setNavOpen }: navProps) => {
           </li>
         ))}
       </ul>
-      <div className="relative">
-        <Listbox value={selectedPerson} onChange={setSelectedPerson}>
-          <Listbox.Button className="text-white bg-gradient-to-r from-[#33AB71] to-[#06753F] flex gap-2 items-center justify-between pl-4 pr-2 py-2 ml-6 mt-3 rounded z-[5]">
-            {selectedPerson.name}
-            <span className="material-symbols-outlined dark:text-myGreen">
-              expand_more
-            </span>
-          </Listbox.Button>
-          <Listbox.Options className="mx-6 w-36 rounded-lg bg-Primary-bg text-white p-3 absolute bottom-full">
-            {languages.map((language) => (
-              <Listbox.Option key={language.id} value={language} as={Fragment}>
-                <li className="cursor-pointer p-1 hover:bg-Neutral-8 rounded">
-                  {language.name}
-                </li>
-              </Listbox.Option>
-            ))}
-          </Listbox.Options>
-        </Listbox>
-      </div>
     </nav>
   );
 };
