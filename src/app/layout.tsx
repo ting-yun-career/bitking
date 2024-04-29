@@ -8,9 +8,9 @@ import Loading from "./loading";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "CryptDash",
+  title: process.env.sitename,
   description:
-    "CryptDash is a cutting-edge HTML template designed specifically for crypto exchange dashboards.",
+    `${process.env.sitename} is a cutting-edge HTML template designed specifically for crypto exchange dashboards.`,
 };
 
 export default function RootLayout({
