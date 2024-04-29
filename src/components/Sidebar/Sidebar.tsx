@@ -6,7 +6,6 @@ import Image from "next/image";
 import AnimateHeight from "react-animate-height";
 import logo from "@/../public/images/logo.png";
 import { sidenavData } from "../../../public/data/sidenavData";
-import { Listbox } from "@headlessui/react";
 import { v4 as uuidv4 } from "uuid";
 
 type navProps = {
@@ -23,7 +22,6 @@ const languages = [
 ];
 
 const Sidebar = ({ navOpen, opened, setOpened, setNavOpen }: navProps) => {
-  const [selectedPerson, setSelectedPerson] = useState(languages[0]);
   const path = usePathname();
   return (
     <nav

@@ -22,7 +22,6 @@ export default function RootLayout({
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
         <Suspense fallback={<Loading />}>
-          <div>{process.env.MONMONGODB_PASSWORD}</div>
           <div>{children}</div>
         </Suspense>
       </body>
