@@ -33,9 +33,9 @@ const Sidebar = ({ navOpen, opened, setOpened, setNavOpen }: navProps) => {
     >
       <Link href="/" className="flex items-center gap-8 mb-10">
         <span className="flex items-center gap-2  cursor-pointer">
-          <Image className="w-10 h-[42px]" src={logo} alt="company logo" />
+          <Image className="w-10 h-[42px]" src={logo} alt="Bit King logo" />
           <span className="text-white text-2xl font-bold">
-            Crypt<span className="text-Primary-2">Dash</span>
+            <span className="text-Primary-1">Bit</span><span className="text-Primary-2">King</span>
           </span>
         </span>
 
