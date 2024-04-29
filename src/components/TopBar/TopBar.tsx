@@ -15,32 +15,7 @@ type headerProps = {
 
 const TopBar = ({ handleOpen }: headerProps) => {
   return (
-    <div className="py-2 flex gap-2 items-center justify-between self-start z-[5] left-0 lg:ml-[260px] right-0 fixed bg-Neutral-2">
-      <div className="flex items-center gap-2 py-2">
-        <button
-          onClick={handleOpen}
-          className="lg:hidden  text-white bg-Primary-bg flex items-center ml-4 p-1 rounded"
-        >
-          <span className="material-symbols-outlined  cursor-pointer !text-3xl">
-            menu
-          </span>
-        </button>
-        <form className="hidden md:block relative  ml-8">
-          <input
-            type="text"
-            placeholder="Search..."
-            id="input"
-            name="input"
-            className="px-4 py-3  rounded-lg focus-within:border-Neutral-8  text-Neutral-5 bg-Neutral-2 outline-none border border-Neutral-1"
-          />
-          <label
-            htmlFor="input"
-            className="material-symbols-outlined cursor-pointer text-Neutral-6 absolute right-3 top-3"
-          >
-            search
-          </label>
-        </form>
-      </div>
+    <div className="py-2 flex gap-2 items-center justify-end self-start z-[5] left-0 lg:ml-[260px] right-0 fixed bg-Neutral-2">
       <div className="flex items-center gap-3 md:gap-5">
         {/* message dropdriwn menu  */}
         <Menu as="div" className="relative inline-block text-left">
