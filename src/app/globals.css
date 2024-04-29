@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #131720;
+    overflow-x: hidden;
+}
+
+.otp-input input:focus{
+outline: 1px solid #3EBF81;
+
+}
+
+.activePath {
+  color: #3EBF81;
+  border:1px solid #3EBF81;
+}
+
+.identify::before
+{
+content:'';
+width:30px;
+height:25px;
+border-bottom: 30px solid #242F40;
+position: absolute;
+border-left: 15px solid transparent;
+border-right: 15px solid transparent;
+right:25%;
+top: -20px;
+}
+
+.identify-notificition::before{
+content:'';
+width:30px;
+height:25px;
+border-bottom: 30px solid #242F40;
+position: absolute;
+border-left: 15px solid transparent;
+border-right: 15px solid transparent;
+right:11%;
+top: -20px;
+}
+
+@media only screen and (max-width: 600px) {
+  .identify::before{
+    content:'';
+    width:30px;
+    height:25px;
+    border-bottom: 30px solid #242F40;
+    position: absolute;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    right:45%;
+    top: -20px;
+    }
+}
+
+.select-option{
+  margin-bottom: 10ox;
+}
+
+
+/* scrollbar style */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #0CAF60;
+    border-radius: 5px;
+}
+
+.iconSize{
+    font-size: 16px !important;
+}
+
+/* border gradient  */
+.border-gradient{
+  background: linear-gradient(#2E3549,#2E3549)padding-box,linear-gradient(to top left,#FE53BB,#09FBD3) border-box;
+  border:1px solid transparent;
+  position: relative; 
+   z-index: 0;
+}
+
+/* animation progressbar */
+.progressorRun{
+  animation: progressor 2s ease-in-out forwards;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+@keyframes progressor{
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+
+
+  .btnShadow{
+    box-shadow: 0px 1.00023px 2.00047px 0px rgba(0, 0, 0, 0.20);
+
+  }
