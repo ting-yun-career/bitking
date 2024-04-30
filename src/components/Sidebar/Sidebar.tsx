@@ -4,7 +4,7 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import AnimateHeight from "react-animate-height";
-import logo from "@/../public/images/logo.png";
+import logo from "@/../public/images/bitking128.png";
 import { sidenavData } from "../../../public/data/sidenavData";
 import { v4 as uuidv4 } from "uuid";
 

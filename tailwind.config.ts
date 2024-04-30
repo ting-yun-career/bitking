@@ -24,7 +24,7 @@ const config: Config = {
       },
       colors:{
         "Primary-1": "#0CAF60",
-        "Primary-2": "#FC774A",
+        "Primary-2": "#FE9829",
         "Primary-3": "#171F2A",
         "Primary-bg": "#131720",
         "Neutral-1":"#868D95",
