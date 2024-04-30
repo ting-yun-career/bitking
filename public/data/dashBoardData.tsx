@@ -3,10 +3,10 @@ import binance from "@/../public/images/binance.png";
 import litecoin from "@/../public/images/litecoin.png";
 import ethereum from "@/../public/images/ethereum.png";
 
-import BitcoinChart from "@/components/chart/BitcoinChart";
-import EthereumChart from "@/components/chart/EthereumChart";
-import LitecoinChart from "@/components/chart/LitecoinChart";
-import BinanceChart from "@/components/chart/BinanceChart";
+import BitcoinChart from "@components/chart/BitcoinChart";
+import EthereumChart from "@components/chart/EthereumChart";
+import LitecoinChart from "@components/chart/LitecoinChart";
+import BinanceChart from "@components/chart/BinanceChart";
 
 import Bitcoin from "@/../public/images/dashboardTable/bitcoin.png";
 import Ethereum from "@/../public/images/dashboardTable/ethereum.png";

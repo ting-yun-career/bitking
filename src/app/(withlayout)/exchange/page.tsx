@@ -4,12 +4,12 @@ import { Tab } from "@headlessui/react";
 import Image from "next/image";
 import { useState } from "react";
 import { Listbox } from "@headlessui/react";
-import MarketTrades from "@/components/Exchange/MarketTrades";
+import MarketTrades from "@components/Exchange/MarketTrades";
 import { curencys, curencysAmount } from "../../../../public/data/exchangeData";
-import DoughnutChart from "@/components/chart/DoughnutChart";
-import CandleStickLineChart from "@/components/chart/CandleStickLineChart";
-import CandlestickChart from "@/components/chart/CandleStickChart";
-import Coin from "@/components/Exchange/Coin";
+import DoughnutChart from "@components/chart/DoughnutChart";
+import CandleStickLineChart from "@components/chart/CandleStickLineChart";
+import CandlestickChart from "@components/chart/CandleStickChart";
+import Coin from "@components/Exchange/Coin";
 
 const Exchange = () => {
   const [selectedCurencys, setSelectedCurencys] = useState(curencys[0]);

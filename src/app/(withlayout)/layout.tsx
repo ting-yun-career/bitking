@@ -1,8 +1,8 @@
 "use client";
-import Sidebar from "@/components/Sidebar/Sidebar";
-import TopBar from "@/components/TopBar/TopBar";
 import React, { MouseEvent, useState } from "react";
-import Footer from "@/components/Footer/Footer";
+import Sidebar from "@components/Sidebar/Sidebar";
+import TopBar from "@components/TopBar/TopBar";
+import Footer from "@components/Footer/Footer";
 
 export default function RootLayout({
   children,

@@ -1,4 +1,4 @@
-import LineChart from "@/components/chart/LineChart";
+import LineChart from "@components/chart/LineChart";
 import Image from "next/image";
 import React from "react";
 import {
@@ -6,7 +6,7 @@ import {
   tableData,
   transactions,
 } from "../../../../public/data/dashBoardData";
-import DoughnutChart from "@/components/chart/DoughnutChart";
+import DoughnutChart from "@components/chart/DoughnutChart";
 
 const DashBoard = () => {
   return (
