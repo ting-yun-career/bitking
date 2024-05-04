@@ -85,32 +85,32 @@ export const messages = [
 
 export const profile = [
   {
-    id: uuidv4(),
+    id: 'profile',
     title: "Profile",
     icon: <span className="material-symbols-outlined">account_circle</span>,
   },
   {
-    id: uuidv4(),
+    id: 'message',
     title: "Message",
     icon: <span className="material-symbols-outlined">chat</span>,
   },
   {
-    id: uuidv4(),
+    id: 'taskboard',
     title: "Taskboard",
     icon: <span className="material-symbols-outlined">task</span>,
   },
   {
-    id: uuidv4(),
+    id: 'support',
     title: "Support",
     icon: <span className="material-symbols-outlined">support</span>,
   },
   {
-    id: uuidv4(),
+    id: 'settings',
     title: "Settings",
     icon: <span className="material-symbols-outlined">settings</span>,
   },
   {
-    id: uuidv4(),
+    id: 'logout',
     title: "Log Out",
     icon: <span className="material-symbols-outlined">logout</span>,
   },

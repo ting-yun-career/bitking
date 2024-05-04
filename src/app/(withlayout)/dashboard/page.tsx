@@ -1,3 +1,5 @@
+"use client"
+
 import LineChart from "@components/chart/LineChart";
 import Image from "next/image";
 import React from "react";

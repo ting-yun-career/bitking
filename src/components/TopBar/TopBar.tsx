@@ -1,5 +1,8 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
+import { signOut } from "next-auth/react";
+import { useRouter } from "next/navigation";
 import React, { Fragment } from "react";
 import user from "@/../public/images/user.png";
 import {
@@ -14,6 +17,14 @@ type headerProps = {
 };
 
 const TopBar = ({ handleOpen }: headerProps) => {
+  const router = useRouter();
+
+  const handleProfileAction = (data: any) => {
+    if (data.id === 'logout') {
+      signOut({ callbackUrl: '/signIn', redirect: true })
+    }
+  }
+
   return (
     <div className="py-2 flex gap-2 items-center justify-end self-start z-[5] left-0 lg:ml-[260px] right-0 fixed bg-Neutral-2">
       <div className="flex items-center gap-3 md:gap-5">
@@ -171,7 +182,8 @@ const TopBar = ({ handleOpen }: headerProps) => {
                     {profile.map((data) => (
                       <div
                         key={data.id}
-                        className="flex items-center gap-3 p-1 duration-200 cursor-pointer hover:bg-Neutral-8  rounded"
+                        className="flex items-center gap-3 p-1 duration-200 cursor-pointer hover:bg-Neutral-8 rounded"
+                        onClick={() => handleProfileAction(data)}
                       >
                         <Link href="#" className="flex items-center gap-2">
                           <span className="text-white !text-3xl">

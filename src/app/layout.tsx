@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "material-symbols";
 import { Suspense } from "react";
 import Loading from "./loading";
+import NextAuthProvider from "./NextAuthProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,9 +22,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body suppressHydrationWarning={true} className={inter.className}>
-        <Suspense fallback={<Loading />}>
-          <div>{children}</div>
-        </Suspense>
+        <NextAuthProvider>
+          <Suspense fallback={<Loading />}>
+            <div>{children}</div>
+          </Suspense>
+        </NextAuthProvider>
       </body>
     </html>
   );

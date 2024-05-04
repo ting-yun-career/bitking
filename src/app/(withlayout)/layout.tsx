@@ -1,5 +1,7 @@
 "use client";
-import React, { MouseEvent, useState } from "react";
+import React, { MouseEvent, useState, useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useSession } from "next-auth/react";
 import Sidebar from "@components/Sidebar/Sidebar";
 import TopBar from "@components/TopBar/TopBar";
 import Footer from "@components/Footer/Footer";
@@ -9,6 +11,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const router = useRouter();
+  const { data: session, status: sessionStatus } = useSession();
+
+  useEffect(() => {
+    if (sessionStatus !== "authenticated") {
+      router.replace("/signIn");
+    }
+  }, [sessionStatus, router])
+
   const [navOpen, setNavOpen] = useState(false);
   const [opened, setOpened] = useState<null | number>(null);
 
@@ -26,10 +37,9 @@ export default function RootLayout({
         setNavOpen={setNavOpen}
       />
       <div
-        className={`lg:ml-[260px] relative ${
-          navOpen &&
+        className={`lg:ml-[260px] relative ${navOpen &&
           "after:bg-opacity-70 after:absolute after:inset-0 after:z-[1] after:duration-300 overflow-y-hidden"
-        }`}
+          }`}
         onClick={() => setNavOpen(false)}
       >
         <TopBar handleOpen={handleOpen} />
