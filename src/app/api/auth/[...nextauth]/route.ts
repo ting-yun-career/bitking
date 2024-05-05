@@ -4,7 +4,7 @@ import type { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
 const authOptions: NextAuthOptions = {
-  secret: 'fsafijsaofjsd',
+  secret: process.env.NEXTAUTH_SECRET,
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID!,
@@ -12,13 +12,11 @@ const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    signIn: async function ({ account }: { account: Account }) {
-      console.log('callback')
-
+    signIn: async function ({ account }: { account: Account | null }) {
       if (account?.provider == "google") {
-        console.log('google:', account)
         return true;
       }
+      return false;
     }
   },
   pages: {
