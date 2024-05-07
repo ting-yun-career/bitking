@@ -1,5 +1,5 @@
 import NextAuth from "next-auth"
-import { Account, User as AuthUser } from "next-auth";
+import { Account, Profile, User as AuthUser } from "next-auth";
 import type { NextAuthOptions } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 
@@ -12,7 +12,7 @@ const authOptions: NextAuthOptions = {
     }),
   ],
   callbacks: {
-    signIn: async function ({ account }: { account: Account | null }) {
+    signIn: async function ({ account, profile }: { account: Account | null, profile?: Profile | null }) {
       if (account?.provider == "google") {
         return true;
       }
