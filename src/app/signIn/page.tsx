@@ -55,17 +55,17 @@ const NextLoginPage = () => {
   }
   return (
     sessionStatus !== "authenticated" && (
-      <div className="flex min-h-full flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
+      <div className="flex h-screen flex-1 flex-col justify-center py-12 sm:px-6 lg:px-8">
         <div className="flex justify-center flex-col items-center">
-          <Image src="/logo 1.png" alt="star logo" width={50} height={50} />
-          <h2 className="mt-6 text-center text-2xl leading-9 tracking-tight text-gray-900">
+          <Image src="/images/bitking128.png" alt="star logo" width={50} height={50} />
+          <h2 className="text-white mt-6 text-center text-2xl leading-9 tracking-tight text-gray-900">
             Sign in to your account
           </h2>
         </div>
 
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-[480px]">
           <div className="bg-white px-6 py-12 shadow sm:rounded-lg sm:px-12">
-            <form className="space-y-6" onSubmit={handleSubmit}>
+            <form className="hidden space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label
                   htmlFor="email"
@@ -141,7 +141,7 @@ const NextLoginPage = () => {
             </form>
 
             <div>
-              <div className="relative mt-10">
+              <div className="hidden relative mt-10">
                 <div
                   className="absolute inset-0 flex items-center"
                   aria-hidden="true"
@@ -155,7 +155,7 @@ const NextLoginPage = () => {
                 </div>
               </div>
 
-              <div className="mt-6 grid grid-cols-2 gap-4">
+              <div className="mt-6">
                 <button
                   onClick={() => {
                     signIn("google");
@@ -163,10 +163,9 @@ const NextLoginPage = () => {
                   className="flex w-full items-center border border-gray-300 justify-center gap-3 rounded-md bg-white px-3 py-1.5 text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                 >
                   <span className="text-sm font-semibold leading-6">
-                    Google
+                    Sign In with Gmail
                   </span>
                 </button>
-
               </div>
               <p className="text-red-600 text-center text-[16px] my-4">
                 {error && error}

@@ -25,9 +25,8 @@ const Sidebar = ({ navOpen, opened, setOpened, setNavOpen }: navProps) => {
   const path = usePathname();
   return (
     <nav
-      className={`${
-        navOpen ? "ml-0" : "ml-[-260px]"
-      } lg:ml-0 w-[260px] transiton-all duration-300 ease-out z-20 overflow-x-hidden overflow-y-auto fixed top-0 bottom-0 bg-[#212B39] flex flex-col p-3 md:p-5 xl:px-6 xl:py-8 min-h-screen shadow-lg lg:shadow-none scrollbarthin  text-white`}
+      className={`${navOpen ? "ml-0" : "ml-[-260px]"
+        } lg:ml-0 w-[260px] transiton-all duration-300 ease-out z-20 overflow-x-hidden overflow-y-auto fixed top-0 bottom-0 bg-[#212B39] flex flex-col p-3 md:p-5 xl:px-6 xl:py-8 min-h-screen shadow-lg lg:shadow-none scrollbarthin  text-white`}
     >
       <Link href="/" className="flex items-center gap-8 mb-10">
         <span className="flex items-center gap-2  cursor-pointer">
@@ -50,9 +49,8 @@ const Sidebar = ({ navOpen, opened, setOpened, setNavOpen }: navProps) => {
         {sidenavData?.map((item) => (
           <li
             key={item.id}
-            className={`hover:text-Neutral-8 text-Neutral-6 text-base font-semibold border border-Neutral-7 hover:border-Neutral-8 rounded-lg mb-4 cursor-pointer ${
-              path == item.url && "text-Neutral-8 border-Neutral-8"
-            }`}
+            className={`hover:text-Neutral-8 text-Neutral-6 text-base font-semibold border border-Neutral-7 hover:border-Neutral-8 rounded-lg mb-4 cursor-pointer ${path == item.url && "text-Neutral-8 border-Neutral-8"
+              }`}
           >
             {item?.url ? (
               <Link
@@ -68,9 +66,8 @@ const Sidebar = ({ navOpen, opened, setOpened, setNavOpen }: navProps) => {
                 onClick={() =>
                   setOpened((prev: any) => (prev == item.id ? null : item.id))
                 }
-                className={`flex gap-2 items-center justify-between py-3 px-4 ${
-                  item.id == opened && " border-[#3EBF81] hover:text-[#D2D9E4]"
-                }`}
+                className={`flex gap-2 items-center justify-between py-3 px-4 ${item.id == opened && " border-[#3EBF81] hover:text-[#D2D9E4]"
+                  }`}
               >
                 <span className="flex gap-2">
                   <span className="material-symbols-outlined">{item.icon}</span>
@@ -92,9 +89,8 @@ const Sidebar = ({ navOpen, opened, setOpened, setNavOpen }: navProps) => {
                       <Link
                         href={item.url}
                         onClick={() => setNavOpen(false)}
-                        className={`flex gap-2 items-center pl-4 pr-1 py-2 text-[#D2D9E4] hover:bg-[#3EBF81] duration-300 rounded-lg ${
-                          item.url == path && "text-[#3EBF81]"
-                        }`}
+                        className={`flex gap-2 items-center pl-4 pr-1 py-2 text-[#D2D9E4] hover:bg-[#3EBF81] duration-300 rounded-lg ${item.url == path && "text-[#3EBF81]"
+                          }`}
                       >
                         {item.title}
                       </Link>

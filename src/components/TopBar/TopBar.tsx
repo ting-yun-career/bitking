@@ -28,8 +28,8 @@ const TopBar = ({ handleOpen }: headerProps) => {
   return (
     <div className="py-2 flex gap-2 items-center justify-end self-start z-[5] left-0 lg:ml-[260px] right-0 fixed bg-Neutral-2">
       <div className="flex items-center gap-3 md:gap-5">
-        {/* message dropdriwn menu  */}
-        <Menu as="div" className="relative inline-block text-left">
+
+        <Menu as="div" className="hidden relative inline-block text-left">
           <Menu.Button className="inline-flex w-full justify-center rounded-md bg-Primary-bg p-1 px-3 py-2 text-sm font-medium text-white  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 relative cursor-pointer">
             <span className="material-symbols-outlined  text-white !text-3xl md:!text-[35px]">
               message
@@ -83,8 +83,8 @@ const TopBar = ({ handleOpen }: headerProps) => {
             </Menu.Items>
           </Transition>
         </Menu>
-        {/* notification dropdown menu  */}
-        <Menu as="div" className="relative inline-block text-left">
+
+        <Menu as="div" className="hidden relative inline-block text-left">
           <Menu.Button className="inline-flex w-full justify-center rounded-md bg-Primary-bg  px-3 py-2 text-sm font-medium text-white  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 relative cursor-pointer">
             <span className="material-symbols-outlined  text-white !text-3xl md:!text-[35px]">
               notifications
@@ -146,17 +146,17 @@ const TopBar = ({ handleOpen }: headerProps) => {
           <Menu.Button>
             <span className="flex gap-2 items-center cursor-pointer">
               <span>
-                <span className="w-12 h-12 md:w-[60px] md:h-[60px] rounded-full mt-1">
+                <div className="w-12 h-12 md:w-[60px] md:h-[60px] rounded-full overflow-hidden">
                   <Image src={user} alt="User" />
-                </span>
+                </div>
               </span>
               <span className="lg:flex items-center hidden">
                 <span>
                   <span className="text-base text-white font-semibold block">
-                    Kim Griffith
+                    John Smith
                   </span>
                   <span className="text-xs text-Neutral-6 text-left block">
-                    Admin
+                    Standard Plan
                   </span>
                 </span>
               </span>
