@@ -29,7 +29,7 @@ const TopBar = ({ handleOpen }: headerProps) => {
     <div className="py-2 flex gap-2 items-center justify-end self-start z-[5] left-0 lg:ml-[260px] right-0 fixed bg-Neutral-2">
       <div className="flex items-center gap-3 md:gap-5">
 
-        <Menu as="div" className="hidden relative inline-block text-left">
+        <Menu as="div" className="relative inline-block text-left">
           <Menu.Button className="inline-flex w-full justify-center rounded-md bg-Primary-bg p-1 px-3 py-2 text-sm font-medium text-white  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 relative cursor-pointer">
             <span className="material-symbols-outlined  text-white !text-3xl md:!text-[35px]">
               message
@@ -60,7 +60,7 @@ const TopBar = ({ handleOpen }: headerProps) => {
                         className="flex items-center gap-3 py-2 duration-200 cursor-pointer hover:bg-Neutral-8 p-2 rounded"
                       >
                         <Image
-                          className="w-10 h-10 md:w-[60px] md:h-[60px]"
+                          className="hidden w-10 h-10 md:w-[60px] md:h-[60px]"
                           src={data.img}
                           alt="buyer"
                         />

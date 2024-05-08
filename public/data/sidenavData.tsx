@@ -60,34 +60,34 @@ export const sidenavData: SidenavItem[] = [
     url: "/settings",
     icon: "settings",
   },
-  {
-    id: 456009,
-    name: "Utilities",
-    icon: "construction",
-    submenus: [
-      {
-        title: "Protected Page",
-        url: "/utillity/protected",
-      },
-      {
-        title: "Error Page",
-        url: "/utillity/error",
-      },
-    ],
-  },
-  {
-    id: 4560010,
-    name: "Authentication",
-    icon: "work",
-    submenus: [
-      {
-        title: "Sign In",
-        url: "/utillity/sign_in",
-      },
-      {
-        title: "Sign Up",
-        url: "/utillity/sign_up",
-      },
-    ],
-  },
+  // {
+  //   id: 456009,
+  //   name: "Utilities",
+  //   icon: "construction",
+  //   submenus: [
+  //     {
+  //       title: "Protected Page",
+  //       url: "/utillity/protected",
+  //     },
+  //     {
+  //       title: "Error Page",
+  //       url: "/utillity/error",
+  //     },
+  //   ],
+  // },
+  // {
+  //   id: 4560010,
+  //   name: "Authentication",
+  //   icon: "work",
+  //   submenus: [
+  //     {
+  //       title: "Sign In",
+  //       url: "/utillity/sign_in",
+  //     },
+  //     {
+  //       title: "Sign Up",
+  //       url: "/utillity/sign_up",
+  //     },
+  //   ],
+  // },
 ];

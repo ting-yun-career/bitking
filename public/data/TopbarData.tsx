@@ -48,39 +48,39 @@ export const notifications = [
 export const messages = [
   {
     id: uuidv4(),
-    name: "Gaël Lokossou",
+    name: "Taylor Swift",
     comment: "Commented on your post",
-    des: "Lorem ipsum dolor sit amet consectetur ut.",
+    des: "Let's chat!",
     img: buyer1,
   },
   {
     id: uuidv4(),
-    name: "Boris Akpodji",
+    name: "Tom Cruise",
     comment: "Commented on your post",
-    des: "Lorem ipsum dolor sit amet consectetur ut.",
+    des: "I'm interested!",
     img: buyer4,
   },
-  {
-    id: uuidv4(),
-    name: "Arsene Sessou",
-    comment: "Commented on your post",
-    des: "Lorem ipsum dolor sit amet consectetur ut.",
-    img: buyer5,
-  },
-  {
-    id: uuidv4(),
-    name: "Wilfried Ali",
-    comment: "Commented on your post",
-    des: "Lorem ipsum dolor sit amet consectetur ut.",
-    img: buyer6,
-  },
-  {
-    id: uuidv4(),
-    name: "Pablo Codjo",
-    comment: "Commented on your post",
-    des: "Lorem ipsum dolor sit amet consectetur ut.",
-    img: buyer7,
-  },
+  // {
+  //   id: uuidv4(),
+  //   name: "Arsene Sessou",
+  //   comment: "Commented on your post",
+  //   des: "Lorem ipsum dolor sit amet consectetur ut.",
+  //   img: buyer5,
+  // },
+  // {
+  //   id: uuidv4(),
+  //   name: "Wilfried Ali",
+  //   comment: "Commented on your post",
+  //   des: "Lorem ipsum dolor sit amet consectetur ut.",
+  //   img: buyer6,
+  // },
+  // {
+  //   id: uuidv4(),
+  //   name: "Pablo Codjo",
+  //   comment: "Commented on your post",
+  //   des: "Lorem ipsum dolor sit amet consectetur ut.",
+  //   img: buyer7,
+  // },
 ];
 
 export const profile = [

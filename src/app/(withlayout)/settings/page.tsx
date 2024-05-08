@@ -1,6 +1,6 @@
 "use client";
 import React, { Fragment, useState, useRef } from "react";
-import profile from "@/../public/images/profile.png";
+import user from "@/../public/images/user512.png";
 import Image from "next/image";
 import "remixicon/fonts/remixicon.css";
 import { Listbox, Tab } from "@headlessui/react";
@@ -56,7 +56,7 @@ const Settings = () => {
         <div className="bg-Primary-3 p-4 lg:px-7 lg:py-6 rounded-xl h-full">
           <div className="relative">
             <Image
-              src={profile}
+              src={user}
               alt="profile"
               className="w-[180px] h-[180px] rounded-full mx-auto"
             />
@@ -78,10 +78,10 @@ const Settings = () => {
             </button>
           </div>
           <h4 className="text-white text-2xl font-semibold leading-[31px] text-center mt-5">
-            Kim Griffith
+            John Smith
           </h4>
           <span className="text-sm text-white leading-[21px] text-center mt-2 block">
-            Amet minim Developer
+            Standard Plan
           </span>
           <hr className="my-5 border-Neutral-10" />
           <h6 className="text-Neutral-6 text-base font-semibold leading-[20px] mb-3">
