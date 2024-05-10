@@ -11,12 +11,12 @@ const BitcoinChart = () => {
     gradient.addColorStop(1, "rgba(115, 115, 115, 0.00)");
 
     const chartData = {
-      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep"],
+      labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],
       datasets: [
         {
           label: "My Dataset",
-          data: [30, 20, 31, 25, 45, 28, 31, 27, 32],
-          fill: true,
+          data: [10, 20, 31, 25, 45, 28, 31, 27, 32, 20, 10, 5],
+          fill: false,
           backgroundColor: gradient,
           borderColor: "#0CAF60",
           pointRadius: 0,

@@ -14,7 +14,7 @@ const DashBoard = () => {
   return (
     <div className="bg-Primary-bg p-3 lg:p-6">
       {/* Small charts */}
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
         {smallCharts.map((chart) => (
           <div key={chart.id} className="px-5 py-4 bg-Primary-3 rounded-lg">
             <div className="flex flex-wrap items-center justify-between">
