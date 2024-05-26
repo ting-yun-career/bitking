@@ -1,12 +1,3 @@
-import bitcoin from "cryptocurrency-icons/128/color/btc.png";
-import binance from "@/../public/images/binance.png";
-import litecoin from "cryptocurrency-icons/128/color/ltc.png";
-import ethereum from "cryptocurrency-icons/128/color/eth.png";
-import solona from "cryptocurrency-icons/128/color/sol.png";
-import stellar from "cryptocurrency-icons/128/color/xlm.png";
-import dogecoin from "cryptocurrency-icons/128/color/doge.png";
-import tether from "cryptocurrency-icons/128/color/usdt.png";
-
 import BitcoinChart from "@components/chart/BitcoinChart";
 import EthereumChart from "@components/chart/EthereumChart";
 import LitecoinChart from "@components/chart/LitecoinChart";
@@ -19,28 +10,28 @@ export const smallCharts = [
     id: uuid(),
     name: "BTC",
     price: "$1200.00",
-    img: bitcoin,
+    symbol: "btc",
     chart: <BitcoinChart />,
   },
   {
     id: uuid(),
     name: "ETH",
     price: "$100.00",
-    img: ethereum,
+    symbol: "eth",
     chart: <EthereumChart />,
   },
   {
     id: uuid(),
-    name: "SOL",
+    name: "LTC",
     price: "$2500.00",
-    img: solona,
+    symbol: "ltc",
     chart: <LitecoinChart />,
   },
   {
     id: uuid(),
     name: "BNB",
     price: "$3200.00",
-    img: binance,
+    symbol: "bnb",
     chart: <BinanceChart />,
   },
 ];
@@ -54,7 +45,7 @@ export const tableData = [
     ip: "140.91.94.219",
     status: "Pending",
     amount: "11,250 BTC",
-    img: bitcoin,
+    symbol: "btc",
     color: "#FC774A",
     bgColor: "rgba(252, 119, 74, 0.08)",
   },
@@ -66,7 +57,7 @@ export const tableData = [
     ip: "140.91.94.219",
     status: "Success",
     amount: "11,250 ETH",
-    img: ethereum,
+    symbol: "eth",
     color: "#3EBF81",
     bgColor: "rgba(62, 191, 129, 0.08)",
   },
@@ -78,7 +69,7 @@ export const tableData = [
     ip: "140.91.94.219",
     status: "Unpaid",
     amount: "11,250 LTC",
-    img: litecoin,
+    symbol: "ltc",
     color: "#FC774A",
     bgColor: "rgba(252, 119, 74, 0.08)",
   },
@@ -90,7 +81,7 @@ export const tableData = [
     ip: "140.91.94.219",
     status: "Success",
     amount: "11,250 XLM",
-    img: stellar,
+    symbol: "xlm",
     color: "#3EBF81",
     bgColor: "rgba(62, 191, 129, 0.08)",
   },
@@ -102,7 +93,7 @@ export const tableData = [
     ip: "140.91.94.219",
     status: "Unpaid",
     amount: "11,250 DOGE",
-    img: dogecoin,
+    symbol: "doge",
     color: "#FC774A",
     bgColor: "rgba(252, 119, 74, 0.08)",
   },
@@ -114,7 +105,7 @@ export const tableData = [
     ip: "140.91.94.219",
     status: "Pending",
     amount: "11,250 USDT",
-    img: tether,
+    symbol: "usdt",
     color: "#FC774A",
     bgColor: "rgba(252, 119, 74, 0.08)",
   },
@@ -126,41 +117,41 @@ export const transactions = [
     asset: "Bitcoin",
     time: "Today, 13.50 PM",
     money: "$47,515",
-    img: bitcoin,
+    symbol: "btc",
   },
   {
     id: uuid(),
     asset: "Ethereum",
     time: "Today, 13.50 PM",
     money: "$3,401",
-    img: ethereum,
+    symbol: "eth",
   },
   {
     id: uuid(),
     asset: "Litecoin",
     time: "Today, 13.50 PM",
     money: "$31,401",
-    img: litecoin,
+    symbol: "ltc",
   },
   {
     id: uuid(),
     asset: "Dogecoin",
     time: "Today, 13.50 PM",
     money: "$2,65",
-    img: dogecoin,
+    symbol: "doge",
   },
   {
     id: uuid(),
     asset: "Ethereum",
     time: "Today, 13.50 PM",
     money: "$22,65",
-    img: ethereum,
+    symbol: "eth",
   },
   {
     id: uuid(),
     asset: "Tether",
     time: "Today, 13.50 PM",
     money: "$120,83",
-    img: tether,
+    symbol: "usdt",
   },
 ];

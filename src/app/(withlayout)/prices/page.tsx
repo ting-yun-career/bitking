@@ -5,6 +5,7 @@ import { prices } from "../../../../public/data/pricesData";
 import { Listbox } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import CryptoCoin from "@src/components/CryptoCoin/CryptoCoin";
 
 const times = [
   { id: uuidv4(), name: "All Times", unavailable: false },
@@ -31,11 +32,7 @@ const Prices = () => {
                   {chart.price}
                 </h4>
               </div>
-              <Image
-                className="w-10 h-10 rounded-full"
-                src={chart.img}
-                alt="bitcoin"
-              />
+              <CryptoCoin symbol={chart.symbol} size={25} />
             </div>
             <div className="h-[55px] w-full mt-2 lg:mt-5">{chart.chart}</div>
           </div>

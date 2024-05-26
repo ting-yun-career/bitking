@@ -9,6 +9,7 @@ import {
   transactions,
 } from "../../../../public/data/dashBoardData";
 import DoughnutChart from "@components/chart/DoughnutChart";
+import CryptoCoin from "@src/components/CryptoCoin/CryptoCoin";
 
 const DashBoard = () => {
   return (
@@ -24,11 +25,7 @@ const DashBoard = () => {
                   {chart.price}
                 </h4>
               </div>
-              <Image
-                className="w-10 h-10 rounded-full"
-                src={chart.img}
-                alt="bitcoin"
-              />
+              <CryptoCoin symbol={chart.symbol} size={25} />
             </div>
             <div className="h-[55px] w-full mt-2 lg:mt-5">{chart.chart}</div>
           </div>
@@ -108,7 +105,7 @@ const DashBoard = () => {
                       <div className="flex items-center space-x-3">
                         <div className="avatar">
                           <div className="mask mask-squircle w-6 h-6">
-                            <Image src={data.img} alt="curency" />
+                            <CryptoCoin symbol={data.symbol} size={25} />
                           </div>
                         </div>
                         <div>
@@ -154,11 +151,7 @@ const DashBoard = () => {
                 className="flex flex-wrap justify-between items-center mb-3 border-b border-Neutral-7 pb-3"
               >
                 <div className="flex flex-wrap gap-2 items-center">
-                  <Image
-                    className="w-8 h-8 rounded-full"
-                    src={transaction.img}
-                    alt="currency"
-                  />
+                  <CryptoCoin symbol={transaction.symbol} size={25} />
                   <div>
                     <h4 className="text-base text-white Neutral-6 leading-[21px]">
                       {transaction.asset}
