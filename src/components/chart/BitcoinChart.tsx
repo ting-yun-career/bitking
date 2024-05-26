@@ -26,7 +26,8 @@ const BitcoinChart = () => {
       ],
     };
 
-    new Chart(ctx, {
+    console.log('new Chart')
+    const theChart = new Chart(ctx, {
       type: "line",
       data: chartData,
       options: {
@@ -55,6 +56,8 @@ const BitcoinChart = () => {
         },
       },
     });
+
+    return () => { theChart.destroy() }
   }, []);
 
   return <canvas ref={chartRef} />;

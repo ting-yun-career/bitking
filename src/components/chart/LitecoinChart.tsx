@@ -41,7 +41,7 @@ const LitecoinChart = () => {
       ],
     };
 
-    new Chart(ctx, {
+    const theChart = new Chart(ctx, {
       type: "line",
       data: chartData,
       options: {
@@ -70,6 +70,8 @@ const LitecoinChart = () => {
         },
       },
     });
+
+    return () => { theChart.destroy() }
   }, []);
 
   return <canvas ref={chartRef} />;

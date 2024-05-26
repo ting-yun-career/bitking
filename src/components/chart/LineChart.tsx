@@ -50,7 +50,7 @@ const LineChart = () => {
       ],
     };
 
-    new Chart(ctx, {
+    const theChart = new Chart(ctx, {
       type: "line",
       data: chartData,
       options: {
@@ -86,9 +86,11 @@ const LineChart = () => {
         },
       },
     });
+
+    return () => { theChart.destroy() }
   }, []);
 
-  return <canvas ref={chartRef} />;
+  return <canvas id="line-chart" ref={chartRef} />;
 };
 
 export default LineChart;

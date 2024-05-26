@@ -3,7 +3,7 @@ import dynamic from "next/dynamic";
 import { ApexOptions } from "apexcharts";
 
 // Import ApexCharts dynamically to prevent server-side rendering issues
-const ReactApexChart = dynamic(() => import("react-apexcharts"), {
+const Chart = dynamic(() => import("react-apexcharts"), {
   ssr: false,
 });
 
@@ -259,6 +259,7 @@ const CandlestickChart = () => {
     chart: {
       type: "candlestick",
       height: "100%",
+      width: "100%",
       toolbar: {
         show: false,
       },
@@ -312,8 +313,9 @@ const CandlestickChart = () => {
 
   return (
     <div className="max-h-[350px]">
-      <ReactApexChart
+      <Chart
         height={350}
+        width="100%"
         options={options}
         series={series}
         type="candlestick"

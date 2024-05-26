@@ -28,7 +28,6 @@ const smallMap: { [key: string]: StaticImageData } = {
 
 const CryptoCoin = ({ symbol, size }: Props) => {
   const img = smallMap[symbol] ?? smallMap['generic'];
-  console.log(img);
   return <Image src={img} alt={`KKK Image of ${symbol}`} width={size} height={size} />
 }
 

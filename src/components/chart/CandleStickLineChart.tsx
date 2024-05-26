@@ -37,7 +37,7 @@ const CandleStickLineChart = () => {
       ],
     };
 
-    new Chart(ctx, {
+    const theChart = new Chart(ctx, {
       type: "line",
       data: chartData,
       options: {
@@ -70,6 +70,8 @@ const CandleStickLineChart = () => {
         },
       },
     });
+
+    return () => { theChart.destroy() }
   }, []);
 
   return <canvas ref={chartRef} />;
