@@ -141,14 +141,14 @@ const DashBoard = () => {
         </div>
         {/* Recent Transaction */}
         <div className="bg-Primary-3 col-span-12 xxl:col-span-3 rounded-xl p-4 lg:px-7 lg:py-6">
-          <h5 className="text-xl font-semibold leading-[26px] text-white mb-4">
+          <h5 className="text-xl font-semibold leading-[26px] text-white">
             Recent Transaction
           </h5>
-          <div>
+          <div className="mt-5">
             {transactions.map((transaction) => (
               <div
                 key={transaction.id}
-                className="flex flex-wrap justify-between items-center mb-3 border-b border-Neutral-7 pb-3"
+                className="flex flex-wrap justify-between items-center mb-3 border-b border-Neutral-7 pb-3 last:border-none"
               >
                 <div className="flex flex-wrap gap-2 items-center">
                   <CryptoCoin symbol={transaction.symbol} size={25} />
