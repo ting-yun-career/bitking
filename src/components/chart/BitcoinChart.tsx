@@ -18,7 +18,7 @@ const BitcoinChart = () => {
           data: [10, 20, 31, 25, 45, 28, 31, 27, 32, 20, 10, 5],
           fill: true,
           backgroundColor: gradient,
-          borderColor: "rgba(12, 200, 150, 1)",
+          borderColor: process.env.theme!.both.chart.profit,
           pointRadius: 0,
           tension: 0.4,
           borderWidth: 1,
