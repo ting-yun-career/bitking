@@ -1,14 +1,17 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
+import Color from 'color';
 
 const EthereumChart = () => {
   const chartRef: any = useRef(null);
+  const theme = process.env.theme as any;
+
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
     const gradient = ctx.createLinearGradient(0, 0, 0, 65);
-    gradient.addColorStop(0, "rgba(252, 119, 74, 0.3)");
-    gradient.addColorStop(1, "rgba(39, 39, 39, 0)");
+    gradient.addColorStop(0, Color(theme.loss).fade(0.5));
+    gradient.addColorStop(1, Color(theme.bg).fade(1));
 
     const chartData = {
       labels: [
@@ -33,7 +36,7 @@ const EthereumChart = () => {
           data: [0, 10, 13, 20, 10, 12, 10, 20, 10, 20, 12, 17, 19, 6],
           fill: true,
           backgroundColor: gradient,
-          borderColor: "#FC774A",
+          borderColor: theme.loss,
           pointRadius: 0,
           tension: 0.4,
           borderWidth: 1,

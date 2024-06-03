@@ -1,14 +1,17 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
+import Color from 'color';
 
 const BinanceChart = () => {
   const chartRef: any = useRef(null);
+  const theme = process.env.theme as any;
+
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
     const gradient = ctx.createLinearGradient(0, 0, 0, 65);
-    gradient.addColorStop(0, "rgba(12, 200, 150, 0.5)");
-    gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
+    gradient.addColorStop(0, Color(theme.profit).fade(0.5));
+    gradient.addColorStop(1, Color(theme.bg).fade(1));
 
     const chartData = {
       labels: [
@@ -33,7 +36,7 @@ const BinanceChart = () => {
           data: [0, 10, 15, 10, 15, 10, 12, 10, 16, 20, 15, 12, 17, 6],
           fill: true,
           backgroundColor: gradient,
-          borderColor: "rgba(12, 200, 150, 1)",
+          borderColor: theme.profit,
           pointRadius: 0,
           tension: 0.4,
           borderWidth: 1,

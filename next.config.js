@@ -4,14 +4,11 @@ const nextConfig = {
     author: 'Ting Yun',
     sitename: 'BitKing',
     theme: {
-      light: {},
+      bg: "#131720",
+      profit: "rgb(21,133,87)",
+      loss: "rgb(150,22,29)",
       dark: {},
-      both: {
-        chart: {
-          profit: "rgba(12, 200, 150, 1)",
-          loss: ""
-        }
-      },
+      light: {},
     }
   },
   reactStrictMode: true,
