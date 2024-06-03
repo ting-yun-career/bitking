@@ -6,9 +6,9 @@ const EthereumChart = () => {
   const chartRef: any = useRef(null);
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
-    const gradient = ctx.createLinearGradient(0, 0, 0, 100);
-    gradient.addColorStop(0, "rgba(252, 119, 74, 1)");
-    gradient.addColorStop(1, "rgba(39, 39, 39, 0.1)");
+    const gradient = ctx.createLinearGradient(0, 0, 0, 65);
+    gradient.addColorStop(0, "rgba(252, 119, 74, 0.3)");
+    gradient.addColorStop(1, "rgba(39, 39, 39, 0)");
 
     const chartData = {
       labels: [
@@ -36,7 +36,7 @@ const EthereumChart = () => {
           borderColor: "#FC774A",
           pointRadius: 0,
           tension: 0.4,
-          borderWidth: 3,
+          borderWidth: 1,
         },
       ],
     };

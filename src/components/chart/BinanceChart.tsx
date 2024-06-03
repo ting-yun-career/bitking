@@ -6,9 +6,9 @@ const BinanceChart = () => {
   const chartRef: any = useRef(null);
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
-    const gradient = ctx.createLinearGradient(0, 0, 0, 100);
-    gradient.addColorStop(0, "rgba(62, 191, 129, 1)");
-    gradient.addColorStop(1, "rgba(71, 77, 74, 0)");
+    const gradient = ctx.createLinearGradient(0, 0, 0, 65);
+    gradient.addColorStop(0, "rgba(12, 200, 150, 0.5)");
+    gradient.addColorStop(1, "rgba(0, 0, 0, 0)");
 
     const chartData = {
       labels: [
@@ -33,10 +33,10 @@ const BinanceChart = () => {
           data: [0, 10, 15, 10, 15, 10, 12, 10, 16, 20, 15, 12, 17, 6],
           fill: true,
           backgroundColor: gradient,
-          borderColor: "#3EBF81",
+          borderColor: "rgba(12, 200, 150, 1)",
           pointRadius: 0,
           tension: 0.4,
-          borderWidth: 3,
+          borderWidth: 1,
         },
       ],
     };

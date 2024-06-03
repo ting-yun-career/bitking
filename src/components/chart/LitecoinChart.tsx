@@ -6,9 +6,9 @@ const LitecoinChart = () => {
   const chartRef: any = useRef(null);
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
-    const gradient = ctx.createLinearGradient(0, 0, 0, 100);
-    gradient.addColorStop(0, "rgba(62, 191, 129, 1)");
-    gradient.addColorStop(1, "rgba(45, 46, 45, 0.1)");
+    const gradient = ctx.createLinearGradient(0, 0, 0, 65);
+    gradient.addColorStop(0, "rgba(12, 200, 150, 0.5)");
+    gradient.addColorStop(1, "rgba(45, 46, 45, 0)");
 
     const chartData = {
       labels: [
@@ -33,10 +33,10 @@ const LitecoinChart = () => {
           data: [0, 10, 8, 12, 8, 12, 10, 10, 17, 20, 17, 15, 13, 6],
           fill: true,
           backgroundColor: gradient,
-          borderColor: "#39B70D",
+          borderColor: "rgba(12, 200, 150, 1)",
           pointRadius: 0,
           tension: 0.4,
-          borderWidth: 3,
+          borderWidth: 1,
         },
       ],
     };
