@@ -1,7 +1,6 @@
 "use client"
 
 import LineChart from "@components/chart/LineChart";
-import Image from "next/image";
 import React from "react";
 import {
   smallCharts,
@@ -10,8 +9,10 @@ import {
 } from "../../../../public/data/dashBoardData";
 import DoughnutChart from "@components/chart/DoughnutChart";
 import CryptoCoin from "@src/components/CryptoCoin/CryptoCoin";
+import Color from 'color';
 
 const DashBoard = () => {
+  const theme: any = process.env.theme;
   return (
     <div className="bg-Primary-bg p-3 lg:p-6" style={{ minHeight: "calc(100vh - 164px)" }}>
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
@@ -71,7 +72,6 @@ const DashBoard = () => {
       </section>
 
       <section className="mt-6 gap-6 grid grid-cols-12">
-        {/* Table start */}
         <div className="rounded-xl p-4 lg:px-7 lg:py-6 col-span-12 xxl:col-span-9">
           <h5 className="text-xl font-semibold text-white leading-[26px] mb-5">
             Active Overall Growth
@@ -89,45 +89,45 @@ const DashBoard = () => {
                 </tr>
               </thead>
               <tbody>
-                {tableData.map((data) => (
+                {tableData.map(({ id, type, symbol, asset, date, ip, status, amount }) => (
                   <tr
-                    key={data.id}
+                    key={id}
                     className="border-Neutral-7 text-base text-Neutral-6 leading-[24px]"
                   >
                     <td>
-                      <div>{data.type}</div>
+                      <div>{type}</div>
                     </td>
                     <td>
                       <div className="flex items-center space-x-3">
                         <div className="avatar">
                           <div className="mask mask-squircle w-6 h-6">
-                            <CryptoCoin symbol={data.symbol} size={25} />
+                            <CryptoCoin symbol={symbol} size={25} />
                           </div>
                         </div>
                         <div>
-                          <div>{data.asset}</div>
+                          <div>{asset}</div>
                         </div>
                       </div>
                     </td>
                     <td>
-                      <div>{data.date}</div>
+                      <div>{date}</div>
                     </td>
                     <td>
-                      <div>{data.ip}</div>
+                      <div>{ip}</div>
                     </td>
                     <td>
                       <div
                         style={{
-                          backgroundColor: data.bgColor,
-                          color: data.color,
+                          backgroundColor: status === 'Success' ? Color(theme.profit).fade(0.85).string() : Color(theme.loss).fade(0.85).string(),
+                          color: status === 'Success' ? Color(theme.profit).lighten(0.5).string() : Color(theme.loss).lighten(0.5).string(),
                         }}
                         className="text-base text-Neutral-6 leading-[24px] px-3 py-1 rounded flex items-center justify-center"
                       >
-                        {data.status}
+                        {status}
                       </div>
                     </td>
                     <td>
-                      <div>{data.amount}</div>
+                      <div>{amount}</div>
                     </td>
                   </tr>
                 ))}

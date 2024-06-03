@@ -6,7 +6,7 @@ import Color from 'color';
 
 const DoughnutChart = () => {
   const theme = process.env.theme as any;
-  const data = {
+  const data = React.useMemo(() => ({
     labels: ["Value", "Remaining", "extra"],
     datasets: [
       {
@@ -14,7 +14,7 @@ const DoughnutChart = () => {
         backgroundColor: [Color(theme.profit).fade(0.3).string(), Color(theme.loss).fade(0.3).string(), "#424A55"], // Change colors as needed
       },
     ],
-  };
+  }), [theme]);
 
   const options: any = {
     cutout: "55%",
