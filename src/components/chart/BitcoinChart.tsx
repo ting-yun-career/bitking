@@ -9,7 +9,7 @@ const BitcoinChart = () => {
     const gradient = ctx.createLinearGradient(0, 0, 0, 55);
     gradient.addColorStop(0, "rgba(12, 200, 150, 0.5)");
     gradient.addColorStop(1, "rgba(115, 115, 115, 0)");
-    const theme = process.env.NEXT_PUBLIC_THEME as any;
+    const theme = process.env.theme as any;
 
     const chartData = {
       labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "July", "Aug", "Sep", "Oct", "Nov", "Dec"],

@@ -4,10 +4,8 @@ const nextConfig = {
     author: 'Ting Yun',
     sitename: 'BitKing',
     theme: {
-      light: {
-      },
-      dark: {
-      },
+      light: {},
+      dark: {},
       both: {
         chart: {
           profit: "rgba(12, 200, 150, 1)",
