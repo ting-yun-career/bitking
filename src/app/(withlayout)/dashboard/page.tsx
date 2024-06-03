@@ -14,7 +14,6 @@ import CryptoCoin from "@src/components/CryptoCoin/CryptoCoin";
 const DashBoard = () => {
   return (
     <div className="bg-Primary-bg p-3 lg:p-6" style={{ minHeight: "calc(100vh - 164px)" }}>
-      {/* Small charts */}
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
         {smallCharts.map((chart) => (
           <div key={chart.id} className="px-5 py-4 rounded-lg">
@@ -32,15 +31,13 @@ const DashBoard = () => {
         ))}
       </section>
 
-      {/* Monthly Overall Growth  */}
       <section className="mt-6 gap-6 grid grid-cols-12">
-        {/* Line chart  */}
         <div className="rounded-xl p-4 lg:px-7 lg:py-6 col-span-12 xl:col-span-9">
           <div className="flex gap-3 flex-wrap justify-between items-center mb-6">
             <h3 className="text-Neutral-6 text-xl font-semibold leading-[26px]">
               Monthly Overall Growth
             </h3>
-            <div className="flex flex-wrap gap-2 lg:gap-4">
+            <div className="hidden flex flex-wrap gap-2 lg:gap-4">
               <span className="text-xs text-Neutral-6 font-medium leading-[18px] px-3 py-1 border border-Neutral-7 rounded hover:bg-gradient-to-r from-[#33AB71] to-[#06753F] transition duration-500 cursor-pointer">
                 Week
               </span>
@@ -56,7 +53,6 @@ const DashBoard = () => {
             <LineChart />
           </div>
         </div>
-        {/* Doughunt chart  */}
         <div className="col-span-12 xl:col-span-3 rounded-xl p-4 xxl:px-7 md:py-6">
           <DoughnutChart />
           <div className="text-center mt-2 lg:mt-5">
@@ -67,7 +63,7 @@ const DashBoard = () => {
               0.3475948
             </h3>
             <h5 className="text-lg text-Neutral-8">11,032.24 USD</h5>
-            <button className="text-xs text-[#F8FAFC] bg-gradient-to-r from-[#33AB71] to-[#06753F] px-2 py-1 rounded-lg mt-2 lg:mt-6">
+            <button className="hidden text-xs text-[#F8FAFC] bg-gradient-to-r from-[#33AB71] to-[#06753F] px-2 py-1 rounded-lg mt-2 lg:mt-6">
               Withdraw
             </button>
           </div>
