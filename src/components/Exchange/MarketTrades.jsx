@@ -4,7 +4,7 @@ import { deepTrades, priceTrades } from "../../../public/data/exchangeData";
 
 const MarketTrades = () => {
   return (
-    <div className="bg-Primary-3 p-4 lg:px-7 lg:py-6 rounded-xl col-span-12 xl:col-span-8">
+    <div className="p-4 lg:px-7 lg:py-6 rounded-xl col-span-12 xl:col-span-8">
       <div>
         <Tab.Group>
           <div className="flex flex-wrap gap-2 justify-between items-center">

@@ -24,7 +24,7 @@ const Prices = () => {
     <div className="bg-Primary-bg p-3 lg:p-6 min-h-screen">
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
         {smallCharts.map((chart) => (
-          <div key={chart.id} className="px-5 py-4 bg-Primary-3 rounded-lg">
+          <div key={chart.id} className="px-5 py-4 rounded-lg">
             <div className="flex flex-wrap items-center justify-between">
               <div>
                 <span className="text-base text-Neutral-9">{chart.name}</span>
@@ -38,7 +38,7 @@ const Prices = () => {
           </div>
         ))}
       </section>
-      <section className="mt-6 bg-Primary-3 rounded-xl p-4 lg:px-7 lg:py-6">
+      <section className="mt-6 rounded-xl p-4 lg:px-7 lg:py-6">
         <div className="flex flex-wrap items-center justify-between">
           <h5 className="text-xl font-semibold text-white leading-[26px] mb-5">
             Cryptocurrency Prices
@@ -48,9 +48,9 @@ const Prices = () => {
               <input
                 type="text"
                 placeholder="Search..."
-                className="outline-none bg-Primary-3"
+                className="bg-Primary-bg outline-none"
               />
-              <span className="material-symbols-outlined cursor-pointer w-[15px] h-[15px] bg-Primary-3 text-Neutral-6 mb-2">
+              <span className="material-symbols-outlined cursor-pointer w-[15px] h-[15px] text-Neutral-6 mb-2">
                 search
               </span>
             </form>

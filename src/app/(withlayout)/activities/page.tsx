@@ -16,7 +16,7 @@ const Activities = () => {
   return (
     <div className="bg-Primary-bg p-3 lg:p-6 min-h-screen">
       <section className="grid grid-cols-12">
-        <div className="bg-Primary-3 px-7 py-6 rounded-xl col-span-12 lg:col-span-11">
+        <div className="px-7 py-6 rounded-xl col-span-12 lg:col-span-11">
           <Tab.Group>
             <div className="flex flex-wrap gap-3 justify-between items-center">
               <h5 className="text-xl text-Neutral-6 font-semibold">History</h5>
@@ -63,7 +63,7 @@ const Activities = () => {
                   </Tab>
                 </Tab.List>
 
-                <div className="relative">
+                <div className="relative hidden">
                   <Listbox value={selectedTime} onChange={setSelectedTime}>
                     <Listbox.Button className="text-Neutral-5 text-base flex gap-2 items-center justify-between pl-4 pr-2 py-1 rounded z-[5] border border-Neutral-7">
                       {selectedTime.name}
@@ -71,7 +71,7 @@ const Activities = () => {
                         expand_more
                       </span>
                     </Listbox.Button>
-                    <Listbox.Options className="rounded w-36 bg-Primary-bg text-white p-3 absolute top-full z-[5]">
+                    <Listbox.Options className="rounded w-36 bg-Primary-bg border border-Neutral-10 text-white p-3 absolute top-full z-[5]">
                       {times.map((time) => (
                         <Listbox.Option
                           key={time.id}

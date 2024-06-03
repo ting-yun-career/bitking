@@ -53,7 +53,7 @@ const Settings = () => {
   return (
     <div className="bg-Primary-bg p-3 lg:p-6 min-h-screen">
       <section className="block lg:flex gap-6 w-full">
-        <div className="bg-Primary-3 p-4 lg:px-7 lg:py-6 rounded-xl h-full">
+        <div className="p-4 lg:px-7 lg:py-6 rounded-xl h-full">
           <div className="relative">
             <Image
               src={user}
@@ -115,7 +115,7 @@ const Settings = () => {
           </div>
           <hr className="mt-5 border-Neutral-10" />
         </div>
-        <div className="bg-Primary-3 p-4 lg:px-7 lg:py-6 rounded-xl w-full h-full mt-6 lg:mt-0">
+        <div className="p-4 lg:px-7 lg:py-6 rounded-xl w-full h-full mt-6 lg:mt-0">
           <Tab.Group>
             <Tab.List className="flex flex-wrap gap-2 xl:gap-10 mb-3 xl:mb-8">
               <Tab as={Fragment}>

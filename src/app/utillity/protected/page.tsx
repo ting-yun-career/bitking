@@ -6,7 +6,7 @@ import Link from "next/link";
 const Protected = () => {
   return (
     <div className="min-h-screen bg-Primary-bg flex items-center justify-center">
-      <div className="bg-Primary-3 p-2 md:px-7 md:py-6 rounded-xl">
+      <div className="p-2 md:px-7 md:py-6 rounded-xl">
         <div className="flex justify-center">
           <Image src={protecte} alt="protected" className="object-cover" />
         </div>
@@ -25,7 +25,7 @@ const Protected = () => {
             <input
               type="password"
               placeholder="Enter your password"
-              className="px-2 py-[10px] rounded bg-Primary-3 text-Neutral-6 border border-Neutral-10 outline-none w-full"
+              className="px-2 py-[10px] rounded text-Neutral-6 border border-Neutral-10 outline-none w-full"
             />
           </div>
         </div>

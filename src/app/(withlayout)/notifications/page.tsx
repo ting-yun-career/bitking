@@ -7,7 +7,7 @@ const Notifications = () => {
   return (
     <div className="bg-Primary-bg p-3 lg:p-6 min-h-screen">
       <section className="grid grid-cols-12">
-        <div className="bg-Primary-3 p-4 lg:px-7 lg:py-6 rounded-xl col-span-12 xxl:col-span-11">
+        <div className="p-4 lg:px-7 lg:py-6 rounded-xl col-span-12 xxl:col-span-11">
           <div className="flex items-center gap-2 mb-3">
             <span className="material-symbols-outlined  text-white">
               notifications

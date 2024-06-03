@@ -13,11 +13,11 @@ import CryptoCoin from "@src/components/CryptoCoin/CryptoCoin";
 
 const DashBoard = () => {
   return (
-    <div className="bg-Primary-bg p-3 lg:p-6">
+    <div className="bg-Primary-bg p-3 lg:p-6" style={{ minHeight: "calc(100vh - 164px)" }}>
       {/* Small charts */}
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
         {smallCharts.map((chart) => (
-          <div key={chart.id} className="px-5 py-4 bg-Primary-3 rounded-lg">
+          <div key={chart.id} className="px-5 py-4 rounded-lg">
             <div className="flex flex-wrap items-center justify-between">
               <div>
                 <span className="text-base text-Neutral-9">{chart.name}</span>
@@ -35,7 +35,7 @@ const DashBoard = () => {
       {/* Monthly Overall Growth  */}
       <section className="mt-6 gap-6 grid grid-cols-12">
         {/* Line chart  */}
-        <div className="bg-Primary-3 rounded-xl p-4 lg:px-7 lg:py-6 col-span-12 xl:col-span-9">
+        <div className="rounded-xl p-4 lg:px-7 lg:py-6 col-span-12 xl:col-span-9">
           <div className="flex gap-3 flex-wrap justify-between items-center mb-6">
             <h3 className="text-Neutral-6 text-xl font-semibold leading-[26px]">
               Monthly Overall Growth
@@ -57,7 +57,7 @@ const DashBoard = () => {
           </div>
         </div>
         {/* Doughunt chart  */}
-        <div className="bg-Primary-3 col-span-12 xl:col-span-3 rounded-xl p-4 xxl:px-7 md:py-6">
+        <div className="col-span-12 xl:col-span-3 rounded-xl p-4 xxl:px-7 md:py-6">
           <DoughnutChart />
           <div className="text-center mt-2 lg:mt-5">
             <h4 className="text-2xl text-Neutral-6 leading-[36px]">
@@ -76,7 +76,7 @@ const DashBoard = () => {
 
       <section className="mt-6 gap-6 grid grid-cols-12">
         {/* Table start */}
-        <div className="bg-Primary-3 rounded-xl p-4 lg:px-7 lg:py-6 col-span-12 xxl:col-span-9">
+        <div className="rounded-xl p-4 lg:px-7 lg:py-6 col-span-12 xxl:col-span-9">
           <h5 className="text-xl font-semibold text-white leading-[26px] mb-5">
             Active Overall Growth
           </h5>
@@ -140,7 +140,7 @@ const DashBoard = () => {
           </div>
         </div>
         {/* Recent Transaction */}
-        <div className="bg-Primary-3 col-span-12 xxl:col-span-3 rounded-xl p-4 lg:px-7 lg:py-6">
+        <div className="col-span-12 xxl:col-span-3 rounded-xl p-4 lg:px-7 lg:py-6">
           <h5 className="text-xl font-semibold leading-[26px] text-white">
             Recent Transaction
           </h5>

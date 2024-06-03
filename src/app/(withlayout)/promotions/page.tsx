@@ -49,7 +49,7 @@ const Promotions = () => {
               {promotions.map((item) => (
                 <div
                   key={item.id}
-                  className="bg-Primary-3 rounded-xl overflow-hidden border-gradient"
+                  className="rounded-xl overflow-hidden border-gradient"
                 >
                   <div className="relative">
                     <Image
@@ -79,7 +79,7 @@ const Promotions = () => {
               {promotions.map((item) => (
                 <div
                   key={item.id}
-                  className="bg-Primary-3 rounded-xl overflow-hidden border-gradient block md:flex items-center"
+                  className=" rounded-xl overflow-hidden border-gradient block md:flex items-center"
                 >
                   <div className="relative shrink-0 w-full md:w-[241px] xl:h-full">
                     <Image

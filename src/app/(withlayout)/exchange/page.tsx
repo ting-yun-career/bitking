@@ -16,7 +16,7 @@ const Exchange = () => {
 
   return (
     <div className="bg-Primary-bg p-3 lg:p-6 min-h-screen">
-      <section className="bg-Primary-3 px-7 py-5 grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-6 rounded-xl">
+      <section className="px-7 py-5 grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-6 rounded-xl">
         <div>
           <Listbox value={selectedCurencys} onChange={setSelectedCurencys}>
             <Listbox.Button className="flex gap-2 items-center  relative w-full rounded-lg text-Neutral-6  py-2 px-3 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm lg:border-r border-Neutral-10 cursor-pointer">
@@ -39,7 +39,7 @@ const Exchange = () => {
                 </span>
               </span>
             </Listbox.Button>
-            <Listbox.Options className="w-[200px] bg-Primary-3 text-Neutral-6 p-5 absolute mt-1 max-h-60 overflow-auto rounded-md  py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm cursor-pointer z-[5]">
+            <Listbox.Options className="w-[200px] text-Neutral-6 p-5 absolute mt-1 max-h-60 overflow-auto rounded-md  py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm cursor-pointer z-[5]">
               {curencys.map((curency) => (
                 <Listbox.Option
                   key={curency.id}
@@ -118,7 +118,7 @@ const Exchange = () => {
 
       {/* Chart part start  */}
       <section className="mt-6 gap-6 grid grid-cols-12">
-        <div className="bg-Primary-3 px-4 lg:px-7 py-6 rounded-xl col-span-12 xl:col-span-8">
+        <div className="px-4 lg:px-7 py-6 rounded-xl col-span-12 xl:col-span-8">
           <Tab.Group>
             <Tab.List>
               <Tab as={Fragment}>
@@ -159,7 +159,7 @@ const Exchange = () => {
           </Tab.Group>
         </div>
         {/* Doughunt chart  */}
-        <div className="bg-Primary-3 col-span-12 xl:col-span-4 rounded-xl p-4 md:px-7 md:py-6">
+        <div className="col-span-12 xl:col-span-4 rounded-xl p-4 md:px-7 md:py-6">
           <DoughnutChart />
           <div className="text-center mt-2 lg:mt-5">
             <h4 className="text-xl xxl:text-2xl text-Neutral-6 leading-[36px]">

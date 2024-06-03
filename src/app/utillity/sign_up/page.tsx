@@ -8,7 +8,7 @@ import "remixicon/fonts/remixicon.css";
 const SignUp = () => {
   return (
     <div className="min-h-screen bg-Primary-bg flex items-center justify-center">
-      <div className="bg-Primary-3 p-2 lg:px-7 lg:py-6 rounded-xl block md:flex items-center gap-6">
+      <div className="p-2 lg:px-7 lg:py-6 rounded-xl block md:flex items-center gap-6">
         <div className="bg-gradient-to-r from-[#33AB71] to-[#06753F] rounded-lg p-2 lg:px-7 lg:py-6">
           <Link href="/" className="flex gap-2 items-center mb-8">
             <Image src={logo} alt="logo" className="w-10 h-10" />

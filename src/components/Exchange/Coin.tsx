@@ -8,7 +8,7 @@ const Coin = () => {
   const [selectedAmount, setSelectedAmount] = useState(curencysAmount[0]);
   const [selectedCurencys, setSelectedCurencys] = useState(curencys[0]);
   return (
-    <div className="bg-Primary-3 p-4 lg:p-5 xl-7 rounded-xl col-span-12 xl:col-span-4">
+    <div className="p-4 lg:p-5 xl-7 rounded-xl col-span-12 xl:col-span-4">
       <Tab.Group>
         <Tab.List className="flex flex-wrap gap-5">
           <Tab as={Fragment}>
@@ -34,19 +34,6 @@ const Coin = () => {
                 }
               >
                 Sell
-              </button>
-            )}
-          </Tab>
-          <Tab as={Fragment}>
-            {({ selected }) => (
-              <button
-                className={
-                  selected
-                    ? "text-Neutral-6 bg-gradient-to-r from-[#33AB71] to-[#06753F] text-base leading-[18px] px-4 py-2 rounded outline-none border border-Neutral-7 w-[120px]"
-                    : "text-Neutral-6 text-base leading-[18px] px-4 py-2 rounded outline-none border border-Neutral-7 w-[120px]"
-                }
-              >
-                Exchange
               </button>
             )}
           </Tab>
