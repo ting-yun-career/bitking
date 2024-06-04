@@ -127,7 +127,7 @@ const Exchange = () => {
                         : "text-Neutral-6 text-xs leading-[18px] px-3 py-1 rounded outline-none mr-4 border border-Neutral-7"
                     }
                   >
-                    Price Chart
+                    K-line
                   </button>
                 )}
               </Tab>
@@ -140,7 +140,7 @@ const Exchange = () => {
                         : "text-Neutral-6 text-xs leading-[18px] px-3 py-1 rounded outline-none mr-4 border border-Neutral-7"
                     }
                   >
-                    Deep Chart
+                    Price
                   </button>
                 )}
               </Tab>
@@ -155,28 +155,14 @@ const Exchange = () => {
             </Tab.Panels>
           </Tab.Group>
         </div>
-        {/* Doughunt chart  */}
         <div className="col-span-12 xl:col-span-4 rounded-xl p-4 md:px-7 md:py-6">
-          <DoughnutChart />
-          <div className="text-center mt-2 lg:mt-5">
-            <h4 className="text-xl xxl:text-2xl text-Neutral-6 leading-[36px]">
-              Total Balance
-            </h4>
-            <h3 className="text-3xl xxl:text-[40px] font-semibold text-Neutral-9 my-1 lg:my-3">
-              0.3475948
-            </h3>
-            <h5 className="text-lg text-Neutral-8">11,032.24 USD</h5>
-            <button className="text-xs text-[#F8FAFC] bg-gradient-to-r from-[#33AB71] to-[#06753F] px-2 py-1 rounded-lg mt-2 lg:mt-6">
-              Withdraw
-            </button>
-          </div>
+          <Coin />
         </div>
       </section>
 
       {/* Market Trades */}
       <section className="mt-6 gap-6 grid grid-cols-12">
         <MarketTrades />
-        <Coin />
       </section>
     </div>
   );
