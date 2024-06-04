@@ -9,6 +9,7 @@ import { curencys } from "../../../../public/data/exchangeData";
 import CandleStickLineChart from "@components/chart/CandleStickLineChart";
 import CandlestickChart from "@components/chart/CandleStickChart";
 import Coin from "@components/Exchange/Coin";
+import { usd } from "@src/util/currency";
 
 const Exchange = () => {
   const [selectedCurencys, setSelectedCurencys] = useState(curencys[0]);
@@ -70,7 +71,7 @@ const Exchange = () => {
             Price
           </h3>
           <span className="text-xs font-bold text-Profit-bold leading-[18px]">
-            $70,498.83
+            {usd(70498.83)}
           </span>
         </div>
         <div className="px-[45px] lg:border-r border-Neutral-10">
@@ -78,7 +79,7 @@ const Exchange = () => {
             24h high
           </h3>
           <span className="text-xs font-bold text-Profit-bold leading-[18px] flex">
-            $70,644.84
+            {usd(70644.84)}
             <span className="material-symbols-outlined iconSize ml-2">
               insights
             </span>
@@ -89,18 +90,18 @@ const Exchange = () => {
             24h low
           </h3>
           <span className="text-xs font-bold text-Loss-bold leading-[18px] flex">
-            $68,556.74
+            {usd(68556.74)}
             <span className="material-symbols-outlined iconSize ml-2">
               insights
             </span>
           </span>
         </div>
         <div className="px-[45px]">
-          <h3 className="text-lg font-bold text-Neutral-6 leading-[27px]">
+          <h3 className="text-lg font-bold text-Neutral-6 leading-[27px] whitespace-nowrap">
             24h change
           </h3>
-          <span className="text-xs font-bold text-Neutral-5 leading-[18px]">
-            19,411,867
+          <span className="text-xs font-bold text-Profit-bold leading-[18px]">
+            {usd(2088)}
           </span>
         </div>
       </section>
