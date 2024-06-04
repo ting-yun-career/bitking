@@ -10,7 +10,7 @@ const EthereumChart = () => {
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
     const gradient = ctx.createLinearGradient(0, 0, 0, 65);
-    gradient.addColorStop(0, Color(theme.loss).fade(0.5));
+    gradient.addColorStop(0, Color(theme.profit).fade(0.5));
     gradient.addColorStop(1, Color(theme.bg).fade(1));
 
     const chartData = {
@@ -36,7 +36,7 @@ const EthereumChart = () => {
           data: [0, 10, 13, 20, 10, 12, 10, 20, 10, 20, 12, 17, 19, 6],
           fill: true,
           backgroundColor: gradient,
-          borderColor: theme.loss,
+          borderColor: theme.profit,
           pointRadius: 0,
           tension: 0.4,
           borderWidth: 1,

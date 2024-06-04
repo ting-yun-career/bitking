@@ -10,6 +10,7 @@ import {
 import DoughnutChart from "@components/chart/DoughnutChart";
 import CryptoCoin from "@src/components/CryptoCoin/CryptoCoin";
 import Color from 'color';
+import { usd } from "@src/util/currency";
 
 const DashBoard = () => {
   const theme: any = process.env.theme;
@@ -22,7 +23,7 @@ const DashBoard = () => {
               <div>
                 <span className="text-base text-Neutral-9">{chart.name}</span>
                 <h4 className="text-2xl text-Neutral-9 font-semibold mt-2">
-                  {chart.price}
+                  {usd(chart.currentValue)}
                 </h4>
               </div>
               <CryptoCoin symbol={chart.symbol} size={25} />

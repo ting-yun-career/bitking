@@ -3,14 +3,14 @@ const USDFormatter = new Intl.NumberFormat('en-US', {
   currency: 'USD'
 });
 
-export const usd = (num: number) => {
+export const usd = (num: number | undefined) => {
   if (typeof num !== 'number') {
     return '--'
   }
   return USDFormatter.format(num);
 }
 
-export const percent = (num: number, showSign: boolean = true) => {
+export const percent = (num: number | undefined, showSign: boolean = true) => {
   if (typeof num !== 'number') {
     return '--'
   }
