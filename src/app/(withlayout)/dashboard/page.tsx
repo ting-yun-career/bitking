@@ -14,7 +14,7 @@ import Color from 'color';
 const DashBoard = () => {
   const theme: any = process.env.theme;
   return (
-    <div className="bg-Primary-bg p-3 lg:p-6" style={{ minHeight: "calc(100vh - 164px)" }}>
+    <div className="bg-Primary-bg p-3 lg:p-6">
       <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
         {smallCharts.map((chart) => (
           <div key={chart.id} className="px-5 py-4 rounded-lg">

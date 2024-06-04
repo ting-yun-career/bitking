@@ -6,7 +6,7 @@ import { currencyPrices, progres } from "../../../../public/data/walletsData";
 
 const Wallets = () => {
   return (
-    <div className="bg-Primary-bg p-3 lg:p-6 min-h-screen">
+    <div className="bg-Primary-bg p-3 lg:p-6">
       <section className="gap-6 grid grid-cols-12">
         <div className="col-span-12 lg:col-span-4 xl:col-span-3 rounded-xl p-4 md:px-7 md:py-6">
           <div className="text-center mt-2 lg:mt-5">

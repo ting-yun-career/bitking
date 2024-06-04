@@ -15,7 +15,7 @@ const Exchange = () => {
   const [selectedCurencys, setSelectedCurencys] = useState(curencys[0]);
 
   return (
-    <div className="bg-Primary-bg p-3 lg:p-6 min-h-screen">
+    <div className="p-3 lg:p-6">
       <section className="px-7 py-5 grid gap-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 xxl:grid-cols-6 rounded-xl">
         <div>
           <Listbox value={selectedCurencys} onChange={setSelectedCurencys}>

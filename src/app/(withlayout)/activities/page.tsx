@@ -14,7 +14,7 @@ const times = [
 const Activities = () => {
   const [selectedTime, setSelectedTime] = useState(times[0]);
   return (
-    <div className="bg-Primary-bg p-3 lg:p-6 min-h-screen">
+    <div className="bg-Primary-bg p-3 lg:p-6">
       <section className="grid grid-cols-12">
         <div className="px-7 py-6 rounded-xl col-span-12 lg:col-span-11">
           <Tab.Group>

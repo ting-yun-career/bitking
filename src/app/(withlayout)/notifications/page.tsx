@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const Notifications = () => {
   return (
-    <div className="bg-Primary-bg p-3 lg:p-6 min-h-screen">
+    <div className="bg-Primary-bg p-3 lg:p-6">
       <section className="grid grid-cols-12">
         <div className="p-4 lg:px-7 lg:py-6 rounded-xl col-span-12 xxl:col-span-11">
           <div className="flex items-center gap-2 mb-3">

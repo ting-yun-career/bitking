@@ -43,7 +43,7 @@ export default function RootLayout({
         onClick={() => setNavOpen(false)}
       >
         <TopBar handleOpen={handleOpen} />
-        <div className="pt-[88px]">{children}</div>
+        <div className="pt-[88px] bg-Primary-bg" style={{ minHeight: "calc(100vh - 76px)" }}>{children}</div>
         <Footer />
       </div>
     </div>

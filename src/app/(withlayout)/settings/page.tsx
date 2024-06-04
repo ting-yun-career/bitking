@@ -51,7 +51,7 @@ const Settings = () => {
   };
 
   return (
-    <div className="bg-Primary-bg p-3 lg:p-6 min-h-screen">
+    <div className="bg-Primary-bg p-3 lg:p-6">
       <section className="block lg:flex gap-6 w-full">
         <div className="p-4 lg:px-7 lg:py-6 rounded-xl h-full">
           <div className="relative">
