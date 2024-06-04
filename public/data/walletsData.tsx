@@ -4,35 +4,30 @@ import graph1 from "@/../public/images/graph/Graph3.png";
 import Bitcoin from "@/../public/images/dashboardTable/bitcoin.png";
 import Ethereum from "@/../public/images/dashboardTable/ethereum.png";
 import Litecoin from "@/../public/images/dashboardTable/litecoin.png";
-import Dogecoin from "@/../public/images/dashboardTable/dogecoin.png";
 import Tether from "@/../public/images/dashboardTable/tether.png";
-import achain from "@/../public/images/dashboardTable/achain.png";
-import ellaism from "@/../public/images/dashboardTable/ellaism.png";
-import tron from "@/../public/images/dashboardTable/tron.png";
 import binance from "@/../public/images/dashboardTable/binance.png";
 import { v4 as uuidv4 } from "uuid";
+
+const theme = process.env.theme;
 
 export const progres = [
   {
     id: uuidv4(),
-    name: "Exchange Balance",
-    balance: "0.397466349",
-    usd: "4,897.94 USD",
-    complete: "+3.89%",
-    color: "#3EBF81",
-    bgColor: "#234f44",
-    completed: 90,
+    name: "Starting Balance (Total)",
+    balance: 42815.26,
+    color: theme!.fg,
+    bgColor: theme!.bg2,
+    completed: 45,
     chart: graph,
   },
   {
     id: uuidv4(),
-    name: "Assets Balance",
-    balance: "0.896209960",
-    usd: "4,254.77 USD",
-    complete: "+2.89%",
-    color: "#FC774A",
-    bgColor: "#2c2c2c",
-    completed: 75,
+    name: "Current Balance (Total)",
+    balance: 70646.68,
+    ytd: 165,
+    color: theme!.profit,
+    bgColor: theme!.bg2,
+    completed: 88,
     chart: graph1,
   },
 ];
@@ -54,7 +49,7 @@ export const currencyPrices = [
     asset: "Ethereum (ETH)",
     startValue: 10955.56,
     currentValue: 20606.82,
-    h24: 0.79,
+    h24: -0.79,
     d7: 2.6,
     d30: 2.68,
     ytd: 188.09,
@@ -65,9 +60,9 @@ export const currencyPrices = [
     asset: "Tether (USDT)",
     startValue: 7401.26,
     currentValue: 7400.36,
-    h24: 0.04,
+    h24: -0.04,
     d7: 0.10,
-    d30: 0.02,
+    d30: -0.02,
     ytd: 0.01,
     img: Tether,
   },
@@ -76,10 +71,10 @@ export const currencyPrices = [
     asset: "Litecoin (LTC)",
     startValue: 1627.28,
     currentValue: 1057.84,
-    h24: 0.04,
-    d7: 0.10,
-    d30: 0.02,
-    ytd: 65.73,
+    h24: 0.41,
+    d7: -5.17,
+    d30: -10.03,
+    ytd: -65.73,
     img: Litecoin,
   },
   {
@@ -87,10 +82,10 @@ export const currencyPrices = [
     asset: "Binance (BNB)",
     startValue: 1050.05,
     currentValue: 663.57,
-    h24: 4.66,
-    d7: 1.77,
-    d30: 2.01,
-    ytd: 63.33,
+    h24: -4.66,
+    d7: -1.77,
+    d30: -2.01,
+    ytd: -63.33,
     img: binance,
   },
 ];

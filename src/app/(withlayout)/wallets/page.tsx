@@ -3,6 +3,7 @@ import React from "react";
 import Progressbar from "@components/Progressbar/Progressbar";
 import { currencyPrices, progres } from "../../../../public/data/walletsData";
 import CryptoCoin from "@src/components/CryptoCoin/CryptoCoin";
+import { percent, usd } from "@src/util/currency";
 
 const Wallets = () => {
   return (
@@ -19,8 +20,8 @@ const Wallets = () => {
             <h4 className="text-lg text-Neutral-6 leading-[27px]">
               Balance (USD)
             </h4>
-            <h3 className="xxl:text-[40px] text-3xl lg:text-xl font-semibold text-Neutral-8 my-1 lg:my-2">
-              11,032.24
+            <h3 className="text-3xl font-semibold text-Neutral-8 my-1 lg:my-2">
+              {usd(42815.26)}
             </h3>
             <div className="mt-2 lg:mt-7 flex flex-wrap gap-5 justify-center">
               <button className="text-xs text-[#F8FAFC] bg-gradient-to-r from-[#33AB71] to-[#06753F] px-2 py-1 rounded-lg ">
@@ -39,17 +40,14 @@ const Wallets = () => {
                 <div>
                   <h5 className="text-white font-semibold">{item.name}</h5>
                   <h4 className="text-xl text-white font-semibold leading-[26px] my-2">
-                    {item.balance}
+                    {usd(item.balance)}
                   </h4>
-                  <span className="text-sm text-Neutral-8 leading-[21px]">
-                    {item.usd}
-                  </span>
                 </div>
-                <div>
+                {item.ytd && <div>
                   <span className="text-sm text-white font-bold leading-[21px]">
-                    {item.complete}
+                    {percent(item.ytd)}
                   </span>
-                </div>
+                </div>}
               </div>
               <Progressbar
                 fillcolor={item.color}
@@ -98,22 +96,22 @@ const Wallets = () => {
                       </div>
                     </td>
                     <td>
-                      <div>{item?.startValue ?? '--'}</div>
+                      <div>{usd(item?.startValue)}</div>
                     </td>
                     <td>
-                      <div>{item?.currentValue ?? '--'}</div>
+                      <div>{usd(item?.currentValue)}</div>
                     </td>
                     <td>
-                      <div>{item?.h24 ?? '--'}%</div>
+                      <div>{percent(item?.h24)}</div>
                     </td>
                     <td>
-                      <div>{item?.d7 ?? '--'}%</div>
+                      <div>{percent(item?.d7)}</div>
                     </td>
                     <td>
-                      <div>{item?.d30 ?? '--'}%</div>
+                      <div>{percent(item?.d30)}</div>
                     </td>
                     <td>
-                      <div>{item?.ytd ?? '--'}%</div>
+                      <div>{percent(item?.ytd)}</div>
                     </td>
                   </tr>
                 ))}
