@@ -1,14 +1,17 @@
 "use client";
 import { useEffect, useRef } from "react";
 import Chart from "chart.js/auto";
+import Color from 'color';
 
 const CandleStickLineChart = () => {
   const chartRef: any = useRef(null);
+  const theme = process.env.theme as any;
+
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
     const gradient = ctx.createLinearGradient(0, 0, 0, 280);
-    gradient.addColorStop(0, "rgba(12, 175, 96, 1)");
-    gradient.addColorStop(1, "rgba(12, 175, 96, 0)");
+    gradient.addColorStop(0, Color(theme.profit).fade(0).string());
+    gradient.addColorStop(1, Color(theme.bg).fade(0.1).string());
 
     const chartData = {
       labels: [
@@ -29,9 +32,9 @@ const CandleStickLineChart = () => {
           data: [38, 25, 49, 38, 40, 66, 65, 48, 85, 58],
           fill: true,
           backgroundColor: gradient,
-          borderColor: "#0CAF60",
-          borderWidth: 4,
-          pointRadius: 2,
+          borderColor: theme.profit,
+          borderWidth: 2,
+          pointRadius: 3,
           pointBackgroundColor: "white",
         },
       ],
@@ -57,7 +60,6 @@ const CandleStickLineChart = () => {
         scales: {
           y: {
             beginAtZero: true,
-            display: false,
           },
           x: {
             ticks: {

@@ -70,7 +70,7 @@ const Exchange = () => {
           <h3 className="text-lg font-bold text-Neutral-6 leading-[27px]">
             Price
           </h3>
-          <span className="text-xs font-bold text-Neutral-8 leading-[18px]">
+          <span className="text-xs font-bold text-Profit-bold leading-[18px]">
             21,264.95
           </span>
         </div>
@@ -78,7 +78,7 @@ const Exchange = () => {
           <h3 className="text-lg font-bold text-Neutral-6 leading-[27px]">
             24h change
           </h3>
-          <span className="text-xs font-bold text-Neutral-8 leading-[18px]">
+          <span className="text-xs font-bold text-Profit-bold leading-[18px]">
             21,264.95
           </span>
         </div>
@@ -86,7 +86,7 @@ const Exchange = () => {
           <h3 className="text-lg font-bold text-Neutral-6 leading-[27px]">
             24h high
           </h3>
-          <span className="text-xs font-bold text-Primary-2 leading-[18px] flex">
+          <span className="text-xs font-bold text-Loss-bold leading-[18px] flex">
             21,264.95
             <span className="material-symbols-outlined iconSize ml-2">
               insights
@@ -97,7 +97,7 @@ const Exchange = () => {
           <h3 className="text-lg font-bold text-Neutral-6 leading-[27px]">
             24h low
           </h3>
-          <span className="text-xs font-bold text-Neutral-8 leading-[18px] flex">
+          <span className="text-xs font-bold text-Profit-bold leading-[18px] flex">
             31,239.04
             <span className="material-symbols-outlined iconSize ml-2">
               insights
@@ -114,7 +114,6 @@ const Exchange = () => {
         </div>
       </section>
 
-      {/* Chart part start  */}
       <section className="mt-6 gap-6 grid grid-cols-12">
         <div className="px-4 lg:px-7 py-6 rounded-xl col-span-12 xl:col-span-8">
           <Tab.Group>

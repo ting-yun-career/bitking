@@ -30,7 +30,7 @@ const LineChart = () => {
       ],
       datasets: [
         {
-          label: "My Dataset",
+          label: "BTC",
           data: [3, 22, 10, 38, 40, 66, 65, 48, 85, 58, 37, 43],
           fill: true,
           backgroundColor: gradient,
@@ -41,7 +41,7 @@ const LineChart = () => {
           pointBackgroundColor: "white",
         },
         {
-          label: "My Dataset",
+          label: "ETH",
           data: [38, 18, 20, 30, 78, 55, 75, 55, 12, 18, 20, 13],
           fill: true,
           borderColor: theme.profit,

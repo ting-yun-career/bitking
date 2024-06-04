@@ -288,13 +288,12 @@ const CandlestickChart = () => {
         style: {
           fontSize: "12px",
           colors: "#D2D9E4",
-          cssClass: "chart-label-x",
         },
       },
     },
     yaxis: {
       labels: {
-        show: false,
+        show: true,
       },
       tooltip: {
         enabled: true,
@@ -302,10 +301,15 @@ const CandlestickChart = () => {
     },
     grid: {
       show: true,
-      borderColor: "#424A55",
+      borderColor: "#112222",
+      yaxis: {
+        lines: {
+          show: true,
+        }
+      },
       xaxis: {
         lines: {
-          show: true, //or just here to disable only x axis grids
+          show: false,
         },
       },
     },

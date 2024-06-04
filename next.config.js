@@ -1,3 +1,4 @@
+// theme color must match tailwind.config.js
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   env: {
