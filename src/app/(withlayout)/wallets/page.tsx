@@ -4,6 +4,7 @@ import Progressbar from "@components/Progressbar/Progressbar";
 import { currencyPrices, progres } from "../../../../public/data/walletsData";
 import CryptoCoin from "@src/components/CryptoCoin/CryptoCoin";
 import { percent, usd } from "@src/util/currency";
+import cx from "classnames";
 
 const Wallets = () => {
   return (
@@ -44,7 +45,7 @@ const Wallets = () => {
                   </h4>
                 </div>
                 {item.ytd && <div>
-                  <span className="text-sm text-white font-bold leading-[21px]">
+                  <span className={cx(["text-sm", "font-bold"], { 'text-Profit-bold': item?.ytd > 0, 'text-Loss-bold': item?.ytd < 0 })}>
                     {percent(item.ytd)}
                   </span>
                 </div>}
@@ -96,22 +97,22 @@ const Wallets = () => {
                       </div>
                     </td>
                     <td>
-                      <div>{usd(item?.startValue)}</div>
+                      <div className={cx({ 'text-Profit-bold': item?.currentValue > item.startValue, 'text-Loss-bold': item?.currentValue < item.startValue })}>{usd(item?.startValue)}</div>
                     </td>
                     <td>
-                      <div>{usd(item?.currentValue)}</div>
+                      <div className={cx({ 'text-Profit-bold': item?.currentValue > item.startValue, 'text-Loss-bold': item?.currentValue < item.startValue })}>{usd(item?.currentValue)}</div>
                     </td>
                     <td>
-                      <div>{percent(item?.h24)}</div>
+                      <div className={cx({ 'text-Profit-bold': item?.h24 > 0, 'text-Loss-bold': item?.h24 < 0 })}>{percent(item?.h24)}</div>
                     </td>
                     <td>
-                      <div>{percent(item?.d7)}</div>
+                      <div className={cx({ 'text-Profit-bold': item?.d7 > 0, 'text-Loss-bold': item?.d7 < 0 })}>{percent(item?.d7)}</div>
                     </td>
                     <td>
-                      <div>{percent(item?.d30)}</div>
+                      <div className={cx({ 'text-Profit-bold': item?.d30 > 0, 'text-Loss-bold': item?.d30 < 0 })}>{percent(item?.d30)}</div>
                     </td>
                     <td>
-                      <div>{percent(item?.ytd)}</div>
+                      <div className={cx({ 'text-Profit-bold': item?.ytd > 0, 'text-Loss-bold': item?.ytd < 0 })}>{percent(item?.ytd)}</div>
                     </td>
                   </tr>
                 ))}
