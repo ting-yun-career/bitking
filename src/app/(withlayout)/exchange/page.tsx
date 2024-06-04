@@ -5,8 +5,7 @@ import Image from "next/image";
 import { useState } from "react";
 import { Listbox } from "@headlessui/react";
 import MarketTrades from "@components/Exchange/MarketTrades";
-import { curencys, curencysAmount } from "../../../../public/data/exchangeData";
-import DoughnutChart from "@components/chart/DoughnutChart";
+import { curencys } from "../../../../public/data/exchangeData";
 import CandleStickLineChart from "@components/chart/CandleStickLineChart";
 import CandlestickChart from "@components/chart/CandleStickChart";
 import Coin from "@components/Exchange/Coin";
@@ -71,23 +70,15 @@ const Exchange = () => {
             Price
           </h3>
           <span className="text-xs font-bold text-Profit-bold leading-[18px]">
-            21,264.95
-          </span>
-        </div>
-        <div className="px-[45px] lg:border-r border-Neutral-10">
-          <h3 className="text-lg font-bold text-Neutral-6 leading-[27px]">
-            24h change
-          </h3>
-          <span className="text-xs font-bold text-Profit-bold leading-[18px]">
-            21,264.95
+            $70,498.83
           </span>
         </div>
         <div className="px-[45px] lg:border-r border-Neutral-10">
           <h3 className="text-lg font-bold text-Neutral-6 leading-[27px]">
             24h high
           </h3>
-          <span className="text-xs font-bold text-Loss-bold leading-[18px] flex">
-            21,264.95
+          <span className="text-xs font-bold text-Profit-bold leading-[18px] flex">
+            $70,644.84
             <span className="material-symbols-outlined iconSize ml-2">
               insights
             </span>
@@ -97,8 +88,8 @@ const Exchange = () => {
           <h3 className="text-lg font-bold text-Neutral-6 leading-[27px]">
             24h low
           </h3>
-          <span className="text-xs font-bold text-Profit-bold leading-[18px] flex">
-            31,239.04
+          <span className="text-xs font-bold text-Loss-bold leading-[18px] flex">
+            $68,556.74
             <span className="material-symbols-outlined iconSize ml-2">
               insights
             </span>
@@ -160,7 +151,6 @@ const Exchange = () => {
         </div>
       </section>
 
-      {/* Market Trades */}
       <section className="mt-6 gap-6 grid grid-cols-12">
         <MarketTrades />
       </section>

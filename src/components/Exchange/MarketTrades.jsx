@@ -1,6 +1,5 @@
 import React, { Fragment } from "react";
-import { Tab } from "@headlessui/react";
-import { deepTrades, priceTrades } from "../../../public/data/exchangeData";
+import { priceTrades } from "../../../public/data/exchangeData";
 
 const MarketTrades = () => {
   return (
