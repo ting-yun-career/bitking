@@ -20,7 +20,7 @@ const Exchange = () => {
         <div>
           <Listbox value={selectedCurencys} onChange={setSelectedCurencys}>
             <Listbox.Button className="flex gap-2 items-center  relative w-full rounded-lg text-Neutral-6  py-2 px-3 text-left focus:outline-none focus-visible:border-indigo-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-orange-300 sm:text-sm lg:border-r border-Neutral-10 cursor-pointer">
-              <span className="flex gap-2 items-center ">
+              <span className="flex gap-2 items-center font-bold">
                 <span className="material-symbols-outlined">expand_more</span>
                 <span className="flex gap-2 items-center">
                   <Image
@@ -39,30 +39,28 @@ const Exchange = () => {
                 </span>
               </span>
             </Listbox.Button>
-            <Listbox.Options className="w-[200px] text-Neutral-6 p-5 absolute mt-1 max-h-60 overflow-auto rounded-md  py-1 text-base shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none sm:text-sm cursor-pointer z-[5]">
-              {curencys.map((curency) => (
+            <Listbox.Options className="bg-Primary-bg w-[200px] text-Neutral-6 pl-11 absolute overflow-auto rounded-md text-base focus:outline-none sm:text-sm cursor-pointer z-[5]">
+              {curencys.map((curency, index) => (
                 <Listbox.Option
                   key={curency.id}
                   value={curency}
                   disabled={curency.unavailable}
                 >
-                  <li>
-                    <span className="flex items-center gap-2 mt-4">
-                      <Image
-                        className="w-10 h-10 rounded-full"
-                        src={curency.img}
-                        alt="curency"
-                      />
-                      <span>
-                        <span className="block text-base text-Neutral-6 leading-[24px]">
-                          {curency.name}
-                        </span>
-                        <span className="block text-Neutral-5 text-xs leading-[18px]">
-                          {curency.coin}
-                        </span>
+                  <span className="flex items-center gap-2 py-2 opacity-50 hover:opacity-100">
+                    <Image
+                      className="w-10 h-10 rounded-full"
+                      src={curency.img}
+                      alt="curency"
+                    />
+                    <span>
+                      <span className="block text-base text-Neutral-6 leading-[24px]">
+                        {curency.name}
+                      </span>
+                      <span className="block text-Neutral-5 text-xs leading-[18px]">
+                        {curency.coin}
                       </span>
                     </span>
-                  </li>
+                  </span>
                 </Listbox.Option>
               ))}
             </Listbox.Options>

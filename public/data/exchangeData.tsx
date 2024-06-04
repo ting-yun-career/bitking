@@ -146,14 +146,18 @@ export const curencys = [
 export const curencysAmount = [
   {
     id: uuidv4(),
-    money: "$1500",
+    money: 100,
   },
   {
     id: uuidv4(),
-    money: "$1300",
+    money: 200,
   },
   {
     id: uuidv4(),
-    money: "$1000",
+    money: 500,
+  },
+  {
+    id: uuidv4(),
+    money: 1000,
   },
 ];
