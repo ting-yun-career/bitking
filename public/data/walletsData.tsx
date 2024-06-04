@@ -8,7 +8,7 @@ import Tether from "@/../public/images/dashboardTable/tether.png";
 import binance from "@/../public/images/dashboardTable/binance.png";
 import { v4 as uuidv4 } from "uuid";
 
-const theme = process.env.theme;
+const theme: any = process.env.theme;
 
 export const progres = [
   {
