@@ -24,24 +24,24 @@ export const sidenavData: SidenavItem[] = [
     url: "/exchange",
     icon: "sync",
   },
-  {
-    id: 456003,
-    name: "Prices",
-    url: "/prices",
-    icon: "payments",
-  },
+  // {
+  //   id: 456003,
+  //   name: "Prices",
+  //   url: "/prices",
+  //   icon: "payments",
+  // },
   {
     id: 456004,
     name: "Wallets",
     url: "/wallets",
     icon: "account_balance_wallet",
   },
-  {
-    id: 456005,
-    name: "Promotions",
-    url: "/promotions",
-    icon: "percent",
-  },
+  // {
+  //   id: 456005,
+  //   name: "Promotions",
+  //   url: "/promotions",
+  //   icon: "percent",
+  // },
   {
     id: 456006,
     name: "Activities",
