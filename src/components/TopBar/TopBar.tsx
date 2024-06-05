@@ -119,9 +119,6 @@ const TopBar = ({ handleOpen }: headerProps) => {
                           <h4 className="font-bold text-base md:text-lg text-white leading-[27px]">
                             {data.name}
                           </h4>
-                          <p className="text-Neutral-6 text-xs leading-[18px]">
-                            {data.comment}
-                          </p>
                           <p className="text-Neutral-6 text-base leading-[24px]">
                             {data.des}
                           </p>
