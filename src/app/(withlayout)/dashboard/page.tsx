@@ -131,18 +131,13 @@ const DashBoard = () => {
                 key={transaction.id}
                 className="flex flex-wrap justify-between items-center mb-3 border-b border-Neutral-7 pb-3 last:border-none"
               >
-                <div className="flex flex-wrap gap-2 items-center">
+                <div className="flex flex-wrap gap-2 items-center w-full sm:w-[200px]">
                   <CryptoCoin symbol={transaction.symbol} size={25} />
-                  <div>
-                    <h4 className="text-base text-white Neutral-6 leading-[21px]">
-                      {transaction.asset}
-                    </h4>
-                    <span className="text-sm text-Neutral-6 leading-[21px]">
-                      {transaction.time}
-                    </span>
-                  </div>
+                  <span className="text-lg text-Neutral-6 leading-[21px]">
+                    <span className="capitalize">{transaction.symbol}</span> {transaction.time}
+                  </span>
                 </div>
-                <h5 className="text-white text-xl font-semibold leading-[26px]">
+                <h5 className="text-white text-lg leading-[26px]">
                   {transaction.money}
                 </h5>
               </div>
