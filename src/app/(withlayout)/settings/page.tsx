@@ -309,73 +309,81 @@ const Settings = () => {
                 <div className="xl:flex block gap-[60px] mb-2 lg:mb-6">
                   <div className="form-control w-full">
                     <label className="label">
-                      <span className="text-base text-Neutral-6">
+                      <span className="text-base text-gray-100 font-semibold">
                         Current Password
                       </span>
                     </label>
                     <div className="relative">
-                      <input
-                        type={show ? "text" : "password"}
-                        placeholder="Old Password"
-                        className="px-2 py-[10px] rounded w-full bg-Primary-3 text-Neutral-6 border border-Neutral-10 outline-none"
-                      />
-                      <label
-                        onClick={handleShow}
-                        className="text-Neutral-1  absolute right-[3%] top-3 cursor-pointer"
-                      >
-                        {show ? (
-                          <span className="material-symbols-outlined">
-                            visibility_off
-                          </span>
-                        ) : (
-                          <span className="material-symbols-outlined">
-                            visibility
-                          </span>
-                        )}
-                      </label>
+                      <div className="w-1/2 min-w-[300px] relative">
+                        <input
+                          type={show ? "text" : "password"}
+                          placeholder="Old Password"
+                          defaultValue="password1"
+                          className="px-2 py-[10px] rounded w-full bg-Primary-3 text-gray-100 placeholder-gray-500 border border-Neutral-10 outline-none"
+                        />
+                        <label
+                          onClick={handleShow}
+                          className="text-Neutral-1 absolute right-[10px] top-3 cursor-pointer"
+                        >
+                          {show ? (
+                            <span className="material-symbols-outlined">
+                              visibility_off
+                            </span>
+                          ) : (
+                            <span className="material-symbols-outlined">
+                              visibility
+                            </span>
+                          )}
+                        </label>
+                      </div>
                     </div>
                   </div>
+                </div>
+                <div className="xl:flex block gap-[60px] mb-2 lg:mb-6">
                   <div className="form-control w-full">
                     <label className="label">
-                      <span className="text-base text-Neutral-6">
+                      <span className="text-base text-gray-100 font-semibold">
                         Enter new password
                       </span>
                     </label>
                     <div className="relative">
-                      <input
-                        type={show1 ? "text" : "password"}
-                        placeholder="New Password"
-                        className="px-2 py-[10px] rounded w-full bg-Primary-3 text-Neutral-6 border border-Neutral-10 outline-none"
-                      />
-                      <label
-                        onClick={handleShow1}
-                        className="text-Neutral-1  absolute right-[3%] top-3 cursor-pointer"
-                      >
-                        {show1 ? (
-                          <span className="material-symbols-outlined">
-                            visibility_off
-                          </span>
-                        ) : (
-                          <span className="material-symbols-outlined">
-                            visibility
-                          </span>
-                        )}
-                      </label>
+                      <div className="w-1/2 min-w-[300px] relative">
+                        <input
+                          type={show1 ? "text" : "password"}
+                          placeholder="Enter New Password"
+                          defaultValue=""
+                          className="px-2 py-[10px] rounded w-full bg-Primary-3 text-gray-100 placeholder-gray-500 border border-Neutral-10 outline-none"
+                        />
+                        <label
+                          onClick={handleShow1}
+                          className="text-Neutral-1  absolute right-[10px] top-3 cursor-pointer"
+                        >
+                          {show1 ? (
+                            <span className="material-symbols-outlined">
+                              visibility_off
+                            </span>
+                          ) : (
+                            <span className="material-symbols-outlined">
+                              visibility
+                            </span>
+                          )}
+                        </label>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="xl:flex block gap-[60px] mb-2 lg:mb-6">
                   <div className="form-control w-full xl:w-1/2">
                     <label className="label">
-                      <span className="text-base text-Neutral-6">
+                      <span className="text-base text-gray-100 font-semibold">
                         Confirm New Password
                       </span>
                     </label>
                     <div className="relative">
                       <input
                         type={show2 ? "text" : "password"}
-                        placeholder="Confirm Password......."
-                        className="px-2 py-[10px] rounded w-full bg-Primary-3 text-Neutral-6 border border-Neutral-10 outline-none"
+                        placeholder="Confirm Password"
+                        className="px-2 py-[10px] rounded w-full bg-Primary-3 text-gray-100 placeholder-gray-500 border border-Neutral-10 outline-none"
                       />
                       <label
                         onClick={handleShow2}
@@ -393,8 +401,10 @@ const Settings = () => {
                       </label>
                     </div>
                   </div>
-                  <div className="w-1/2 relative mt-3 xl:mt-0">
-                    <button className="px-4 py-2 text-[#F8FAFC] text-xs bg-gradient-to-r from-[#33AB71] to-[#06753F] rounded xl:absolute xl:bottom-0">
+                </div>
+                <div className="xl:flex block gap-[60px] mb-2 lg:mb-6">
+                  <div className="w-1/2 mt-3 xl:mt-0">
+                    <button className="px-4 py-2 text-[#F8FAFC] text-xs bg-gradient-to-r from-[#33AB71] to-[#06753F] rounded">
                       Update Password
                     </button>
                   </div>

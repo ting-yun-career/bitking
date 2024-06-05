@@ -40,16 +40,16 @@ const LineChart = () => {
           tension: 0.4,
           pointBackgroundColor: "white",
         },
-        {
-          label: "ETH",
-          data: [38, 18, 20, 30, 78, 55, 75, 55, 12, 18, 20, 13],
-          fill: true,
-          borderColor: theme.profit,
-          borderWidth: 2,
-          pointRadius: 3,
-          tension: 0.4,
-          pointBackgroundColor: "white",
-        },
+        // {
+        //   label: "ETH",
+        //   data: [38, 18, 20, 30, 78, 55, 75, 55, 12, 18, 20, 13],
+        //   fill: true,
+        //   borderColor: theme.profit,
+        //   borderWidth: 2,
+        //   pointRadius: 3,
+        //   tension: 0.4,
+        //   pointBackgroundColor: "white",
+        // },
       ],
     };
 
