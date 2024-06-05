@@ -1,15 +1,4 @@
-import Bitcoin from "@/../public/images/dashboardTable/bitcoin.png";
-import Ethereum from "@/../public/images/dashboardTable/ethereum.png";
-import Litecoin from "@/../public/images/dashboardTable/litecoin.png";
-import Stellar from "@/../public/images/dashboardTable/stellar.png";
-import Dogecoin from "@/../public/images/dashboardTable/dogecoin.png";
-import Tether from "@/../public/images/dashboardTable/tether.png";
-import achain from "@/../public/images/dashboardTable/achain.png";
-import ellaism from "@/../public/images/dashboardTable/ellaism.png";
-import tron from "@/../public/images/dashboardTable/tron.png";
-import binance from "@/../public/images/dashboardTable/binance.png";
 import { v4 as uuidv4 } from "uuid";
-import { usd } from "@src/util/currency";
 
 const options: Intl.DateTimeFormatOptions = {
   year: 'numeric',

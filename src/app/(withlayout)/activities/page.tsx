@@ -20,13 +20,13 @@ const Activities = () => {
   return (
     <div className="bg-Primary-bg p-3 lg:p-6">
       <section className="grid grid-cols-12">
-        <div className="px-7 py-6 rounded-xl col-span-12 lg:col-span-11">
+        <div className="px-7 py-6 col-span-12">
           <div className="flex flex-wrap gap-3 justify-between items-center">
             <h5 className="text-xl text-Neutral-6 font-semibold">History</h5>
             <div className="flex flex-wrap gap-3 items-center">
               <button
                 className={cx(
-                  ["px-4", "py-2", "text-Neutral-1", "text-xs", "rounded-lg", "outline-none", "flex", "items-center", "border", "border-Neutral-10"],
+                  ["px-4", "py-2", "text-Neutral-1", "text-xs", "rounded-sm", "outline-none", "flex", "items-center", "border", "border-Neutral-10"],
                   { "border-none text-white bg-gradient-to-r bg-gradient-to-r from-[#33AB71] to-[#06753F]": selectionStatus === 'all' }
                 )}
                 onClick={() => setSelectionStatus('all')}
@@ -35,7 +35,7 @@ const Activities = () => {
               </button>
               <button
                 className={cx(
-                  ["px-4", "py-2", "text-Neutral-1", "text-xs", "rounded-lg", "outline-none", "flex", "items-center", "border", "border-Neutral-10"],
+                  ["px-4", "py-2", "text-Neutral-1", "text-xs", "rounded-sm", "outline-none", "flex", "items-center", "border", "border-Neutral-10"],
                   { "border-none text-white bg-gradient-to-r bg-gradient-to-r from-[#33AB71] to-[#06753F]": selectionStatus === 'pending' }
                 )}
                 onClick={() => setSelectionStatus('pending')}
@@ -81,8 +81,8 @@ const Activities = () => {
                       />
                     </label>
                   </th>
-                  <th>Transaction ID</th>
-                  <th>Type</th>
+                  <th>Id</th>
+                  <th>Symbol</th>
                   <th>Date</th>
                   <th>Status</th>
                   <th>Amount</th>

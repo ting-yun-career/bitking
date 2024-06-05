@@ -10,7 +10,7 @@ const Wallets = () => {
   return (
     <div className="bg-Primary-bg p-3 lg:p-6">
       <section className="gap-6 grid grid-cols-12">
-        <div className="col-span-12 lg:col-span-4 xl:col-span-3 rounded-xl p-4 md:px-7 md:py-6">
+        <div className="col-span-12 lg:col-span-4 rounded-xl p-4 md:px-7 md:py-6">
           <div className="text-center mt-2 lg:mt-5">
             <div className="flex items-center justify-center gap-2 mb-3 lg:mb-7">
               <span className="text-lg font-bold text-Neutral-6">Top Coins: </span>
@@ -61,7 +61,7 @@ const Wallets = () => {
         </div>
       </section>
       <section className="grid grid-cols-12">
-        <div className="p-4 md:px-7 md:py-5 mt-6 col-span-12 xl:col-span-11 rounded-xl">
+        <div className="p-4 md:px-7 md:py-5 mt-6 col-span-12">
           <h5 className="text-xl text-Neutral-6 font-semibold leading-[26px] mb-7">
             Coins in Wallet:
           </h5>
