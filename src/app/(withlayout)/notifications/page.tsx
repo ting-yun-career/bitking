@@ -17,7 +17,7 @@ const Notifications = () => {
             </h4>
           </div>
           <p className="text-lg text-Neutral-6 leading-[27px] mb-6">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do{" "}
+            See who has been following you!
           </p>
           <div>
             {notifications.map((item) => (
