@@ -29,7 +29,7 @@ const Prices = () => {
               <div>
                 <span className="text-base text-Neutral-9">{chart.name}</span>
                 <h4 className="text-2xl text-Neutral-9 font-semibold mt-2">
-                  {chart.price}
+                  {chart.currentValue}
                 </h4>
               </div>
               <CryptoCoin symbol={chart.symbol} size={25} />
