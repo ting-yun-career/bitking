@@ -44,7 +44,7 @@ const Activities = () => {
 
               <div className="relative">
                 <Listbox value={selectedTime} onChange={setSelectedTime}>
-                  <Listbox.Button className="w-36 text-Neutral-5 text-base flex gap-2 items-center justify-between pl-4 pr-2 py-1 rounded z-[5] border border-Neutral-7">
+                  <Listbox.Button className="w-36 text-Neutral-5 text-base flex gap-2 items-center justify-between pl-4 pr-2 py-1 rounded z-[5] border border-Neutral-10">
                     {selectedTime.name}
                     <span className="material-symbols-outlined dark:text-myGreen">
                       expand_more
