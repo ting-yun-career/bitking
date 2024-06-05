@@ -4,6 +4,7 @@ import { Listbox, Tab } from "@headlessui/react";
 import { history } from "../../../../public/data/activitiesData";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
+import cx from "classnames";
 
 const times = [
   { id: uuidv4(), name: "All Times", unavailable: false },
@@ -144,9 +145,7 @@ const Activities = () => {
                           </td>
                           <td>
                             <div
-                              style={{
-                                color: item.color,
-                              }}
+                              className={cx({ 'text-Profit': item?.status === 'Completed', 'text-Pending-bold': item?.status !== 'Completed' })}
                             >
                               {item.status}
                             </div>

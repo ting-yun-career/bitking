@@ -97,7 +97,7 @@ const Wallets = () => {
                       </div>
                     </td>
                     <td>
-                      <div className={cx({ 'text-Profit-bold': item?.currentValue > item.startValue, 'text-Loss-bold': item?.currentValue < item.startValue })}>{usd(item?.startValue)}</div>
+                      <div className="">{usd(item?.startValue)}</div>
                     </td>
                     <td>
                       <div className={cx({ 'text-Profit-bold': item?.currentValue > item.startValue, 'text-Loss-bold': item?.currentValue < item.startValue })}>{usd(item?.currentValue)}</div>

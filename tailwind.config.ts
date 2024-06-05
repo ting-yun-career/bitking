@@ -3,6 +3,7 @@ import Color from 'color';
 
 // must match next.config.js
 const colorProfit = "rgb(21,133,87)";
+const colorPending = "#DCC004"
 const colorLoss = "rgb(150,22,29)";
 
 const config: Config = {
@@ -44,6 +45,8 @@ const config: Config = {
         "Neutral-10": "#242F40",
         "Profit": colorProfit,
         "Profit-bold": Color(colorProfit).lighten(0.5).string(),
+        "Pending": colorPending,
+        "Pending-bold": Color(colorPending).lighten(0.5).string(),
         "Loss": colorLoss,
         "Loss-bold": Color(colorLoss).lighten(0.5).string(),
       }
