@@ -5,6 +5,7 @@ import { history } from "../../../../public/data/activitiesData";
 import Image from "next/image";
 import { v4 as uuidv4 } from "uuid";
 import cx from "classnames";
+import CryptoCoin from "@src/components/CryptoCoin/CryptoCoin";
 
 const times = [
   { id: uuidv4(), name: "All Times", unavailable: false },
@@ -102,15 +103,11 @@ const Activities = () => {
                       </label>
                     </th>
                     <td>
-                      <div>{item.transaction}</div>
+                      <div>{item.id}</div>
                     </td>
                     <td>
                       <div className="flex items-center space-x-3">
-                        <div className="avatar">
-                          <div className="mask mask-squircle w-6 h-6">
-                            <Image src={item.img} alt="curency" />
-                          </div>
-                        </div>
+                        <CryptoCoin symbol={item.symbol} size={30} />
                         <div>
                           <div>{item.type}</div>
                         </div>
