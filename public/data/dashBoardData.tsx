@@ -111,47 +111,59 @@ export const tableData = [
   },
 ];
 
+const options: Intl.DateTimeFormatOptions = {
+  year: 'numeric',
+  month: '2-digit',
+  day: '2-digit',
+  timeZone: 'UTC',
+};
+
+const getTimeDisplay = (year: number, month: number, date: number, hour: number, minute: number) => {
+  const dateStr = new Intl.DateTimeFormat('en-US', options).format(Date.UTC(year, month, date, hour, minute, 0))
+  return dateStr.replace(', ', '-')
+}
+
 export const transactions = [
   {
     id: uuid(),
+    asset: "Ethereum",
+    time: getTimeDisplay(2024, 5, 30, 4, 1),
+    money: "$1,019.54",
+    symbol: "eth",
+  },
+  {
+    id: uuid(),
+    asset: "Ethereum",
+    time: getTimeDisplay(2024, 4, 20, 17, 13),
+    money: "$7,421.04",
+    symbol: "eth",
+  },
+  {
+    id: uuid(),
     asset: "Bitcoin",
-    time: "Today, 13.50 PM",
-    money: "$47,515",
+    time: getTimeDisplay(2024, 0, 5, 8, 52),
+    money: "$5,721.74",
+    symbol: "btc",
+  },
+  {
+    id: uuid(),
+    asset: "Bitcoin",
+    time: getTimeDisplay(2023, 10, 29, 13, 28),
+    money: "$1,326.18",
     symbol: "btc",
   },
   {
     id: uuid(),
     asset: "Ethereum",
-    time: "Today, 13.50 PM",
-    money: "$3,401",
-    symbol: "eth",
-  },
-  {
-    id: uuid(),
-    asset: "Litecoin",
-    time: "Today, 13.50 PM",
-    money: "$31,401",
-    symbol: "ltc",
-  },
-  {
-    id: uuid(),
-    asset: "Dogecoin",
-    time: "Today, 13.50 PM",
-    money: "$2,65",
-    symbol: "doge",
-  },
-  {
-    id: uuid(),
-    asset: "Ethereum",
-    time: "Today, 13.50 PM",
-    money: "$22,65",
+    time: getTimeDisplay(2023, 8, 21, 3, 37),
+    money: "$2,265.78",
     symbol: "eth",
   },
   {
     id: uuid(),
     asset: "Tether",
-    time: "Today, 13.50 PM",
-    money: "$120,83",
+    time: getTimeDisplay(2023, 5, 3, 22, 19),
+    money: "$1208.39",
     symbol: "usdt",
   },
 ];
