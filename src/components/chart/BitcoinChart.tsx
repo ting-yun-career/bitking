@@ -18,7 +18,7 @@ const BitcoinChart = () => {
       datasets: [
         {
           label: "USDT",
-          data: [10, 20, 31, 25, 45, 28, 31, 27, 32, 20, 10, 5],
+          data: [10, 20, 31, 25, 45, 48, 61, 67, 72, 80, 90, 105],
           fill: true,
           backgroundColor: gradient,
           borderColor: theme.profit,

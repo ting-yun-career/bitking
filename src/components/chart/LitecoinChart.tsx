@@ -9,7 +9,7 @@ const LitecoinChart = () => {
   useEffect(() => {
     const ctx = chartRef.current.getContext("2d");
     const gradient = ctx.createLinearGradient(0, 0, 0, 65);
-    gradient.addColorStop(0, Color(theme.profit).fade(0.5));
+    gradient.addColorStop(0, Color(theme.loss).fade(0.5));
     gradient.addColorStop(1, Color(theme.bg).fade(1));
 
     const chartData = {
@@ -32,10 +32,10 @@ const LitecoinChart = () => {
       datasets: [
         {
           label: "My Dataset",
-          data: [0, 10, 8, 12, 8, 12, 10, 10, 17, 20, 17, 15, 13, 6],
+          data: [100, 90, 80, 72, 62, 42, 30, 30, 37, 22, 10, 10, 13, 6],
           fill: true,
           backgroundColor: gradient,
-          borderColor: theme.profit,
+          borderColor: theme.loss,
           pointRadius: 0,
           tension: 0.4,
           borderWidth: 1,

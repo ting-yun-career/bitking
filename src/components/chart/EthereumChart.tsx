@@ -32,8 +32,8 @@ const EthereumChart = () => {
       ],
       datasets: [
         {
-          label: "My Dataset",
-          data: [0, 10, 13, 20, 10, 12, 10, 20, 10, 20, 12, 17, 19, 6],
+          label: "ETH",
+          data: [0, 10, 13, 20, 23, 32, 40, 45, 47, 50, 61, 65, 80, 100],
           fill: true,
           backgroundColor: gradient,
           borderColor: theme.profit,

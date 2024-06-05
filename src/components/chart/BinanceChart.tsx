@@ -33,7 +33,7 @@ const BinanceChart = () => {
       datasets: [
         {
           label: "My Dataset",
-          data: [0, 10, 15, 10, 15, 10, 12, 10, 16, 20, 15, 12, 17, 6],
+          data: [100, 90, 85, 70, 55, 10, 12, 10, 16, 20, 15, 12, 17, 6],
           fill: true,
           backgroundColor: gradient,
           borderColor: theme.loss,

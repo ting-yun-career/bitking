@@ -11,6 +11,7 @@ import DoughnutChart from "@components/chart/DoughnutChart";
 import CryptoCoin from "@src/components/CryptoCoin/CryptoCoin";
 import Color from 'color';
 import { usd } from "@src/util/currency";
+import cx from "classnames";
 
 const DashBoard = () => {
   const theme: any = process.env.theme;
@@ -22,7 +23,7 @@ const DashBoard = () => {
             <div className="flex flex-wrap items-center justify-between">
               <div>
                 <span className="text-base text-Neutral-9">{chart.name}</span>
-                <h4 className="text-2xl text-Neutral-9 font-semibold mt-2">
+                <h4 className={cx(["text-2xl", "font-semibold", "mt-2"], { 'text-Profit': chart.currentValue > chart.startValue, 'text-Loss': chart.currentValue < chart.startValue })}>
                   {usd(chart.currentValue)}
                 </h4>
               </div>
@@ -83,7 +84,7 @@ const DashBoard = () => {
                   <th>Date</th>
                   <th>IP Address</th>
                   <th>Status List</th>
-                  <th>Amount</th>
+                  <th>Earnings</th>
                 </tr>
               </thead>
               <tbody>
@@ -116,8 +117,8 @@ const DashBoard = () => {
                     <td>
                       <div
                         style={{
-                          backgroundColor: status === 'Success' ? Color(theme.profit).fade(0.85).string() : Color(theme.loss).fade(0.85).string(),
-                          color: status === 'Success' ? Color(theme.profit).lighten(0.5).string() : Color(theme.loss).lighten(0.5).string(),
+                          backgroundColor: status === 'Profit' ? Color(theme.profit).fade(0.85).string() : Color(theme.loss).fade(0.85).string(),
+                          color: status === 'Profit' ? Color(theme.profit).lighten(0.5).string() : Color(theme.loss).lighten(0.5).string(),
                         }}
                         className="text-base text-Neutral-6 leading-[24px] px-3 py-1 rounded flex items-center justify-center"
                       >
@@ -133,7 +134,6 @@ const DashBoard = () => {
             </table>
           </div>
         </div>
-        {/* Recent Transaction */}
         <div className="col-span-12 xxl:col-span-3 rounded-xl p-4 lg:px-7 lg:py-6">
           <h5 className="text-xl font-semibold leading-[26px] text-white">
             Recent Transaction
