@@ -45,7 +45,7 @@ const TopBar = ({ handleOpen }: headerProps) => {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute -right-28 mt-4 origin-top-right divide-y divide-gray-100 rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none identify">
+            <Menu.Items className="absolute -right-28 top-11 mt-4 origin-top-right divide-y divide-gray-100 rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none identify">
               <div className="px-1 py-1 ">
                 <Menu.Item>
                   <div className="w-[400px] bg-Neutral-10 p-3 rounded-xl">
@@ -142,7 +142,7 @@ const TopBar = ({ handleOpen }: headerProps) => {
           <Menu.Button>
             <span className="flex gap-2 items-center cursor-pointer">
               <span>
-                <div className="w-12 h-12 md:w-[60px] md:h-[60px] rounded-full overflow-hidden">
+                <div className="w-12 h-12 rounded-full overflow-hidden">
                   <Image src={user} alt="User" />
                 </div>
               </span>
