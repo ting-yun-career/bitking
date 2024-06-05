@@ -79,23 +79,17 @@ const DashBoard = () => {
             <table className="table whitespace-nowrap">
               <thead>
                 <tr className="border-Neutral-7 text-base font-bold text-Neutral-6 leading-[24px]">
-                  <th>Type</th>
                   <th>Asset</th>
-                  <th>Date</th>
                   <th>IP Address</th>
-                  <th>Status List</th>
                   <th>Earnings</th>
                 </tr>
               </thead>
               <tbody>
-                {tableData.map(({ id, type, symbol, asset, date, ip, status, amount }) => (
+                {tableData.map(({ id, symbol, asset, ip, status, amount }) => (
                   <tr
                     key={id}
                     className="border-Neutral-7 text-base text-Neutral-6 leading-[24px]"
                   >
-                    <td>
-                      <div>{type}</div>
-                    </td>
                     <td>
                       <div className="flex items-center space-x-3">
                         <div className="avatar">
@@ -109,24 +103,17 @@ const DashBoard = () => {
                       </div>
                     </td>
                     <td>
-                      <div>{date}</div>
-                    </td>
-                    <td>
                       <div>{ip}</div>
                     </td>
                     <td>
                       <div
-                        style={{
-                          backgroundColor: status === 'Profit' ? Color(theme.profit).fade(0.85).string() : Color(theme.loss).fade(0.85).string(),
-                          color: status === 'Profit' ? Color(theme.profit).lighten(0.5).string() : Color(theme.loss).lighten(0.5).string(),
-                        }}
-                        className="text-base text-Neutral-6 leading-[24px] px-3 py-1 rounded flex items-center justify-center"
+                        className={cx(
+                          ["text-base", "leading-[24px]", "px-3", "py-1", "rounded", "flex", "items-center"],
+                          { 'text-Profit-bold': amount > 0, 'text-Loss-bold': amount < 0 }
+                        )}
                       >
-                        {status}
+                        {usd(amount)}
                       </div>
-                    </td>
-                    <td>
-                      <div>{amount}</div>
                     </td>
                   </tr>
                 ))}

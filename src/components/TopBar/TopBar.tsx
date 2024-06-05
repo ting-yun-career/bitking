@@ -131,7 +131,6 @@ const TopBar = ({ handleOpen }: headerProps) => {
             </Menu.Items>
           </Transition>
         </Menu>
-        {/* Profile dropdown menu */}
         <Menu
           as="div"
           className="relative inline-block text-left pr-3 md:pr-6 lg:pr-10 mt-1"
