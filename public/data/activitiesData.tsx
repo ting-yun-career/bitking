@@ -10,6 +10,32 @@ import tron from "@/../public/images/dashboardTable/tron.png";
 import binance from "@/../public/images/dashboardTable/binance.png";
 import { v4 as uuidv4 } from "uuid";
 
+// Recent Transaction
+// KKK Image of eth
+// Ethereum
+// 06/30/2024
+// $1,019.54
+// KKK Image of eth
+// Ethereum
+// 05/20/2024
+// $7,421.04
+// KKK Image of btc
+// Bitcoin
+// 01/05/2024
+// $5,721.74
+// KKK Image of btc
+// Bitcoin
+// 11/29/2023
+// $1,326.18
+// KKK Image of eth
+// Ethereum
+// 09/21/2023
+// $2,265.78
+// KKK Image of usdt
+// Tether
+// 06/03/2023
+// $1208.39
+
 export const history = [
   {
     id: uuidv4(),
@@ -17,7 +43,7 @@ export const history = [
     type: "Bitcoin (BTC)",
     date: "21 Sep, 2023",
     status: "Pending",
-    amount: "7.7642303 USDT",
+    amount: "0.056",
     img: Bitcoin,
   },
   {
