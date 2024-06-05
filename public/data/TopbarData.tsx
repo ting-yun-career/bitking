@@ -46,20 +46,20 @@ export const notifications = [
   },
 ];
 export const messages = [
-  {
-    id: uuidv4(),
-    name: "Taylor Swift",
-    comment: "Commented on your post",
-    des: "Let's chat!",
-    img: buyer1,
-  },
-  {
-    id: uuidv4(),
-    name: "Tom Cruise",
-    comment: "Commented on your post",
-    des: "I'm interested!",
-    img: buyer4,
-  },
+  // {
+  //   id: uuidv4(),
+  //   name: "Taylor Swift",
+  //   comment: "Commented on your post",
+  //   des: "Let's chat!",
+  //   img: buyer1,
+  // },
+  // {
+  //   id: uuidv4(),
+  //   name: "Tom Cruise",
+  //   comment: "Commented on your post",
+  //   des: "I'm interested!",
+  //   img: buyer4,
+  // },
   // {
   //   id: uuidv4(),
   //   name: "Arsene Sessou",
