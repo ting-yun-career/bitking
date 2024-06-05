@@ -59,12 +59,9 @@ const DashBoard = () => {
           <DoughnutChart />
           <div className="text-center mt-2 lg:mt-5">
             <h4 className="text-2xl text-Neutral-6 leading-[36px]">
-              Total Balance
+              Total Balance (USD)
             </h4>
-            <h3 className="text-[32px] font-semibold text-Neutral-9 my-1 lg:my-3">
-              0.3475948
-            </h3>
-            <h5 className="text-lg text-Neutral-8">11,032.24 USD</h5>
+            <h5 className="text-3xl font-semibold text-Profit-bold">{usd(11032.24)}</h5>
             <button className="hidden text-xs text-[#F8FAFC] bg-gradient-to-r from-[#33AB71] to-[#06753F] px-2 py-1 rounded-lg mt-2 lg:mt-6">
               Withdraw
             </button>

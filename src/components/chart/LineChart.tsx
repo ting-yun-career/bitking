@@ -73,7 +73,9 @@ const LineChart = () => {
         scales: {
           y: {
             beginAtZero: true,
-
+            grid: {
+              color: "#333"
+            },
             ticks: {
               color: "#D2D9E4",
               callback: function (value, index, values) {
@@ -82,6 +84,9 @@ const LineChart = () => {
             },
           },
           x: {
+            grid: {
+              display: false,
+            },
             ticks: {
               color: "#D2D9E4",
             },

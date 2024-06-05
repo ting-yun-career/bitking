@@ -24,7 +24,7 @@ const Wallets = () => {
             <h3 className="text-3xl font-semibold text-Neutral-8 my-1 lg:my-2">
               {usd(42815.26)}
             </h3>
-            <div className="mt-2 lg:mt-7 flex flex-wrap gap-5 justify-center">
+            <div className="hidden mt-2 lg:mt-7 flex flex-wrap gap-5 justify-center">
               <button className="text-xs text-[#F8FAFC] bg-gradient-to-r from-[#33AB71] to-[#06753F] px-2 py-1 rounded-lg ">
                 Withdraw
               </button>
