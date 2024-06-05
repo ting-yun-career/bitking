@@ -88,13 +88,8 @@ const Settings = () => {
             BIO
           </h6>
           <p className="text-base text-Neutral-6 leading-[24px]">
-            Fusce quis tempor augue, congue mollis lorem. Donec et tristique
-            massa, a consectetur risus
+            Web3 investor, Social Media activist
           </p>
-          <hr className="my-5 border-Neutral-10" />
-          <h6 className="text-Neutral-6 text-base font-semibold leading-[20px]">
-            Social media
-          </h6>
           <div className="mt-2 flex gap-3">
             <Link
               href="#"
@@ -144,7 +139,7 @@ const Settings = () => {
                   </button>
                 )}
               </Tab>
-              <Tab as={Fragment}>
+              {/* <Tab as={Fragment}>
                 {({ selected }) => (
                   <button
                     className={
@@ -156,7 +151,7 @@ const Settings = () => {
                     Two-factor
                   </button>
                 )}
-              </Tab>
+              </Tab> */}
               <Tab as={Fragment}>
                 {({ selected }) => (
                   <button
@@ -173,243 +168,138 @@ const Settings = () => {
             </Tab.List>
             <Tab.Panels>
               <Tab.Panel>
-                <form>
+                <form className="">
                   <div className="xl:flex block gap-[60px] mb-2 lg:mb-6">
                     <div className="form-control w-full">
                       <label className="label">
-                        <span className="text-base text-Neutral-6 font-semibold mb-1 lg:mb-3">
+                        <span className="text-base text-gray-100 font-semibold mb-1 lg:mb-3">
                           First Name
                         </span>
                       </label>
                       <input
                         type="text"
-                        placeholder="First Name........."
-                        className="w-full px-2 py-[10px] outline-none rounded bg-Primary-3 border border-Neutral-10"
+                        placeholder="Enter First Name"
+                        defaultValue="John"
+                        className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
                       />
                     </div>
 
                     <div className="form-control w-full">
                       <label className="label">
-                        <span className="text-base text-Neutral-6 font-semibold mb-1 lg:mb-3">
+                        <span className="text-base text-gray-100 font-semibold mb-1 lg:mb-3">
                           Last Name
                         </span>
                       </label>
                       <input
                         type="text"
-                        placeholder="Last Name........."
-                        className="w-full px-2 py-[10px] outline-none rounded bg-Primary-3 border border-Neutral-10"
+                        placeholder="Enter Last Name"
+                        defaultValue="Smith"
+                        className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
                       />
                     </div>
                   </div>
                   <div className="xl:flex block gap-[60px] mb-2 lg:mb-6">
                     <div className="form-control w-full">
                       <label className="label">
-                        <span className="text-base text-Neutral-6 font-semibold mb-1 lg:mb-3">
-                          Email Address
+                        <span className="text-base text-gray-100 font-semibold mb-1 lg:mb-3">
+                          Email
                         </span>
                       </label>
                       <input
                         type="text"
-                        placeholder="Email Address........."
-                        className="w-full px-2 py-[10px] outline-none rounded bg-Primary-3 border border-Neutral-10"
+                        placeholder="Enter Email"
+                        defaultValue="jsmith@gmail.com"
+                        className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
                       />
                     </div>
 
                     <div className="form-control w-full">
                       <label className="label">
-                        <span className="text-base text-Neutral-6 font-semibold mb-1 lg:mb-3">
+                        <span className="text-base text-gray-100 font-semibold mb-1 lg:mb-3">
                           Phone Number
                         </span>
                       </label>
                       <input
                         type="text"
-                        placeholder="+(1) 987........."
-                        className="w-full px-2 py-[10px] outline-none rounded bg-Primary-3 border border-Neutral-10"
+                        placeholder="eg. 604135641"
+                        defaultValue="604135641"
+                        className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
                       />
                     </div>
                   </div>
                   <div className="xl:flex block gap-[60px] mb-2 lg:mb-6">
                     <div className="form-control w-full">
                       <label className="label">
-                        <span className="text-base text-Neutral-6 font-semibold mb-1 lg:mb-3">
-                          Joining Date
+                        <span className="text-base text-gray-100 font-semibold mb-1 lg:mb-3">
+                          Address
                         </span>
                       </label>
                       <input
-                        type="date"
-                        className="w-full px-2 py-[10px] outline-none rounded bg-Primary-3 text-Neutral-1 border border-Neutral-10"
+                        type="text"
+                        placeholder="Enter Address"
+                        defaultValue="123 Broadway Avenue"
+                        className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
                       />
                     </div>
-
+                  </div>
+                  <div className="xl:flex block gap-[60px] mb-2 lg:mb-6">
                     <div className="form-control w-full">
                       <label className="label">
-                        <span className="text-base text-Neutral-6 font-semibold mb-1 lg:mb-3">
+                        <span className="text-base text-gray-100 font-semibold mb-1 lg:mb-3">
                           City
                         </span>
                       </label>
                       <input
                         type="text"
-                        placeholder="City........."
-                        className="w-full px-2 py-[10px] outline-none rounded bg-Primary-3 border border-Neutral-10"
+                        placeholder="Enter City"
+                        defaultValue="Seattle"
+                        className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
                       />
                     </div>
-                  </div>
-                  <div className="xl:flex block gap-[60px] mb-2 lg:mb-6">
                     <div className="form-control w-full">
                       <label className="label">
-                        <span className="text-base text-Neutral-6 font-semibold mb-1 lg:mb-3">
+                        <span className="text-base text-gray-100 font-semibold mb-1 lg:mb-3">
                           Country
                         </span>
                       </label>
                       <input
                         type="text"
-                        placeholder="Country........."
-                        className="w-full px-2 py-[10px] outline-none rounded bg-Primary-3 border border-Neutral-10"
+                        placeholder="Enter Country"
+                        defaultValue="USA"
+                        className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
                       />
                     </div>
-
                     <div className="form-control w-full">
                       <label className="label">
-                        <span className="text-base text-Neutral-6 font-semibold mb-1 lg:mb-3">
+                        <span className="text-base text-gray-100 font-semibold mb-1 lg:mb-3">
                           Zip Code
                         </span>
                       </label>
                       <input
                         type="text"
-                        placeholder="Zip Code........."
-                        className="w-full px-2 py-[10px] outline-none rounded bg-Primary-3 border border-Neutral-10"
+                        placeholder="Enter Zip Code"
+                        defaultValue="90210"
+                        className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
                       />
                     </div>
                   </div>
-                  <div className="xl:flex block gap-[60px] mb-2 lg:mb-6">
-                    <div className="form-control w-full">
-                      <label className="label">
-                        <span className="text-base text-Neutral-6 font-semibold mb-1 lg:mb-3">
-                          Deposit Assets
-                        </span>
-                      </label>
-                      <Listbox
-                        value={selectedDepositAssets}
-                        onChange={setSelectedDepositAssets}
-                      >
-                        <Listbox.Button className="text-Neutral-1 flex gap-2 items-center justify-between px-2 py-[10px] rounded z-[5] border border-Neutral-10">
-                          {selectedDepositAssets.name}
-                          <span className="material-symbols-outlined">
-                            expand_more
-                          </span>
-                        </Listbox.Button>
-                        <Listbox.Options className="w-full rounded bg-Primary-bg text-white p-3">
-                          {depositAssets.map((asset) => (
-                            <Listbox.Option
-                              key={asset.id}
-                              value={asset}
-                              as={Fragment}
-                            >
-                              <li className="cursor-pointer p-1 hover:bg-Neutral-8 rounded">
-                                {asset.name}
-                              </li>
-                            </Listbox.Option>
-                          ))}
-                        </Listbox.Options>
-                      </Listbox>
-                    </div>
-                    <div className="form-control w-full">
-                      <label className="label">
-                        <span className="text-base text-Neutral-6 font-semibold mb-1 lg:mb-3">
-                          Enabled 1,11000 USD/Day
-                        </span>
-                      </label>
-                      <Listbox
-                        value={selectedWithdrawAssets}
-                        onChange={setSelectedWithdrawAssets}
-                      >
-                        <Listbox.Button className="text-Neutral-1 flex gap-2 items-center justify-between px-2 py-[10px] rounded z-[5] border border-Neutral-10">
-                          {selectedWithdrawAssets.name}
-                          <span className="material-symbols-outlined">
-                            expand_more
-                          </span>
-                        </Listbox.Button>
-                        <Listbox.Options className="w-full rounded bg-Primary-bg text-white p-3">
-                          {withdrawAssets.map((asset) => (
-                            <Listbox.Option
-                              key={asset.id}
-                              value={asset}
-                              as={Fragment}
-                            >
-                              <li className="cursor-pointer p-1 hover:bg-Neutral-8 rounded">
-                                {asset.name}
-                              </li>
-                            </Listbox.Option>
-                          ))}
-                        </Listbox.Options>
-                      </Listbox>
-                    </div>
-                  </div>
-                  <div className="form-control mb-2 lg:mb-6">
+                  <div className="form-control w-full">
                     <label className="label">
-                      <span className="text-base text-Neutral-6 font-semibold">
+                      <span className="text-base text-gray-100 font-semibold mb-1 lg:mb-3">
                         Description
                       </span>
                     </label>
                     <textarea
-                      className="h-28 text-Neutral-1 bg-Primary-3  rounded outline-none py-[10px] px-2 border border-Neutral-10"
-                      placeholder="Description......."
-                    ></textarea>
-                  </div>
-                  <div>
-                    <h6 className="text-white text-base font-semibold leading-[20px] mb-3">
-                      Deposit Assets
-                    </h6>
-                    <div className="border border-Neutral-10 px-2 py-[10px] rounded">
-                      <div className="flex gap-2 mb-2">
-                        <input
-                          type="checkbox"
-                          id="check"
-                          name="check"
-                          className="checkbox border-Neutral-10 checkbox-success"
-                        />
-                        <label
-                          htmlFor="check"
-                          className="text-Neutral-5 text-sm leading-[21px] cursor-pointer"
-                        >
-                          Promotions
-                        </label>
-                      </div>
-                      <div className="flex gap-2 mb-2">
-                        <input
-                          type="checkbox"
-                          className="checkbox border-Neutral-10 checkbox-success"
-                          id="check2"
-                          name="check2"
-                        />
-                        <label
-                          htmlFor="check2"
-                          className="text-Neutral-5 text-sm leading-[21px] cursor-pointer"
-                        >
-                          Exchange
-                        </label>
-                      </div>
-                      <div className="flex gap-2">
-                        <input
-                          type="checkbox"
-                          id="check1"
-                          name="check1"
-                          className="checkbox border-Neutral-10 checkbox-success"
-                        />
-                        <label
-                          htmlFor="check1"
-                          className="text-Neutral-5 text-sm leading-[21px] cursor-pointer"
-                        >
-                          Withdrawls
-                        </label>
-                      </div>
-                    </div>
+                      placeholder="Describe yourself"
+                      defaultValue="Web3 investor, Social Media activist"
+                      className="h-28 text-gray-100 placeholder-gray-500 bg-Primary-3 rounded outline-none py-[10px] px-2 border border-Neutral-10"
+                    />
                   </div>
                   <div className="mt-8 flex gap-5">
                     <button className="text-xs text-[#F8FAFC] leading-[18px] bg-gradient-to-r from-[#33AB71] to-[#06753F] rounded-lg px-4 py-2">
                       Updates
                     </button>
-                    <button className="text-xs text-Primary-2 leading-[18px] border border-Primary-2 rounded-lg px-4 py-2">
+                    <button className="text-xs text-Neutral-6 leading-[18px] border border-Neutral-6 rounded-lg px-4 py-2">
                       Cancel
                     </button>
                   </div>
@@ -426,7 +316,7 @@ const Settings = () => {
                     <div className="relative">
                       <input
                         type={show ? "text" : "password"}
-                        placeholder="Old Password........."
+                        placeholder="Old Password"
                         className="px-2 py-[10px] rounded w-full bg-Primary-3 text-Neutral-6 border border-Neutral-10 outline-none"
                       />
                       <label
@@ -454,7 +344,7 @@ const Settings = () => {
                     <div className="relative">
                       <input
                         type={show1 ? "text" : "password"}
-                        placeholder="New Password........."
+                        placeholder="New Password"
                         className="px-2 py-[10px] rounded w-full bg-Primary-3 text-Neutral-6 border border-Neutral-10 outline-none"
                       />
                       <label
@@ -510,7 +400,7 @@ const Settings = () => {
                   </div>
                 </div>
               </Tab.Panel>
-              <Tab.Panel>
+              {/* <Tab.Panel>
                 <div className="flex flex-wrap items-center gap-6">
                   <div className="">
                     <Image src={code} alt="code" className="object-cover" />
@@ -552,7 +442,7 @@ const Settings = () => {
                     </button>
                   </div>
                 </div>
-              </Tab.Panel>
+              </Tab.Panel> */}
               <Tab.Panel>
                 <h5 className="text-xl font-semibold text-Neutral-6 leading-[26px]">
                   Login Device History
