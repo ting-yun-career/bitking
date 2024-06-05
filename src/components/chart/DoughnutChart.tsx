@@ -3,15 +3,16 @@ import React from "react";
 import { Doughnut } from "react-chartjs-2";
 import "chart.js/auto";
 import Color from 'color';
+import { percent } from "@src/util/currency";
 
 const DoughnutChart = () => {
   const theme = process.env.theme as any;
   const data = React.useMemo(() => ({
-    labels: ["Value", "Remaining", "extra"],
+    labels: ["Profit", "Loss"],
     datasets: [
       {
-        data: [35, 40, 25],
-        backgroundColor: [Color(theme.profit).fade(0.3).string(), Color(theme.loss).fade(0.3).string(), "#424A55"], // Change colors as needed
+        data: [28792.38, 955.93],
+        backgroundColor: [Color(theme.profit).fade(0.3).string(), Color(theme.loss).fade(0.3).string()],
       },
     ],
   }), [theme]);
@@ -22,7 +23,7 @@ const DoughnutChart = () => {
       legend: {
         display: false,
       },
-      tooltip: false,
+      tooltip: true,
     },
     elements: {
       arc: {
@@ -48,10 +49,9 @@ const DoughnutChart = () => {
           transform: "translate(-50%, -50%)",
           textAlign: "center",
         }}
+        className="text-Profit-bold text-2xl font-semibold"
       >
-        <div style={{ fontSize: "32px", fontWeight: "bold", color: "white" }}>
-          89%
-        </div>
+        {percent(28792.38 / 955.93, true, 0)}
       </div>
     </div>
   );

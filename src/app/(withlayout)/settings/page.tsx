@@ -4,7 +4,6 @@ import user from "@/../public/images/user512.png";
 import Image from "next/image";
 import "remixicon/fonts/remixicon.css";
 import { Listbox, Tab } from "@headlessui/react";
-import code from "@/../public/images/Code.png";
 import { loginHistory } from "../../../../public/data/settingsData";
 import Link from "next/link";
 import OtpInput from "react-otp-input";
