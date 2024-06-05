@@ -108,7 +108,7 @@ const DashBoard = () => {
                     <td>
                       <div
                         className={cx(
-                          ["text-base", "leading-[24px]", "px-3", "py-1", "rounded", "flex", "items-center"],
+                          ["text-base", "leading-[24px]", "py-1", "rounded", "flex", "items-center"],
                           { 'text-Profit-bold': amount > 0, 'text-Loss-bold': amount < 0 }
                         )}
                       >
