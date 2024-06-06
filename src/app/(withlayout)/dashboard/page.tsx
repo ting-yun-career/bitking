@@ -108,11 +108,13 @@ const DashBoard = () => {
                     <td>
                       <div
                         className={cx(
-                          ["text-base", "leading-[24px]", "py-1", "rounded", "flex", "items-center"],
+                          ["text-base", "leading-[24px]", "py-1", "rounded", "flex", "items-center", "relative"],
                           { 'text-Profit-bold': amount > 0, 'text-Loss-bold': amount < 0 }
                         )}
                       >
                         {usd(amount)}
+                        {amount > 0 && <span className="text-Profit-bold material-symbols-outlined">arrow_drop_up</span>}
+                        {amount < 0 && <span className="text-Loss-bold material-symbols-outlined">arrow_drop_down</span>}
                       </div>
                     </td>
                   </tr>
