@@ -102,8 +102,8 @@ const Wallets = () => {
                     <td>
                       <div className="relative">
                         {usd(item?.currentValue)}
-                        {item?.currentValue > item.startValue && <span className="absolute top-0.5 text-Profit-bold material-symbols-outlined">arrow_drop_up</span>}
-                        {item?.currentValue < item.startValue && <span className="absolute top-0.5 text-Loss-bold material-symbols-outlined">arrow_drop_down</span>}
+                        {item?.currentValue > item.startValue && <span className="align-middle text-Profit-bold material-symbols-outlined">arrow_drop_up</span>}
+                        {item?.currentValue < item.startValue && <span className="align-middle text-Loss-bold material-symbols-outlined">arrow_drop_down</span>}
                       </div>
                     </td>
                     <td>
