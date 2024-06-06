@@ -473,9 +473,6 @@ const Settings = () => {
                         <th className="text-base font-bold text-Neutral-6 leading-[24px]">
                           IP Address
                         </th>
-                        <th className="text-base font-bold text-Neutral-6 leading-[24px]">
-                          Active Device
-                        </th>
                       </tr>
                     </thead>
                     <tbody>
@@ -500,17 +497,6 @@ const Settings = () => {
                           <td>
                             <div className="text-base text-Neutral-6 leading-[24px]">
                               {item.ip}
-                            </div>
-                          </td>
-                          <td>
-                            <div className="flex items-center gap-2">
-                              <div
-                                style={{ backgroundColor: item.color }}
-                                className="w-2 h-2  rounded-full"
-                              ></div>
-                              <span className="text-base text-Neutral-6 leading-[24px]">
-                                {item.active}
-                              </span>
                             </div>
                           </td>
                         </tr>
