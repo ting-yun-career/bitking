@@ -73,14 +73,6 @@ const Activities = () => {
             <table className="table whitespace-nowrap">
               <thead>
                 <tr className="border-Neutral-7 text-base font-bold text-Neutral-6 leading-[24px]">
-                  <th>
-                    <label>
-                      <input
-                        type="checkbox"
-                        className="checkbox border-Neutral-10"
-                      />
-                    </label>
-                  </th>
                   <th>Id</th>
                   <th>Symbol</th>
                   <th>Date</th>
@@ -94,14 +86,14 @@ const Activities = () => {
                     key={item.id}
                     className="border-Neutral-7 text-base text-Neutral-6 leading-[24px]"
                   >
-                    <th>
+                    {/* <th>
                       <label>
                         <input
                           type="checkbox"
                           className="checkbox border-Neutral-10"
                         />
                       </label>
-                    </th>
+                    </th> */}
                     <td>
                       <div>{item.id}</div>
                     </td>
