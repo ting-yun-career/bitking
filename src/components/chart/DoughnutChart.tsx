@@ -51,7 +51,7 @@ const DoughnutChart = () => {
         }}
         className="text-Profit-bold text-2xl font-semibold"
       >
-        {percent(28792.38 / 955.93, true, 0)}
+        {percent((70646 / 42813) * 100, true, 0)}
       </div>
     </div>
   );
