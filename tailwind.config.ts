@@ -43,6 +43,7 @@ const config: Config = {
         "Neutral-8": "#3EBF81",
         "Neutral-9": "#FFFFFF",
         "Neutral-10": "#242F40",
+        "darkblue": "#141A22",
         "Profit": colorProfit,
         "Profit-bold": Color(colorProfit).lighten(0.5).string(),
         "Pending": colorPending,

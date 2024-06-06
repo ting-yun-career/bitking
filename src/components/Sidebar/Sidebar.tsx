@@ -26,13 +26,13 @@ const Sidebar = ({ navOpen, opened, setOpened, setNavOpen }: navProps) => {
   return (
     <nav
       className={`${navOpen ? "ml-0" : "ml-[-260px]"
-        } lg:ml-0 w-[260px] transiton-all duration-300 ease-out z-20 overflow-x-hidden overflow-y-auto fixed top-0 bottom-0 bg-[#212B39] flex flex-col p-3 md:p-5 xl:px-6 xl:py-8 min-h-screen shadow-lg lg:shadow-none scrollbarthin  text-white`}
+        } lg:ml-0 w-[260px] transiton-all duration-300 ease-out z-20 overflow-x-hidden overflow-y-auto fixed top-0 bottom-0 bg-darkblue flex flex-col p-3 md:p-5 xl:px-6 xl:py-8 min-h-screen shadow-lg lg:shadow-none scrollbarthin  text-white`}
     >
       <Link href="/" className="flex items-center gap-8 mb-10">
         <span className="flex items-center gap-2  cursor-pointer">
           <Image className="w-10 h-[42px]" src={logo} alt="Bit King logo" />
           <span className="text-white text-2xl font-bold">
-            <span className="text-Primary-1">Bit</span><span className="text-Primary-2">King</span>
+            <span className="text-Profit-bold">Bit</span><span className="text-Loss-bold">King</span>
           </span>
         </span>
 
