@@ -88,7 +88,7 @@ const Wallets = () => {
                       <div className="flex items-center space-x-3">
                         <div className="avatar">
                           <div className="mask mask-squircle w-6 h-6">
-                            <Image src={item.img} alt="curency" />
+                            <CryptoCoin symbol={item.symbol} size={25} />
                           </div>
                         </div>
                         <div>
@@ -100,7 +100,11 @@ const Wallets = () => {
                       <div className="">{usd(item?.startValue)}</div>
                     </td>
                     <td>
-                      <div className={cx({ 'text-Profit-bold': item?.currentValue > item.startValue, 'text-Loss-bold': item?.currentValue < item.startValue })}>{usd(item?.currentValue)}</div>
+                      <div className="relative">
+                        {usd(item?.currentValue)}
+                        {item?.currentValue > item.startValue && <span className="absolute top-0.5 text-Profit-bold material-symbols-outlined">arrow_drop_up</span>}
+                        {item?.currentValue < item.startValue && <span className="absolute top-0.5 text-Loss-bold material-symbols-outlined">arrow_drop_down</span>}
+                      </div>
                     </td>
                     <td>
                       <div className={cx({ 'text-Profit-bold': item?.h24 > 0, 'text-Loss-bold': item?.h24 < 0 })}>{percent(item?.h24)}</div>

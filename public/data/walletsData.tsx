@@ -42,6 +42,7 @@ export const currencyPrices = [
     d7: 3.53,
     d30: 4.52,
     ytd: 187.87,
+    symbol: 'btc',
     img: Bitcoin,
   },
   {
@@ -53,6 +54,7 @@ export const currencyPrices = [
     d7: 2.6,
     d30: 2.68,
     ytd: 188.09,
+    symbol: 'eth',
     img: Ethereum,
   },
   {
@@ -64,6 +66,7 @@ export const currencyPrices = [
     d7: 0.10,
     d30: -0.02,
     ytd: 0.01,
+    symbol: 'usdt',
     img: Tether,
   },
   {
@@ -75,6 +78,7 @@ export const currencyPrices = [
     d7: -5.17,
     d30: -10.03,
     ytd: -65.73,
+    symbol: 'ltc',
     img: Litecoin,
   },
   {
@@ -86,6 +90,7 @@ export const currencyPrices = [
     d7: -1.77,
     d30: -2.01,
     ytd: -63.33,
+    symbol: 'bnb',
     img: binance,
   },
 ];
