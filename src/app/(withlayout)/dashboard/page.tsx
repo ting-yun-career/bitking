@@ -27,9 +27,7 @@ const DashBoard = () => {
                   {usd(chart.currentValue)}
                 </h4>
               </div>
-              <div className="border border-2 rounded-full">
-                <CryptoCoin symbol={chart.symbol} size={40} />
-              </div>
+              <CryptoCoin symbol={chart.symbol} size={40} />
             </div>
             <div className="h-[55px] w-full mt-2 lg:mt-5">{chart.chart}</div>
           </div>

@@ -28,7 +28,7 @@ const smallMap: { [key: string]: StaticImageData } = {
 
 const CryptoCoin = ({ symbol, size }: Props) => {
   const img = smallMap[symbol] ?? smallMap['generic'];
-  return <Image src={img} alt={`${symbol}`} width={size} height={size} />
+  return <div className="border border-2 rounded-full"><Image src={img} alt={`${symbol}`} width={size} height={size} /></div>
 }
 
 export default CryptoCoin;

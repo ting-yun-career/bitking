@@ -10,6 +10,7 @@ import CandleStickLineChart from "@components/chart/CandleStickLineChart";
 import CandlestickChart from "@components/chart/CandleStickChart";
 import Coin from "@components/Exchange/Coin";
 import { usd } from "@src/util/currency";
+import CryptoCoin from "@src/components/CryptoCoin/CryptoCoin";
 
 const Exchange = () => {
   const [selectedCurencys, setSelectedCurencys] = useState(curencys[0]);
@@ -23,11 +24,7 @@ const Exchange = () => {
               <span className="flex gap-2 items-center font-bold">
                 <span className="material-symbols-outlined">expand_more</span>
                 <span className="flex gap-2 items-center">
-                  <Image
-                    className="w-10 h-10 rounded-full"
-                    src={selectedCurencys.img}
-                    alt="curency"
-                  />
+                  <CryptoCoin symbol={selectedCurencys.symbol} size={35} />
                   <span>
                     <span className="block text-base text-Neutral-6 leading-[24px]">
                       {selectedCurencys.name}
@@ -47,11 +44,7 @@ const Exchange = () => {
                   disabled={curency.unavailable}
                 >
                   <span className="flex items-center gap-2 py-2 opacity-50 hover:opacity-100">
-                    <Image
-                      className="w-10 h-10 rounded-full"
-                      src={curency.img}
-                      alt="curency"
-                    />
+                    <CryptoCoin symbol={curency.symbol} size={35} />
                     <span>
                       <span className="block text-base text-Neutral-6 leading-[24px]">
                         {curency.name}

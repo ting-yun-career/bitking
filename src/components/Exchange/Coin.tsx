@@ -2,6 +2,7 @@ import { Listbox, Tab } from "@headlessui/react";
 import Image from "next/image";
 import React, { Fragment, useState } from "react";
 import { curencys, curencysAmount } from "../../../public/data/exchangeData";
+import CryptoCoin from "../CryptoCoin/CryptoCoin";
 
 const Coin = () => {
   const [selectedAmount, setSelectedAmount] = useState(curencysAmount[0]);
@@ -46,17 +47,13 @@ const Coin = () => {
               <Listbox.Button className="w-full max-w-xs flex gap-2 items-center relative rounded-lg text-Neutral-6 bg-Primary-bg py-3 px-4 text-left focus:outline-none sm:text-sm">
                 <span className="flex gap-2 items-center justify-between w-full">
                   <span className="flex gap-2 items-center flex-1">
-                    <Image
-                      className="w-10 h-10 rounded-full"
-                      src={selectedCurencys.img}
-                      alt="curency"
-                    />
+                    <CryptoCoin symbol={selectedCurencys.symbol} size={35} />
                     <span className="flex flex-1 flex-wrap justify-between gap-2">
                       <span className="text-xl text-Neutral-6 font-bold leading-[24px]">
-                        {selectedCurencys.coin}
+                        {selectedCurencys.name}
                       </span>
                       <span className="text-xl text-Neutral-6 leading-[24px]">
-                        {selectedCurencys.sort}
+                        {selectedCurencys.coin}
                       </span>
                     </span>
                   </span>
@@ -71,11 +68,7 @@ const Coin = () => {
                     disabled={curency.unavailable}
                   >
                     <span className="flex items-center gap-2 py-2 opacity-50 hover:opacity-100">
-                      <Image
-                        className="w-10 h-10 rounded-full"
-                        src={curency.img}
-                        alt="curency"
-                      />
+                      <CryptoCoin symbol={curency.symbol} size={30} />
                       <span>
                         <span className="block text-base text-Neutral-6 leading-[24px]">
                           {curency.name}
@@ -129,17 +122,13 @@ const Coin = () => {
               <Listbox.Button className="w-full max-w-xs flex gap-2 items-center relative rounded-lg text-Neutral-6 bg-Primary-bg py-3 px-4 text-left focus:outline-none sm:text-sm">
                 <span className="flex gap-2 items-center justify-between w-full">
                   <span className="flex gap-2 items-center flex-1">
-                    <Image
-                      className="w-10 h-10 rounded-full"
-                      src={selectedCurencys.img}
-                      alt="curency"
-                    />
+                    <CryptoCoin symbol={selectedCurencys.symbol} size={30} />
                     <span className="flex flex-1 flex-wrap justify-between gap-2">
                       <span className="text-xl text-Neutral-6 font-bold leading-[24px]">
-                        {selectedCurencys.coin}
+                        {selectedCurencys.name}
                       </span>
                       <span className="text-xl text-Neutral-6 leading-[24px]">
-                        {selectedCurencys.sort}
+                        {selectedCurencys.coin}
                       </span>
                     </span>
                   </span>
@@ -154,11 +143,7 @@ const Coin = () => {
                     disabled={curency.unavailable}
                   >
                     <span className="flex items-center gap-2 py-2 opacity-50 hover:opacity-100">
-                      <Image
-                        className="w-10 h-10 rounded-full"
-                        src={curency.img}
-                        alt="curency"
-                      />
+                      <CryptoCoin symbol={curency.symbol} size={35} />
                       <span>
                         <span className="block text-base text-Neutral-6 leading-[24px]">
                           {curency.name}

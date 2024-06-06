@@ -111,35 +111,31 @@ export const deepTrades = [
 export const curencys = [
   {
     id: uuidv4(),
-    name: "BTC/USDT",
+    name: "BTC/USD",
     coin: "Bitcoin",
-    img: bitcoin,
     unavailable: false,
-    sort: "BTC",
+    symbol: "btc",
   },
   {
     id: uuidv4(),
-    name: "BNB/USDT",
+    name: "BNB/USD",
     coin: "Binance",
-    img: binance,
     unavailable: false,
-    sort: "BNB",
+    symbol: "bnb",
   },
   {
     id: uuidv4(),
-    name: "LTC/USDT",
+    name: "LTC/USD",
     coin: "Litecoin",
-    img: litecoin,
     unavailable: false,
-    sort: "LTC",
+    symbol: "ltc",
   },
   {
     id: uuidv4(),
-    name: "ETH/USDT",
+    name: "ETH/USD",
     coin: "Ethereum",
-    img: ethereum,
     unavailable: false,
-    sort: "ETH",
+    symbol: "eth",
   },
 ];
 
