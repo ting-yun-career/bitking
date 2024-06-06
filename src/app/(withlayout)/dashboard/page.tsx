@@ -17,7 +17,7 @@ const DashBoard = () => {
   const theme: any = process.env.theme;
   return (
     <div className="bg-Primary-bg p-3 lg:p-6">
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+      <section className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 gap-6">
         {smallCharts.map((chart) => (
           <div key={chart.id} className="px-5 py-4 rounded-lg">
             <div className="flex flex-wrap items-center justify-between">
@@ -27,7 +27,9 @@ const DashBoard = () => {
                   {usd(chart.currentValue)}
                 </h4>
               </div>
-              <CryptoCoin symbol={chart.symbol} size={25} />
+              <div className="border border-2 rounded-full">
+                <CryptoCoin symbol={chart.symbol} size={40} />
+              </div>
             </div>
             <div className="h-[55px] w-full mt-2 lg:mt-5">{chart.chart}</div>
           </div>
