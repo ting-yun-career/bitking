@@ -28,13 +28,13 @@ const CandleStickLineChart = () => {
       ],
       datasets: [
         {
-          label: "My Dataset",
+          label: "BTC/USD",
           data: [38, 25, 49, 38, 40, 66, 65, 48, 85, 58],
           fill: true,
           backgroundColor: gradient,
           borderColor: theme.profit,
           borderWidth: 2,
-          pointRadius: 3,
+          pointRadius: 5,
           pointBackgroundColor: "white",
         },
       ],
@@ -53,7 +53,7 @@ const CandleStickLineChart = () => {
           tooltip: {
             backgroundColor: "#212B39",
             titleColor: "#3EBF81",
-            padding: 10,
+            padding: 15,
             bodyColor: "#FFF",
           },
         },
