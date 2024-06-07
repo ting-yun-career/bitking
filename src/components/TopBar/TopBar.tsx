@@ -26,6 +26,12 @@ const TopBar = ({ handleOpen }: headerProps) => {
 
   return (
     <div className="py-2 flex gap-2 items-center justify-end self-start z-[5] left-0 lg:ml-[260px] right-0 fixed bg-Primary-bg border-b border-gray-800">
+      { /* mobile menu trigger, hidden beyond lg+ */}
+      <div className="lg:hidden w-[60px] h-[50px] flex justify-center items-center absolute left-4">
+        <span className="material-symbols-outlined text-white !text-4xl">
+          menu
+        </span>
+      </div>
       <div className="flex items-center gap-3 md:gap-5">
 
         <Menu as="div" className="relative inline-block text-left">
