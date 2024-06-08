@@ -1,4 +1,3 @@
-import Image from "next/image";
 import React from "react";
 import Progressbar from "@components/Progressbar/Progressbar";
 import { currencyPrices, progres } from "../../../../public/data/walletsData";

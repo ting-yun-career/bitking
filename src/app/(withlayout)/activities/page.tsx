@@ -86,23 +86,13 @@ const Activities = () => {
                     key={item.id}
                     className="border-Neutral-7 text-base text-Neutral-6 leading-[24px]"
                   >
-                    {/* <th>
-                      <label>
-                        <input
-                          type="checkbox"
-                          className="checkbox border-Neutral-10"
-                        />
-                      </label>
-                    </th> */}
                     <td>
                       <div>{item.id}</div>
                     </td>
                     <td>
                       <div className="flex items-center space-x-3">
                         <CryptoCoin symbol={item.symbol} size={30} />
-                        <div>
-                          <div>{item.type}</div>
-                        </div>
+                        <div>{item.type}</div>
                       </div>
                     </td>
                     <td>
