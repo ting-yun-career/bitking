@@ -40,8 +40,14 @@ body {
   position: absolute;
   border-left: 15px solid transparent;
   border-right: 15px solid transparent;
-  right: 40%;
-  top: -20px;
+  right: 15px;
+  top: -18px;
+}
+
+@media only screen and (max-width: 768px) {
+  .identify-notificition::before {
+    right: 170px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
