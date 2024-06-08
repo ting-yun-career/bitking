@@ -85,14 +85,8 @@ const Wallets = () => {
                   >
                     <td>
                       <div className="flex items-center space-x-3">
-                        <div className="avatar">
-                          <div className="mask mask-squircle w-6 h-6">
-                            <CryptoCoin symbol={item.symbol} size={25} />
-                          </div>
-                        </div>
-                        <div>
-                          <div>{item.asset}</div>
-                        </div>
+                        <CryptoCoin symbol={item.symbol} size={25} />
+                        <div>{item.asset}</div>
                       </div>
                     </td>
                     <td>
