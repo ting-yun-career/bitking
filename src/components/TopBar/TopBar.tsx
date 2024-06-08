@@ -27,7 +27,8 @@ const TopBar = ({ handleOpen }: headerProps) => {
   return (
     <div className="py-2 flex gap-2 items-center justify-end self-start z-[5] left-0 lg:ml-[260px] right-0 fixed bg-Primary-bg border-b border-gray-800">
       <div className="flex items-center gap-3 md:gap-5">
-        <Menu as="div" className="relative inline-block text-left">
+
+        {/* <Menu as="div" className="relative inline-block text-left">
           <Menu.Button className="inline-flex w-full justify-center rounded-md bg-Primary-bg p-1 px-3 py-2 text-sm font-medium text-white  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 relative cursor-pointer">
             <span className="material-symbols-outlined text-white !text-3xl md:!text-[35px]">
               message
@@ -77,10 +78,10 @@ const TopBar = ({ handleOpen }: headerProps) => {
               </div>
             </Menu.Items>
           </Transition>
-        </Menu>
+        </Menu> */}
 
-        <Menu as="div" className="hidden relative inline-block text-left">
-          <Menu.Button className="inline-flex w-full justify-center rounded-md bg-Primary-bg  px-3 py-2 text-sm font-medium text-white  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 relative cursor-pointer">
+        <Menu as="div" className="relative inline-block text-left">
+          <Menu.Button className="inline-flex w-full justify-center rounded-md bg-Primary-bg px-3 py-2 text-sm font-medium text-white  focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 relative cursor-pointer">
             <span className="material-symbols-outlined  text-white !text-3xl md:!text-[35px]">
               notifications
             </span>
@@ -96,10 +97,10 @@ const TopBar = ({ handleOpen }: headerProps) => {
             leaveFrom="transform opacity-100 scale-100"
             leaveTo="transform opacity-0 scale-95"
           >
-            <Menu.Items className="absolute -right-8 mt-4 origin-top-right divide-y divide-gray-100 rounded-md  shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none identify-notificition">
+            <Menu.Items className="absolute -right-32 mt-4 origin-top-right divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none identify-notificition">
               <div className="px-1 py-1 ">
                 <Menu.Item>
-                  <div className="w-64 md:w-[500px] bg-Neutral-10 p-3 rounded-xl">
+                  <div className="w-[350px] bg-Neutral-10 p-3 rounded-xl">
                     <h3 className="text-2xl text-white font-bold text-center">
                       Notifications
                     </h3>
@@ -107,13 +108,15 @@ const TopBar = ({ handleOpen }: headerProps) => {
                     {notifications.map((data) => (
                       <div
                         key={data.id}
-                        className="flex items-center gap-3 py-2 duration-200 cursor-pointer hover:bg-Neutral-8 p-2 rounded"
+                        className="flex items-center gap-3 py-2 duration-200 cursor-pointer hover:bg-Neutral-2 p-2 rounded"
                       >
-                        <Image
-                          className="w-10 h-10 md:w-[60px] md:h-[60px]"
-                          src={data.img}
-                          alt="buyer"
-                        />
+                        <div className="relative min-w-10 h-10 border rounded-full overflow-hidden">
+                          <Image
+                            src={data.img}
+                            alt="buyer"
+                            fill={true}
+                          />
+                        </div>
                         <div>
                           <h4 className="font-bold text-base md:text-lg text-white leading-[27px]">
                             {data.name}
@@ -130,28 +133,21 @@ const TopBar = ({ handleOpen }: headerProps) => {
             </Menu.Items>
           </Transition>
         </Menu>
-        <Menu
-          as="div"
-          className="relative inline-block text-left pr-3 md:pr-6 lg:pr-10 mt-1"
-        >
+        <Menu as="div" className="relative inline-block text-left mr-8 md:mr-12 mt-1">
           <Menu.Button>
-            <span className="flex gap-2 items-center cursor-pointer">
-              <span>
-                <div className="w-12 h-12 rounded-full overflow-hidden">
-                  <Image src={user} alt="User" />
+            <div className="flex gap-2 items-center cursor-pointer">
+              <div className="w-12 h-12 rounded-full overflow-hidden">
+                <Image src={user} alt="User" />
+              </div>
+              <div>
+                <div className="text-base text-white font-semibold">
+                  John Smith
                 </div>
-              </span>
-              <span className="lg:flex items-center hidden">
-                <span>
-                  <span className="text-base text-white font-semibold block">
-                    John Smith
-                  </span>
-                  <span className="text-xs text-Neutral-6 text-left block">
-                    Standard Plan
-                  </span>
-                </span>
-              </span>
-            </span>
+                <div className="text-xs text-Neutral-6 text-left">
+                  Standard Plan
+                </div>
+              </div>
+            </div>
           </Menu.Button>
 
           <Transition

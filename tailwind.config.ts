@@ -23,6 +23,9 @@ const config: Config = {
       "4xl": "1800px",
     },
     extend: {
+      minWidth: {
+        10: '2.5rem',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
