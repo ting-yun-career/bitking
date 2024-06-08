@@ -265,22 +265,22 @@ const CandlestickChart = () => {
       },
     },
     responsive: [
-      {
-        breakpoint: 320,
-        options: {
-          chart: {
-            height: "100%",
-          },
-        },
-      },
-      {
-        breakpoint: 768,
-        options: {
-          chart: {
-            height: "200%",
-          },
-        },
-      },
+      // {
+      //   breakpoint: 320,
+      //   options: {
+      //     chart: {
+      //       height: "100%",
+      //     },
+      //   },
+      // },
+      // {
+      //   breakpoint: 768,
+      //   options: {
+      //     chart: {
+      //       height: "100%",
+      //     },
+      //   },
+      // },
     ],
     xaxis: {
       type: "datetime",

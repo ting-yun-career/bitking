@@ -56,7 +56,6 @@ const Sidebar = ({ navOpen, opened, setOpened, setNavOpen }: navProps) => {
             {item.url && (
               <Link
                 href={item.url}
-                onClick={() => setNavOpen(false)}
                 className={cx(["flex", "py-3", "px-4"], { "gap-2": navOpen })}
               >
                 <span className="material-symbols-outlined">{item.icon}</span>
