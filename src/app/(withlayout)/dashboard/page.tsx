@@ -85,21 +85,15 @@ const DashBoard = () => {
                 </tr>
               </thead>
               <tbody>
-                {tableData.map(({ id, symbol, asset, ip, status, amount }) => (
+                {tableData.map(({ id, symbol, asset, ip, amount }) => (
                   <tr
                     key={id}
                     className="border-Neutral-7 text-base text-Neutral-6 leading-[24px]"
                   >
                     <td>
                       <div className="flex items-center space-x-3">
-                        <div className="avatar">
-                          <div className="mask mask-squircle w-6 h-6">
-                            <CryptoCoin symbol={symbol} size={25} />
-                          </div>
-                        </div>
-                        <div>
-                          <div>{asset}</div>
-                        </div>
+                        <CryptoCoin symbol={symbol} size={25} />
+                        <div>{asset}</div>
                       </div>
                     </td>
                     <td>
@@ -127,16 +121,16 @@ const DashBoard = () => {
           <h5 className="text-xl font-semibold leading-[26px] text-white">
             Recent Transaction
           </h5>
-          <div className="mt-5 divide-y divide-gray-700 ">
+          <div className="mt-5 divide-y divide-gray-700">
             {transactions.map((transaction) => (
               <div
                 key={transaction.id}
-                className="flex flex-wrap justify-between items-center py-4"
+                className="flex flex-wrap justify-between items-center p-4"
               >
                 <div className="flex flex-wrap gap-2 items-center">
                   <CryptoCoin symbol={transaction.symbol} size={25} />
-                  <span className="text-lg text-Neutral-6 leading-[21px]">
-                    <span className="capitalize">{transaction.symbol}</span> {transaction.time}
+                  <span className="text-base text-Neutral-6 leading-[21px]">
+                    <span className="uppercase">{transaction.symbol}</span> {transaction.time}
                   </span>
                 </div>
                 <h5 className="text-white text-lg leading-[26px]">
