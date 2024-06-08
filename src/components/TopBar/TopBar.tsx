@@ -52,7 +52,7 @@ const TopBar = ({ handleOpen }: headerProps) => {
                     Notifications
                   </h3>
                   <hr className="my-2 lg:my-3 border-Neutral-7" />
-                  <div className="divide-y divide-gray-700 ">
+                  <div className="divide-y divide-gray-700">
                     {notifications.map((data) => (
                       <div
                         key={data.id}

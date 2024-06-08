@@ -127,13 +127,13 @@ const DashBoard = () => {
           <h5 className="text-xl font-semibold leading-[26px] text-white">
             Recent Transaction
           </h5>
-          <div className="mt-5">
+          <div className="mt-5 divide-y divide-gray-700 ">
             {transactions.map((transaction) => (
               <div
                 key={transaction.id}
-                className="flex flex-wrap justify-between items-center mb-3 border-b border-Neutral-7 pb-3 last:border-none"
+                className="flex flex-wrap justify-between items-center py-4"
               >
-                <div className="flex flex-wrap gap-2 items-center w-full sm:w-[200px]">
+                <div className="flex flex-wrap gap-2 items-center">
                   <CryptoCoin symbol={transaction.symbol} size={25} />
                   <span className="text-lg text-Neutral-6 leading-[21px]">
                     <span className="capitalize">{transaction.symbol}</span> {transaction.time}
