@@ -1,8 +1,7 @@
 "use client";
 import React, { Fragment, useState } from "react";
 import { Listbox, Tab } from "@headlessui/react";
-import { history } from "../../../../public/data/activitiesData";
-import Image from "next/image";
+import { activities as allActivities } from "../../../../public/data/activitiesData";
 import { v4 as uuidv4 } from "uuid";
 import cx from "classnames";
 import CryptoCoin from "@src/components/CryptoCoin/CryptoCoin";
@@ -15,7 +14,14 @@ const times = [
 
 const Activities = () => {
   const [selectedTime, setSelectedTime] = useState(times[0]);
-  const [selectionStatus, setSelectionStatus] = useState('pending');
+  const [selectionStatus, setSelectionStatus] = useState<string>('All');
+  const [activities, setActivities] = useState(allActivities);
+
+  function handleSelectionFilter(status: string) {
+    setSelectionStatus(status)
+    const filteredActivities = [...allActivities].filter((activity => status === 'All' || activity.status === status)); // shortcut for 'All', check for others
+    setActivities(filteredActivities);
+  }
 
   return (
     <div className="bg-Primary-bg p-3 lg:p-6">
@@ -27,18 +33,18 @@ const Activities = () => {
               <button
                 className={cx(
                   ["px-4", "py-2", "text-Neutral-1", "text-xs", "rounded-sm", "outline-none", "flex", "items-center", "border", "border-Neutral-10"],
-                  { "border-none text-white bg-gradient-to-r bg-gradient-to-r from-[#33AB71] to-[#06753F]": selectionStatus === 'all' }
+                  { "border-none text-white bg-gradient-to-r bg-gradient-to-r from-[#33AB71] to-[#06753F]": selectionStatus === 'All' }
                 )}
-                onClick={() => setSelectionStatus('all')}
+                onClick={() => handleSelectionFilter('All')}
               >
                 All
               </button>
               <button
                 className={cx(
                   ["px-4", "py-2", "text-Neutral-1", "text-xs", "rounded-sm", "outline-none", "flex", "items-center", "border", "border-Neutral-10"],
-                  { "border-none text-white bg-gradient-to-r bg-gradient-to-r from-[#33AB71] to-[#06753F]": selectionStatus === 'pending' }
+                  { "border-none text-white bg-gradient-to-r bg-gradient-to-r from-[#33AB71] to-[#06753F]": selectionStatus === 'Pending' }
                 )}
-                onClick={() => setSelectionStatus('pending')}
+                onClick={() => handleSelectionFilter('Pending')}
               >
                 Pending
               </button>
@@ -81,7 +87,7 @@ const Activities = () => {
                 </tr>
               </thead>
               <tbody>
-                {history.map((item) => (
+                {activities?.map((item) => (
                   <tr
                     key={item.id}
                     className="border-Neutral-7 text-base text-Neutral-6 leading-[24px]"

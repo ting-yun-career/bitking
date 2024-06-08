@@ -15,7 +15,7 @@ const getDatetimeDisplay = (year: number, month: number, date: number, hour: num
   return dateStr.replace(', ', ' ')
 }
 
-export const history = [
+export const activities = [
   {
     id: uuidv4().slice(-6),
     type: "Ethereum",
