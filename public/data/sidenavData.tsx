@@ -22,7 +22,7 @@ export const sidenavData: SidenavItem[] = [
     id: 456002,
     name: "Exchange",
     url: "/exchange",
-    icon: "sync",
+    icon: "insights",
   },
   // {
   //   id: 456003,
@@ -34,7 +34,7 @@ export const sidenavData: SidenavItem[] = [
     id: 456004,
     name: "Wallets",
     url: "/wallets",
-    icon: "account_balance_wallet",
+    icon: "attach_money",
   },
   // {
   //   id: 456005,
@@ -46,7 +46,7 @@ export const sidenavData: SidenavItem[] = [
     id: 456006,
     name: "Activities",
     url: "/activities",
-    icon: "insights",
+    icon: "history",
   },
   {
     id: 456007,
