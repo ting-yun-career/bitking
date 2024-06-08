@@ -7,6 +7,7 @@ import AnimateHeight from "react-animate-height";
 import logo from "@/../public/images/bitking128.png";
 import { sidenavData } from "../../../public/data/sidenavData";
 import { v4 as uuidv4 } from "uuid";
+import cx from 'classnames';
 
 type navProps = {
   navOpen: boolean;
@@ -23,25 +24,25 @@ const languages = [
 
 const Sidebar = ({ navOpen, opened, setOpened, setNavOpen }: navProps) => {
   const path = usePathname();
+  const transitionDuration = 300;
   return (
     <nav
-      className={`${navOpen ? "ml-0" : "ml-[-260px]"
-        } lg:ml-0 w-[260px] transiton-all duration-300 ease-out z-20 overflow-x-hidden overflow-y-auto fixed top-0 bottom-0 bg-darkblue flex flex-col p-3 md:p-5 xl:px-6 xl:py-8 min-h-screen shadow-lg lg:shadow-none scrollbarthin  text-white`}
+      className={cx(["ml-0", "z-20", "fixed", "top-0", "bottom-0", "bg-darkblue", "flex", "flex-col", "items-center", "pt-4", "min-h-screen", "shadow-lg", "lg:shadow-none", "scrollbarthin", "text-white", "md:px-6"])}
     >
-      <Link href="/" className="flex items-center gap-8 mb-10">
-        <span className="flex items-center gap-2  cursor-pointer">
+      <Link href="/" className="flex items-center gap-8 mb-5">
+        <span className={cx(["flex", "items-center", "cursor-pointer"], { "gap-2": navOpen })}>
           <Image className="w-10 h-[42px]" src={logo} alt="Bit King logo" />
-          <span className="text-white text-2xl font-bold">
+          <span className={cx(["text-white", "text-2xl", "font-bold", "overflow-hidden", "transiton-all", `duration-${transitionDuration}`, "ease-out"], { "w-full": navOpen, "w-0": !navOpen })}>
             <span className="text-Profit-bold">Bit</span><span className="text-Loss-bold">King</span>
           </span>
         </span>
 
         <span
+          className={cx(["absolute", "left-[100%]", "top-0", "px-4", "py-4", "bg-darkblue", "flex", "items-center", "px-1", "transform"], { "rotate-180": navOpen })}
           onClick={() => setNavOpen(!navOpen)}
-          className="lg:hidden  text-white bg-Primary-bg flex items-center rounded px-1"
         >
-          <span className="material-symbols-outlined  cursor-pointer !text-2xl">
-            close
+          <span className="material-symbols-outlined text-white cursor-pointer !text-4xl">
+            menu_open
           </span>
         </span>
       </Link>
@@ -52,52 +53,15 @@ const Sidebar = ({ navOpen, opened, setOpened, setNavOpen }: navProps) => {
             className={`hover:text-Neutral-8 text-Neutral-6 text-base font-semibold border border-Neutral-7 hover:border-Neutral-8 rounded-lg mb-4 cursor-pointer ${path == item.url && "text-Neutral-8 border-Neutral-8"
               }`}
           >
-            {item?.url ? (
+            {item.url && (
               <Link
                 href={item.url}
                 onClick={() => setNavOpen(false)}
-                className="flex gap-2 py-3 px-4"
+                className={cx(["flex", "py-3", "px-4"], { "gap-2": navOpen })}
               >
                 <span className="material-symbols-outlined">{item.icon}</span>
-                <span>{item.name}</span>
+                <span className={cx(["overflow-hidden", "transiton-all", `duration-${transitionDuration}`, "ease-out"], { "w-[150px]": navOpen, "w-0": !navOpen })}>{item.name}</span>
               </Link>
-            ) : (
-              <span
-                onClick={() =>
-                  setOpened((prev: any) => (prev == item.id ? null : item.id))
-                }
-                className={`flex gap-2 items-center justify-between py-3 px-4 ${item.id == opened && " border-[#3EBF81] hover:text-[#D2D9E4]"
-                  }`}
-              >
-                <span className="flex gap-2">
-                  <span className="material-symbols-outlined">{item.icon}</span>
-                  <span>{item.name}</span>
-                </span>
-                {item.submenus && (
-                  <span className="material-symbols-outlined">expand_more</span>
-                )}
-              </span>
-            )}
-            {item.submenus && (
-              <AnimateHeight
-                duration={300}
-                height={opened == item.id ? "auto" : 0}
-              >
-                <ul className={`px-3 mt-1 flex flex-col gap-1`}>
-                  {item.submenus.map((item) => (
-                    <li key={item.title}>
-                      <Link
-                        href={item.url}
-                        onClick={() => setNavOpen(false)}
-                        className={`flex gap-2 items-center pl-4 pr-1 py-2 text-[#D2D9E4] hover:bg-[#3EBF81] duration-300 rounded-lg ${item.url == path && "text-[#3EBF81]"
-                          }`}
-                      >
-                        {item.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </AnimateHeight>
             )}
           </li>
         ))}

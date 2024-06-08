@@ -36,12 +36,7 @@ export default function RootLayout({
         setOpened={setOpened}
         setNavOpen={setNavOpen}
       />
-      <div
-        className={`lg:ml-[260px] relative ${navOpen &&
-          "after:bg-opacity-70 after:absolute after:inset-0 after:z-[1] after:duration-300 overflow-y-hidden"
-          }`}
-        onClick={() => setNavOpen(false)}
-      >
+      <div className="relative">
         <TopBar handleOpen={handleOpen} />
         <div className="pt-[88px] bg-Primary-bg" style={{ minHeight: "calc(100vh - 76px)" }}>{children}</div>
         <Footer />
