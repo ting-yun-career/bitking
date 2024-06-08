@@ -99,7 +99,7 @@ const Exchange = () => {
         </div>
       </section>
 
-      <section className="mt-6 gap-6 grid grid-cols-12">
+      <section className="hidden md:block mt-6 gap-6 grid grid-cols-12">
         <div className="px-4 lg:px-7 py-6 rounded-xl col-span-12 xl:col-span-8">
           <Tab.Group>
             <Tab.List>
