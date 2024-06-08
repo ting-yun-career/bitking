@@ -2,6 +2,7 @@ import React from "react";
 import { notifications } from "../../../../public/data/notificationsData";
 import Image from "next/image";
 import Link from "next/link";
+import cx from "classnames";
 
 const Notifications = () => {
   return (
@@ -26,11 +27,13 @@ const Notifications = () => {
                 className="md:flex items-center justify-between border-Neutral-10 border-t"
               >
                 <div className="flex items-center gap-3 my-5 w-full md:w-[70%]">
-                  <Image
-                    src={item.img}
-                    alt="buyer"
-                    className="w-10 h-10 rounded-full"
-                  />
+                  <div className={cx(["relative", "min-w-10", "h-10", "overflow-hidden"], { "border rounded-full": item.name !== 'System' })}>
+                    <Image
+                      src={item.img}
+                      alt="notification_sender"
+                      fill={true}
+                    />
+                  </div>
                   <div>
                     <div>
                       <span className="text-white text-sm font-bold">
