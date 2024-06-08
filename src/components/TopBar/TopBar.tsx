@@ -10,6 +10,7 @@ import {
 } from "../../../public/data/TopbarData";
 import { Menu, Transition } from "@headlessui/react";
 import { notifications } from "@public/data/notificationsData";
+import cx from "classnames";
 
 type headerProps = {
   handleOpen: (e: any) => void;
@@ -110,10 +111,10 @@ const TopBar = ({ handleOpen }: headerProps) => {
                         key={data.id}
                         className="flex items-center gap-3 py-2 duration-200 cursor-pointer hover:bg-Neutral-2 p-2 rounded"
                       >
-                        <div className="relative min-w-10 h-10 border rounded-full overflow-hidden">
+                        <div className={cx(["relative", "min-w-10", "h-10", "overflow-hidden"], { "border rounded-full": data.name !== 'System' })}>
                           <Image
                             src={data.img}
-                            alt="buyer"
+                            alt="notification_sender"
                             fill={true}
                           />
                         </div>
