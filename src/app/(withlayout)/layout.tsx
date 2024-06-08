@@ -5,6 +5,7 @@ import { useSession } from "next-auth/react";
 import Sidebar from "@components/Sidebar/Sidebar";
 import TopBar from "@components/TopBar/TopBar";
 import Footer from "@components/Footer/Footer";
+import cx from "classnames";
 
 export default function RootLayout({
   children,
@@ -36,7 +37,7 @@ export default function RootLayout({
         setOpened={setOpened}
         setNavOpen={setNavOpen}
       />
-      <div className="relative">
+      <div className={cx(["relative"], { "ml-[60px] md:ml-[100px]": !navOpen, "ml-[205px] md:ml-[260px]": navOpen })}>
         <TopBar handleOpen={handleOpen} />
         <div className="pt-[88px] bg-Primary-bg" style={{ minHeight: "calc(100vh - 76px)" }}>{children}</div>
         <Footer />

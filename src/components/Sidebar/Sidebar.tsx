@@ -27,7 +27,7 @@ const Sidebar = ({ navOpen, opened, setOpened, setNavOpen }: navProps) => {
   const transitionDuration = 300;
   return (
     <nav
-      className={cx(["ml-0", "z-20", "fixed", "top-0", "bottom-0", "bg-darkblue", "flex", "flex-col", "items-center", "pt-4", "min-h-screen", "shadow-lg", "lg:shadow-none", "scrollbarthin", "text-white", "md:px-6"])}
+      className={cx(["z-20", "fixed", "top-0", "bottom-0", "bg-darkblue", "flex", "flex-col", "items-center", "pt-4", "min-h-screen", "shadow-lg", "lg:shadow-none", "scrollbarthin", "text-white", "md:px-6"])}
     >
       <Link href="/" className="flex items-center gap-8 mb-5">
         <span className={cx(["flex", "items-center", "cursor-pointer"], { "gap-2": navOpen })}>
