@@ -38,7 +38,7 @@ const Sidebar = ({ navOpen, opened, setOpened, setNavOpen }: navProps) => {
         </span>
 
         <span
-          className={cx(["absolute", "left-[100%]", "top-0", "px-4", "py-4", "bg-darkblue", "flex", "items-center", "px-1", "transform"], { "rotate-180": navOpen })}
+          className={cx(["absolute", "left-[100%]", "top-0", "px-4", "py-4", "bg-darkblue", "flex", "items-center", "px-1", "transform"], { "rotate-180": !navOpen })}
           onClick={() => setNavOpen(!navOpen)}
         >
           <span className="material-symbols-outlined text-white cursor-pointer !text-4xl">
