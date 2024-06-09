@@ -9,13 +9,8 @@ const Notifications = () => {
     <div className="bg-Primary-bg p-3 lg:p-6">
       <section className="grid grid-cols-12">
         <div className="p-4 lg:px-7 lg:py-6 rounded-xl col-span-12 xxl:col-span-11">
-          <div className="flex items-center gap-2 mb-10">
-            <span className="material-symbols-outlined text-white">
-              notifications
-            </span>
-            <h4 className="text-base text-white font-bold leading-[24px]">
-              Notifications
-            </h4>
+          <div className="text-xl text-white font-bold mb-10">
+            Notifications
           </div>
           {notificationData.map((item) => (
             <div key={item.id}>

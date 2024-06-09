@@ -18,7 +18,7 @@ const DashBoard = () => {
   return (
     <div className="bg-Primary-bg p-3 lg:p-6">
       <h3 className="text-Neutral-6 text-xl font-semibold leading-[26px] pl-4">
-        Total Earnings by Coins (USD)
+        Balance by Coins (USD)
       </h3>
       <section className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 gap-6">
         {smallCharts.map((chart) => (
