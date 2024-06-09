@@ -1,12 +1,12 @@
 import { Listbox, Tab } from "@headlessui/react";
-import Image from "next/image";
 import React, { Fragment, useState } from "react";
-import { curencys, curencysAmount } from "../../../public/data/exchangeData";
+import { currencies as allCurrencies, curencysAmount } from "../../../public/data/exchangeData";
 import CryptoCoin from "../CryptoCoin/CryptoCoin";
 
 const Coin = () => {
   const [selectedAmount, setSelectedAmount] = useState(curencysAmount[0]);
-  const [selectedCurencys, setSelectedCurencys] = useState(curencys[0]);
+  const [selectedCurencys, setSelectedCurencys] = useState(allCurrencies[0]);
+
   return (
     <div className="p-4 lg:p-5 xl-7 rounded-xl col-span-12 xl:col-span-4">
       <Tab.Group>
@@ -61,20 +61,19 @@ const Coin = () => {
                 </span>
               </Listbox.Button>
               <Listbox.Options className="bg-Primary-bg text-Neutral-6 pl-4 absolute overflow-auto text-base sm:text-sm cursor-pointer z-10">
-                {curencys.map((curency) => (
+                {allCurrencies.map((currency) => (
                   <Listbox.Option
-                    key={curency.id}
-                    value={curency}
-                    disabled={curency.unavailable}
+                    key={currency.id}
+                    value={currency}
                   >
                     <span className="flex items-center gap-2 py-2 opacity-50 hover:opacity-100">
-                      <CryptoCoin symbol={curency.symbol} size={30} />
+                      <CryptoCoin symbol={currency.symbol} size={30} />
                       <span>
                         <span className="block text-base text-Neutral-6 leading-[24px]">
-                          {curency.name}
+                          {currency.name}
                         </span>
                         <span className="block text-Neutral-5 text-xs leading-[18px]">
-                          {curency.coin}
+                          {currency.coin}
                         </span>
                       </span>
                     </span>
@@ -136,20 +135,19 @@ const Coin = () => {
                 </span>
               </Listbox.Button>
               <Listbox.Options className="bg-Primary-bg text-Neutral-6 pl-4 absolute overflow-auto text-base sm:text-sm cursor-pointer z-10">
-                {curencys.map((curency) => (
+                {allCurrencies.map((currency) => (
                   <Listbox.Option
-                    key={curency.id}
-                    value={curency}
-                    disabled={curency.unavailable}
+                    key={currency.id}
+                    value={currency}
                   >
                     <span className="flex items-center gap-2 py-2 opacity-50 hover:opacity-100">
-                      <CryptoCoin symbol={curency.symbol} size={35} />
+                      <CryptoCoin symbol={currency.symbol} size={35} />
                       <span>
                         <span className="block text-base text-Neutral-6 leading-[24px]">
-                          {curency.name}
+                          {currency.name}
                         </span>
                         <span className="block text-Neutral-5 text-xs leading-[18px]">
-                          {curency.coin}
+                          {currency.coin}
                         </span>
                       </span>
                     </span>

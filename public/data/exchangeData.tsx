@@ -1,7 +1,3 @@
-import binance from "@/../public/images/binance.png";
-import litecoin from "@/../public/images/litecoin.png";
-import ethereum from "@/../public/images/ethereum.png";
-import bitcoin from "@/../public/images/bitcoin.png";
 import { v4 as uuidv4 } from "uuid";
 
 export const priceTrades = [
@@ -108,34 +104,54 @@ export const deepTrades = [
   },
 ];
 
-export const curencys = [
+export const currencies = [
   {
     id: uuidv4(),
     name: "BTC/USD",
     coin: "Bitcoin",
-    unavailable: false,
     symbol: "btc",
-  },
-  {
-    id: uuidv4(),
-    name: "BNB/USD",
-    coin: "Binance",
-    unavailable: false,
-    symbol: "bnb",
-  },
-  {
-    id: uuidv4(),
-    name: "LTC/USD",
-    coin: "Litecoin",
-    unavailable: false,
-    symbol: "ltc",
+    stat: {
+      price: 74498.83,
+      high24: 70644.84,
+      low24: 68556.74,
+      change24: 2088.00
+    }
   },
   {
     id: uuidv4(),
     name: "ETH/USD",
     coin: "Ethereum",
-    unavailable: false,
     symbol: "eth",
+    stat: {
+      price: 3779.03,
+      high24: 3885.07,
+      low24: 3628.97,
+      change24: 128.43,
+    }
+  },
+  {
+    id: uuidv4(),
+    name: "BNB/USD",
+    coin: "Bnb",
+    symbol: "bnb",
+    stat: {
+      price: 684.15,
+      high24: 696.41,
+      low24: 679.75,
+      change24: -13.03,
+    }
+  },
+  {
+    id: uuidv4(),
+    name: "LTC/USD",
+    coin: "Litecoin",
+    symbol: "ltc",
+    stat: {
+      price: 80.00,
+      high24: 80.42,
+      low24: 78.97,
+      change24: 1.46
+    }
   },
 ];
 
