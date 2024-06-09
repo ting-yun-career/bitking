@@ -1,15 +1,8 @@
-import buyer1 from "@/../public/images/people/Kaitlin Hale.jpg";
-import buyer2 from "@/../public/images/people/Sarah Page.jpg";
-import buyer3 from "@/../public/images/people/Nic Fassbender.jpg";
-import buyer4 from "@/../public/images/people/Owen Garcia.jpg";
-import buyer5 from "@/../public/images/people/Florence Shaw.jpg";
 import buyer6 from "@/../public/images/people/Jonathan Kelly.jpg";
-import buyer7 from "@/../public/images/people/Levi Rocha.jpg";
-import buyer8 from "@/../public/images/people/Marco Gross.jpg";
 import system from "@/../public/images/system.png";
 import { v4 as uuidv4 } from "uuid";
 
-export const notifications = [
+export const notificationData = [
   {
     id: uuidv4(),
     img: system,

@@ -9,7 +9,7 @@ import {
   profile,
 } from "../../../public/data/TopbarData";
 import { Menu, Transition } from "@headlessui/react";
-import { notifications } from "@public/data/notificationsData";
+import { notificationData } from "@public/data/notificationsData";
 import cx from "classnames";
 
 type headerProps = {
@@ -53,7 +53,7 @@ const TopBar = ({ handleOpen }: headerProps) => {
                   </h3>
                   <hr className="my-2 lg:my-3 border-Neutral-7" />
                   <div className="divide-y divide-gray-700">
-                    {notifications.map((data) => (
+                    {notificationData.map((data) => (
                       <div
                         key={data.id}
                         className="flex items-center gap-4 py-2cursor-pointer hover:bg-Neutral-2 p-2 rounded"
