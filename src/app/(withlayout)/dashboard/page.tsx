@@ -17,6 +17,9 @@ const DashBoard = () => {
   const theme: any = process.env.theme;
   return (
     <div className="bg-Primary-bg p-3 lg:p-6">
+      <h3 className="text-Neutral-6 text-xl font-semibold leading-[26px] pl-4">
+        Total Earnings by Coins (USD)
+      </h3>
       <section className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xxl:grid-cols-4 gap-6">
         {smallCharts.map((chart) => (
           <div key={chart.id} className="px-5 py-4 rounded-lg">
@@ -38,7 +41,7 @@ const DashBoard = () => {
         <div className="rounded-xl p-4 lg:px-7 lg:py-6 col-span-12 xl:col-span-9">
           <div className="flex gap-3 flex-wrap justify-between items-center mb-6">
             <h3 className="text-Neutral-6 text-xl font-semibold leading-[26px]">
-              Monthly Overall Growth
+              Monthly Overall Growth (USD)
             </h3>
             <div className="hidden flex flex-wrap gap-2 lg:gap-4">
               <span className="text-xs text-Neutral-6 font-medium leading-[18px] px-3 py-1 border border-Neutral-7 rounded hover:bg-gradient-to-r from-[#33AB71] to-[#06753F] transition duration-500 cursor-pointer">
