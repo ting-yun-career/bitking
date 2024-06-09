@@ -62,10 +62,7 @@ const DashBoard = () => {
             <h4 className="text-2xl text-Neutral-6 leading-[36px]">
               Total Earnings (USD)
             </h4>
-            <h5 className="text-3xl font-semibold text-Profit-bold">{usd(11032.24)}</h5>
-            <button className="hidden text-xs text-[#F8FAFC] bg-gradient-to-r from-[#33AB71] to-[#06753F] px-2 py-1 rounded-lg mt-2 lg:mt-6">
-              Withdraw
-            </button>
+            <h5 className="text-3xl font-semibold text-Profit-bold">{usd(27834.75)}</h5>
           </div>
         </div>
       </section>
