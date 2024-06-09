@@ -156,12 +156,18 @@ const NextLoginPage = () => {
 
             <div className="">
               <button
-                className="flex w-full items-center border border-gray-300 justify-center rounded-md bg-white px-3 py-2 text-black"
+                className="flex text-sm font-semibold leading-6 w-full items-center border border-gray-300 justify-center rounded-md bg-white px-3 py-2 text-black"
                 onClick={() => { signIn("google") }}
               >
-                <span className="text-sm font-semibold leading-6">
-                  Sign In with GMail
-                </span>
+                Sign In with GMail
+              </button>
+            </div>
+            <div className="mt-10">
+              <button
+                className="flex text-sm font-semibold leading-6 w-full items-center border border-gray-300 justify-center rounded-md bg-white px-3 py-2 text-black"
+                onClick={() => { signIn("facebook") }}
+              >
+                Sign In with Facebook
               </button>
             </div>
             <p className="text-red-600 text-center text-[16px] my-4">
