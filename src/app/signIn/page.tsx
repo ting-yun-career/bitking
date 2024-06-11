@@ -173,6 +173,9 @@ const NextLoginPage = () => {
             <p className="text-red-600 text-center text-[16px] my-4">
               {error && error}
             </p>
+            <p className="text-white text-center text-[16px] my-8">
+              Disclaimer: <br/> Your google/facebook data is not saved/used in anyway other than accessing this site.
+            </p>
           </div>
         </div>
       </div>
