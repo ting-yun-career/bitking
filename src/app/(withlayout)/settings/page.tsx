@@ -1,5 +1,5 @@
 "use client";
-import React, { Fragment, useState, useRef } from "react";
+import React, { Fragment, useState, useRef, useEffect } from "react";
 import userImg from "@/../public/images/user512.png";
 import Image from "next/image";
 import "remixicon/fonts/remixicon.css";
@@ -22,8 +22,15 @@ const withdrawAssets = [
 
 const Settings = () => {
   const { data: session } = useSession();
-  const { user } = session ?? { };
+  const { user: sessionUser } = session ?? { };
 
+  const [user, setUser] = useState<typeof user>(null);
+
+  useEffect(() => {
+    if (sessionUser) {
+      setUser(sessionUser);
+    }
+  }, [sessionUser])
   // const [selectedDepositAssets, setSelectedDepositAssets] = useState(
   //   depositAssets[0]
   // );
@@ -174,13 +181,14 @@ const Settings = () => {
                     <div className="form-control w-full">
                       <label className="label">
                         <span className="text-base text-gray-100 font-semibold mb-1 lg:mb-3">
-                          First Name
+                          First Name ({JSON.stringify(user?.fname)})
                         </span>
                       </label>
                       <input
                         type="text"
                         placeholder="Enter First Name"
-                        defaultValue="John"
+                        value={user?.fname ?? 'John'}
+                        onChange={() => {}}
                         className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
                       />
                     </div>
@@ -194,7 +202,8 @@ const Settings = () => {
                       <input
                         type="text"
                         placeholder="Enter Last Name"
-                        defaultValue="Smith"
+                        value={user?.lname ?? 'Yun'}
+                        onChange={() => {}}
                         className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
                       />
                     </div>
@@ -209,7 +218,8 @@ const Settings = () => {
                       <input
                         type="text"
                         placeholder="Enter Email"
-                        defaultValue="jsmith@gmail.com"
+                        value={user?.email ?? 'jsmith@gmail.com'}
+                        onChange={() => {}}
                         className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
                       />
                     </div>
