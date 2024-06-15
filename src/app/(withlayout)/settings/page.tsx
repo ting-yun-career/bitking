@@ -1,13 +1,13 @@
 "use client";
 import React, { Fragment, useState, useRef } from "react";
-import user from "@/../public/images/user512.png";
+import userImg from "@/../public/images/user512.png";
 import Image from "next/image";
 import "remixicon/fonts/remixicon.css";
-import { Listbox, Tab } from "@headlessui/react";
+import { Tab } from "@headlessui/react";
 import { loginHistory } from "../../../../public/data/settingsData";
 import Link from "next/link";
-import OtpInput from "react-otp-input";
 import { v4 as uuidv4 } from "uuid";
+import { useSession } from "next-auth/react";
 
 const depositAssets = [
   { id: uuidv4(), name: "Disabled", unavailable: false },
@@ -21,14 +21,15 @@ const withdrawAssets = [
 ];
 
 const Settings = () => {
-  const [otp, setOtp] = useState("");
+  const { data: session } = useSession();
+  const { user } = session ?? { };
 
-  const [selectedDepositAssets, setSelectedDepositAssets] = useState(
-    depositAssets[0]
-  );
-  const [selectedWithdrawAssets, setSelectedWithdrawAssets] = useState(
-    withdrawAssets[0]
-  );
+  // const [selectedDepositAssets, setSelectedDepositAssets] = useState(
+  //   depositAssets[0]
+  // );
+  // const [selectedWithdrawAssets, setSelectedWithdrawAssets] = useState(
+  //   withdrawAssets[0]
+  // );
 
   const [show, setShow] = useState(false);
   const handleShow = () => {
@@ -55,8 +56,9 @@ const Settings = () => {
         <div className="p-4 lg:px-7 lg:py-6 rounded-xl h-full">
           <div className="relative">
             <Image
-              src={user}
+              src={user?.image ?? userImg}
               alt="profile"
+              width="100" height="100"
               className="w-[180px] h-[180px] rounded-full mx-auto"
             />
             <input
@@ -77,7 +79,7 @@ const Settings = () => {
             </button>
           </div>
           <h4 className="text-white text-2xl font-semibold leading-[31px] text-center mt-5">
-            John Smith
+            {user?.name ?? 'John Smith'}
           </h4>
           <span className="text-sm text-white leading-[21px] text-center mt-2 block">
             Standard Plan

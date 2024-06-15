@@ -19,7 +19,7 @@ type headerProps = {
 const TopBar = ({ handleOpen }: headerProps) => {
   const router = useRouter();
 
-  const { data: session, status } = useSession();
+  const { data: session } = useSession();
   const { user } = session ?? { };
 
   const handleProfileAction = (data: any) => {
