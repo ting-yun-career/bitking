@@ -26,7 +26,7 @@ const authOptions: NextAuthOptions = {
       const nameArr = userData?.name ? userData.name.split(' ') : [];
       const fname = nameArr[0];
       const lname = nameArr?.[nameArr.length-1]
-      session.user = {...user, fname, lname};
+      session.user = {...userData, fname, lname};
       return session;
     }
   },
