@@ -8,6 +8,7 @@ import { loginHistory } from "../../../../public/data/settingsData";
 import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
 import { useSession } from "next-auth/react";
+import { Session } from "next-auth";
 
 const depositAssets = [
   { id: uuidv4(), name: "Disabled", unavailable: false },
@@ -24,7 +25,7 @@ const Settings = () => {
   const { data: session } = useSession();
   const { user: sessionUser } = session ?? { };
 
-  const [user, setUser] = useState<typeof user>(null);
+  const [user, setUser] = useState<Session['user']>();
 
   useEffect(() => {
     if (sessionUser) {

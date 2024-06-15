@@ -21,7 +21,6 @@ const authOptions: NextAuthOptions = {
       return true;
     },
     session: async function({ session, token, user }) {
-      console.log('session: ', session);
       const userData = session.user;
       const nameArr = userData?.name ? userData.name.split(' ') : [];
       const fname = nameArr[0];
