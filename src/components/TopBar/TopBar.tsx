@@ -21,6 +21,7 @@ const TopBar = ({ handleOpen }: headerProps) => {
 
   const { data: session, status } = useSession();
   const { user } = session ?? { };
+  console.log('user', user)
 
   const handleProfileAction = (data: any) => {
     if (data.id === 'logout') {
@@ -115,7 +116,7 @@ const TopBar = ({ handleOpen }: headerProps) => {
                 <Menu.Item>
                   <div className="w-52 bg-Neutral-10 p-3 rounded-xl">
                     <h5 className="mb-2 text-base ml-3 font-semibold text-white">
-                      Welcome {user?.name ?? 'John Smith'}!
+                      Welcome {user?.fname ?? 'John'}!
                     </h5>
                     {profile.map((data) => (
                       <div
