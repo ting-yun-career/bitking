@@ -21,7 +21,6 @@ const TopBar = ({ handleOpen }: headerProps) => {
 
   const { data: session, status } = useSession();
   const { user } = session ?? { };
-  console.log('user', user)
 
   const handleProfileAction = (data: any) => {
     if (data.id === 'logout') {
