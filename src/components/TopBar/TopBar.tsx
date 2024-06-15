@@ -1,10 +1,10 @@
 "use client"
 import Image from "next/image";
 import Link from "next/link";
-import { signOut } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import React, { Fragment } from "react";
-import user from "@/../public/images/user.png";
+import userImg from "@/../public/images/user.png";
 import {
   profile,
 } from "../../../public/data/TopbarData";
@@ -18,6 +18,9 @@ type headerProps = {
 
 const TopBar = ({ handleOpen }: headerProps) => {
   const router = useRouter();
+
+  const { data: session, status } = useSession();
+  const { user } = session ?? { };
 
   const handleProfileAction = (data: any) => {
     if (data.id === 'logout') {
@@ -85,11 +88,11 @@ const TopBar = ({ handleOpen }: headerProps) => {
           <Menu.Button>
             <div className="flex gap-2 items-center cursor-pointer">
               <div className="w-12 h-12 rounded-full overflow-hidden">
-                <Image src={user} alt="User" />
+                <Image src={user?.image ?? userImg} width="100" height="100" alt="User Image" />
               </div>
               <div>
                 <div className="text-base text-white font-semibold">
-                  John Smith
+                  {user?.name ?? 'John Smith'}
                 </div>
                 <div className="text-xs text-Neutral-6 text-left">
                   Standard Plan
@@ -112,7 +115,7 @@ const TopBar = ({ handleOpen }: headerProps) => {
                 <Menu.Item>
                   <div className="w-52 bg-Neutral-10 p-3 rounded-xl">
                     <h5 className="mb-2 text-base ml-3 font-semibold text-white">
-                      Welcome John!
+                      Welcome {user?.name ?? 'John Smith'}!
                     </h5>
                     {profile.map((data) => (
                       <div
