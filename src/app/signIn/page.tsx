@@ -170,12 +170,12 @@ const NextLoginPage = () => {
                 Sign In with Facebook
               </button>
             </div>
-            <p className="text-red-600 text-center text-[16px] my-4">
-              {error && error}
-            </p>
-            <p className="text-white text-center text-[16px] my-8">
-              Disclaimer: <br/> Your google/facebook data is not saved/used in anyway other than accessing this site.
-            </p>
+            <div className="mt-10">
+              <div role="alert" className="alert text-sm font-semibold">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" className="stroke-info shrink-0 w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                <span>Your credential is not saved/used in anyway other than to access this site (to demonstrate social login)</span>
+              </div>
+            </div>
           </div>
         </div>
       </div>
