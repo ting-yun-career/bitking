@@ -9,6 +9,7 @@ import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
 import { useSession } from "next-auth/react";
 import { Session } from "next-auth";
+import { myFunc } from "@src/app/action/actions";
 
 const depositAssets = [
   { id: uuidv4(), name: "Disabled", unavailable: false },
@@ -57,6 +58,12 @@ const Settings = () => {
   const onButtonClick = () => {
     inputFile.current.click();
   };
+
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+    const result = await myFunc({name: 'tyun', age: 40, address: { street: '123 abc', number: 333}, male: true});
+    console.log(result);
+  }
 
   return (
     <div className="bg-Primary-bg p-3 lg:p-6">
@@ -308,8 +315,8 @@ const Settings = () => {
                     />
                   </div>
                   <div className="mt-8 flex gap-5">
-                    <button className="text-xs text-[#F8FAFC] leading-[18px] bg-gradient-to-r from-[#33AB71] to-[#06753F] rounded-lg px-4 py-2">
-                      Updates
+                    <button onClick={(event) => handleUpdate(event)} className="border text-xs text-[#F8FAFC] leading-[18px] bg-gradient-to-r from-[#33AB71] to-[#06753F] rounded-lg px-4 py-2">
+                      Update
                     </button>
                     <button className="text-xs text-Neutral-6 leading-[18px] border border-Neutral-6 rounded-lg px-4 py-2">
                       Cancel
