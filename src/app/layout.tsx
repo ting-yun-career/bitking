@@ -5,6 +5,8 @@ import "material-symbols";
 import { Suspense } from "react";
 import Loading from "./loading";
 import NextAuthProvider from "./NextAuthProvider";
+import { Slide, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +27,11 @@ export default function RootLayout({
         <NextAuthProvider>
           <Suspense fallback={<Loading />}>
             <div>{children}</div>
+            <ToastContainer 
+              autoClose={500}
+              theme="dark"
+              transition={Slide}
+            />
           </Suspense>
         </NextAuthProvider>
       </body>

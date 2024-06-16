@@ -10,6 +10,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useSession } from "next-auth/react";
 import { Session } from "next-auth";
 import { updateProfile } from "@src/app/action/actions";
+import { toast } from 'react-toastify';
 
 const depositAssets = [
   { id: uuidv4(), name: "Disabled", unavailable: false },
@@ -59,6 +60,7 @@ const Settings = () => {
     const data = Object.fromEntries(formData);
     const result = await updateProfile(data);
     console.log(result);
+    toast.success('Success!');
   }
 
   return (
