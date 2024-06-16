@@ -1,6 +1,5 @@
 'use server';
-
-export async function myFunc(data: any) {
-  console.log('calling myFunc', data);
+// setting
+export async function updateProfile(data: any) {
   return { result: 'okay', data }
 }

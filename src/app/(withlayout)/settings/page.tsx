@@ -9,7 +9,7 @@ import Link from "next/link";
 import { v4 as uuidv4 } from "uuid";
 import { useSession } from "next-auth/react";
 import { Session } from "next-auth";
-import { myFunc } from "@src/app/action/actions";
+import { updateProfile } from "@src/app/action/actions";
 
 const depositAssets = [
   { id: uuidv4(), name: "Disabled", unavailable: false },
@@ -33,12 +33,6 @@ const Settings = () => {
       setUser(sessionUser);
     }
   }, [sessionUser])
-  // const [selectedDepositAssets, setSelectedDepositAssets] = useState(
-  //   depositAssets[0]
-  // );
-  // const [selectedWithdrawAssets, setSelectedWithdrawAssets] = useState(
-  //   withdrawAssets[0]
-  // );
 
   const [show, setShow] = useState(false);
   const handleShow = () => {
@@ -59,9 +53,11 @@ const Settings = () => {
     inputFile.current.click();
   };
 
-  const handleUpdate = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const result = await myFunc({name: 'tyun', age: 40, address: { street: '123 abc', number: 333}, male: true});
+    const formData = new FormData(e.target as HTMLFormElement);
+    const data = Object.fromEntries(formData);
+    const result = await updateProfile(data);
     console.log(result);
   }
 
@@ -184,19 +180,20 @@ const Settings = () => {
             </Tab.List>
             <Tab.Panels>
               <Tab.Panel>
-                <form className="">
+                {user && 
+                <form onSubmit={handleSubmit}>
                   <div className="xl:flex block gap-[60px] mb-2 lg:mb-6">
                     <div className="form-control w-full">
                       <label className="label">
                         <span className="text-base text-gray-100 font-semibold mb-1 lg:mb-3">
-                          First Name ({JSON.stringify(user?.fname)})
+                          First Name
                         </span>
                       </label>
                       <input
                         type="text"
+                        name="fname"
                         placeholder="Enter First Name"
-                        value={user?.fname ?? 'John'}
-                        onChange={() => {}}
+                        defaultValue={user?.fname ?? 'John'}
                         className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
                       />
                     </div>
@@ -209,6 +206,7 @@ const Settings = () => {
                       </label>
                       <input
                         type="text"
+                        name="lname"
                         placeholder="Enter Last Name"
                         value={user?.lname ?? 'Yun'}
                         onChange={() => {}}
@@ -225,6 +223,7 @@ const Settings = () => {
                       </label>
                       <input
                         type="text"
+                        name="email"
                         placeholder="Enter Email"
                         value={user?.email ?? 'jsmith@gmail.com'}
                         onChange={() => {}}
@@ -240,6 +239,7 @@ const Settings = () => {
                       </label>
                       <input
                         type="text"
+                        name="phone"
                         placeholder="eg. 604135641"
                         defaultValue="604135641"
                         className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
@@ -255,6 +255,7 @@ const Settings = () => {
                       </label>
                       <input
                         type="text"
+                        name="address"
                         placeholder="Enter Address"
                         defaultValue="123 Broadway Avenue"
                         className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
@@ -270,6 +271,7 @@ const Settings = () => {
                       </label>
                       <input
                         type="text"
+                        name="city"
                         placeholder="Enter City"
                         defaultValue="Seattle"
                         className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
@@ -283,6 +285,7 @@ const Settings = () => {
                       </label>
                       <input
                         type="text"
+                        name="country"
                         placeholder="Enter Country"
                         defaultValue="USA"
                         className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
@@ -296,6 +299,7 @@ const Settings = () => {
                       </label>
                       <input
                         type="text"
+                        name="zip"
                         placeholder="Enter Zip Code"
                         defaultValue="90210"
                         className="w-full px-2 py-[10px] outline-none rounded text-gray-100 placeholder-gray-500 bg-Primary-3 border border-Neutral-10"
@@ -309,20 +313,19 @@ const Settings = () => {
                       </span>
                     </label>
                     <textarea
+                      name="description"
                       placeholder="Describe yourself"
                       defaultValue="Web3 investor, Social Media activist"
                       className="h-28 text-gray-100 placeholder-gray-500 bg-Primary-3 rounded outline-none py-[10px] px-2 border border-Neutral-10"
                     />
                   </div>
                   <div className="mt-8 flex gap-5">
-                    <button onClick={(event) => handleUpdate(event)} className="border text-xs text-[#F8FAFC] leading-[18px] bg-gradient-to-r from-[#33AB71] to-[#06753F] rounded-lg px-4 py-2">
+                    <button className="text-xs text-[#F8FAFC] leading-[18px] bg-gradient-to-r from-[#33AB71] to-[#06753F] rounded-md px-4 py-2">
                       Update
-                    </button>
-                    <button className="text-xs text-Neutral-6 leading-[18px] border border-Neutral-6 rounded-lg px-4 py-2">
-                      Cancel
                     </button>
                   </div>
                 </form>
+                }
               </Tab.Panel>
               <Tab.Panel>
                 <div className="xl:flex block gap-[60px] mb-2 lg:mb-6">
